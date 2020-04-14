@@ -1,0 +1,17 @@
+
+
+#### in server###
+jupyter notebook --notebook-dir=/
+
+
+
+
+
+
+##### in my laptop######
+ssh -L 8000:localhost:8888 ialahi@10.39.68.43 
+
+
+
+#### in browser ####
+http://localhost:8000/
