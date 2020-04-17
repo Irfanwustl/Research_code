@@ -1,0 +1,19 @@
+Notes on 450k data
+1.	It may have duplicate genomic position with different ref id
+2.	It may have overlapping genomic position in the same file
+
+
+
+
+Bedtools unionbedg  Wont work  properly if above  are true. So run https://github.com/Irfanwustl/Research_code/tree/master/450k_data_analysis/450k_supporting_tools/merge_onlyoverlapping
+
+After TCGA preprocess step
+
+Or: Pending task:should I change the TCGA process file to include: https://github.com/Irfanwustl/Research_code/tree/master/450k_data_analysis/450k_supporting_tools/merge_onlyoverlapping
+? 
+
+uniq_pos.sh: I have code this and working (but if not necessary for 450k data preprocess. merge_onlyoverlapping.sh is enough): https://github.com/Irfanwustl/Research_code/tree/master/450k_data_analysis/450k_supporting_tools/uniq_pos
+
+
+
+
