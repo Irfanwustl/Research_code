@@ -29,6 +29,9 @@ class GeneticAlgorithm:
   def __init__(self, **kwargs):
     
     self.data = kwargs['data']
+    self.dataStd = kwargs['data_Std']
+    self.refData = kwargs['ref_Data']
+    self.phenoclass = kwargs['pheno_class']
     self.ind_size = self.data.shape[1]
     self.min_nfeat = self.data.shape[0]
 
@@ -150,9 +153,23 @@ class GeneticAlgorithm:
 
   def fitness(self, ind):
 
+    
+    
     selection = self.data[:,ind] 
+    selectionStd=self.dataStd[:,ind]
+    selectionRef=self.refData[ind]  #########
+    
+    
+    '''
+    print ("in fitness")
+    myindices = [i for i, x in enumerate(ind) if x ==True] 
+    print(myindices)
+    '''
+   
+
+
     if ind not in self.tabu:
-      obj = [f(selection) for f in self.objectives_func]
+      obj = [f(selection,selectionStd,selectionRef,self.phenoclass) for f in self.objectives_func]
       self.tabu[ind] = obj
       return tuple(obj)
     else:

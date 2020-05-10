@@ -23,6 +23,7 @@ def correlation(data):
   # Then, cov(xi, xj) = 0
   # Therefore, we can set NaN values to 0
   corr[np.isnan(corr)] = 0
+  #corr[np.isnan(corr)] = 1
 
   num_vars = corr.shape[0]
   for i in range(num_vars):
