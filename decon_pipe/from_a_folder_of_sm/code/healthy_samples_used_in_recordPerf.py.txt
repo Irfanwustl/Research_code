@@ -1,0 +1,4 @@
+med-H1-cfDNA.bg
+med-H2-cfDNA.bg
+med-H3-cfDNA.bg
+med-H4-cfDNA.bg

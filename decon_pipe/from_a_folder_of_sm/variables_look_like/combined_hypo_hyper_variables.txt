@@ -1,0 +1,7 @@
+SmFolder=all_sm
+SmFolderType=COMBINED
+dataFolder=All_bg_rolled
+gtFile=crc_gt4.txt
+masterperf=MasterPerf.txt
+
+

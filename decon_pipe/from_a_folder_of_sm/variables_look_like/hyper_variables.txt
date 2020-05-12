@@ -1,0 +1,7 @@
+SmFolder=all_sm_hyper
+SmFolderType=HYPER
+dataFolder=All_bg_rolled
+gtFile=crc_gt4.txt
+masterperf=MasterPerf.txt
+
+

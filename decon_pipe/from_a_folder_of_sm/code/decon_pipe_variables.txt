@@ -1,0 +1,7 @@
+SmFolder=combinedSM_hypo_19_21_hyper_4_6
+SmFolderType=COMBINED
+dataFolder=All_bg_rolled
+gtFile=crc_ground_truth4.txt
+masterperf=MasterPerf.txt
+
+
