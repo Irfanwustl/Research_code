@@ -1,0 +1,8 @@
+We can run preprocess_the_data_with_largerSM_likefile before from_a_folder_of_sm to make deconvolution faster. But this is not mandatory, only to run the deconvolution faster.
+
+
+
+To run preprocess_the_data_with_largerSM_likefile just use something like q25d1.txt_inverted (or q25d1.txt. Anyone is enough. Not necessary to use both q25d1.txt_inverted and q25d1.txt) on the all_bg_rolled like folder. Then run from_a_folder_of_sm.
+
+
+raw folder(not necessary, just for reference if something go wrong):/Users/irffanalahi/Research/Research_code/gitignorefolder/Automated_pipe_code_testing/preproces_file_test
