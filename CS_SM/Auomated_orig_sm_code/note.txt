@@ -1,0 +1,1 @@
+functional_CS_SM.R/functional_CS_SM_corrected.R is determined in run_CS_SM.sh file.
