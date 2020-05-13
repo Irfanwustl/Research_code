@@ -2,3 +2,11 @@ med-H1-cfDNA.bg
 med-H2-cfDNA.bg
 med-H3-cfDNA.bg
 med-H4-cfDNA.bg
+tot-PH7-cfDNA.bg
+tot-PH4-cfDNA.bg
+tot-PH17-cfDNA.bg
+tot-PH16-cfDNA.bg
+tot-PH1-cfDNA.bg
+tot-72-cfDNA.bg
+tot-67-cfDNA.bg
+tot-66-cfDNA.bg
