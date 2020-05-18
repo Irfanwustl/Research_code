@@ -1,4 +1,4 @@
-SmFolder=all_sm_hyper
+SmFolder=Onlyhyper_37_52
 SmFolderType=HYPER
 dataFolder=All_bg_rolled
 gtFile=crc_gt4.txt

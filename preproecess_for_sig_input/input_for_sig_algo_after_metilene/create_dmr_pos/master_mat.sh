@@ -1,0 +1,1 @@
+bedtools intersect -a all_matrix_T1382 -b 3DMR_pos_sorted_merged  -wa -header > master_mat
