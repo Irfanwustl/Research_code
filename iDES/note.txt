@@ -1,1 +1,7 @@
+It can work like code in one folder and data + output in different  deirctory. So no need to copy data all time.
+
+
+
+
+
 gitignore: /Users/irffanalahi/Research/Research_code/gitignorefolder/iDES/pipeline_for_freq
