@@ -1,0 +1,1 @@
+gitignore: /Users/irffanalahi/Research/Research_code/gitignorefolder/iDES/pipeline_for_freq
