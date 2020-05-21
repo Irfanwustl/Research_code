@@ -1,4 +1,4 @@
-It can work like code in one folder and data + output in different  deirctory. So no need to copy data all time.
+The .py files can work like code in one folder and data + output in different  deirctory. So no need to copy data all time. But the correspondind sh files are creating result in the same folder of the code. So if we want result in different folder, have to mention in the corresponding .sh file.
 
 
 
