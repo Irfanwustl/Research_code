@@ -19,16 +19,18 @@ import math
 
 def generatefreq(df_bed,ffile):
 	column_names=["CHR","POS","DEPTH","REF","R+","R-","A+","A-","C+","C-","T+","T-","G+","G-"]
-	freqdf = pd.DataFrame(columns = column_names)
+	
+	rowlist=[]
 
-
-	df_bed_rownum=df.shape[0]
+	df_bed_rownum=df_bed.shape[0]
 	for rindex in range(df_bed_rownum):
 		onerow=df_bed.iloc[rindex,:]
 		Crow,Grow=splitOneRow(onerow)
-		freqdf=freqdf.append(Crow,ignore_index=True)
-		freqdf=freqdf.append(Grow,ignore_index=True)
+		rowlist.append(Crow)
+		rowlist.append(Grow)
 
+
+	freqdf = pd.DataFrame(rowlist,columns = column_names)
 	freqdf.to_csv(ffile,sep="\t",index=False)
 
 
