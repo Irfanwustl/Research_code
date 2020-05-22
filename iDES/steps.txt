@@ -1,0 +1,7 @@
+1. raw bed to nohla
+2.nohla to freq
+3.freq (have to rename for iDES) to bgdb
+4.polish 
+5. freq to bed
+6. bed to bedgraph
+7.bedgraph to bedgraph rolled(?)
