@@ -20,7 +20,7 @@ import math
 
 
 
-def generatefreq(df_freq,bedfile):
+def generatebed(df_freq,bedfile):
 	allrows=[]
 
 
@@ -33,9 +33,8 @@ def generatefreq(df_freq,bedfile):
 
 		mergedrow=generateRow(Crow,Grow)
 
-		
-
-		allrows.append(mergedrow)
+		if mergedrow[3]!=-1:
+			allrows.append(mergedrow)
 
 		rindex=rindex+2
 
@@ -79,8 +78,10 @@ def generateRow(Crow,Grow):
 
 	lastField=Crow['REF']+":"+CbetaSymbol+":"+str(Cdepth)+","+Grow['REF']+":"+GbetaSymbol+":"+str(Gdepth)
 
-
-	finalbeta=(Cdepth*Cbeta+Gdepth*Gbeta)/float(Cdepth+Gdepth)
+	if (Cdepth+Gdepth) > 0:
+		finalbeta=(Cdepth*Cbeta+Gdepth*Gbeta)/float(Cdepth+Gdepth)
+	else:
+		finalbeta=-1
 
 	chrom=Crow['CHR']
 	if chrom!=Grow['CHR']:
@@ -130,7 +131,7 @@ if df.shape[0]%2!=0:
 	sys.exit(1)
 
 
-generatefreq(df,bedfile)
+generatebed(df,bedfile)
 
 
 
