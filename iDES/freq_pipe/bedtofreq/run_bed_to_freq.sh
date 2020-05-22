@@ -16,7 +16,7 @@ do
 	
 	
 	echo bed=========${dirList[i]}
-	python3 bed2freq.py ${dir}/${dirList[i]}  ${outdir}/${dirList[i]}_freq.txt
+	python3 bed2freq.py ${dir}/${dirList[i]}  ${outdir}/${dirList[i]}_freq.allreads.Q20.txt
 
 	(( i++ ))
 done
