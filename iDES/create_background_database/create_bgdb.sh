@@ -6,6 +6,8 @@ mindepth=$2
 
 outdir=${freqdir}_depth${mindepth}_bgdbdir
 
+mkdir ${outdir}
+
 outfile=${freqdir}_depth${mindepth}_bgdb.txt
 
 
