@@ -1,6 +1,6 @@
 bg_in=$1   #####testin real bg files' folder
 
-outdir=${bg_in}_monod2_intersected
+outdir=${bg_in}_monod2_intersectedSortedMerged
 
 dirList=($( ls ${bg_in}  ))
 
@@ -12,7 +12,7 @@ while (( i < ${#dirList[@]} ))
 do
 
 	echo now=========${bg_in}/${dirList[i]} 
-	bedtools intersect -wa -wb -a ${bg_in}/${dirList[i]}  -b mond2_mhb_hg38.bed > ${outdir}/${dirList[i]}
+	bedtools intersect -wa -wb -a ${bg_in}/${dirList[i]}  -b mond2_mhb_hg38_sorted_merged.bed > ${outdir}/${dirList[i]}
  	(( i++ ))
 done
 

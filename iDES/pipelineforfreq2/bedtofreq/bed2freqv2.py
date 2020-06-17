@@ -25,9 +25,9 @@ def generatefreq(df_bed,ffile):
 	df_bed_rownum=df_bed.shape[0]
 	for rindex in range(df_bed_rownum):
 		onerow=df_bed.iloc[rindex,:]
-		Crow,Grow=splitOneRow(onerow)
+		Crow=splitOneRow(onerow)
 		rowlist.append(Crow)
-		rowlist.append(Grow)
+		#rowlist.append(Grow)
 
 
 	freqdf = pd.DataFrame(rowlist,columns = column_names)
@@ -75,18 +75,29 @@ def splitOneRow(onerow):
 		sys.exit(1)
 
 	chrom=onerow[0]	
-	Crow={"CHR":chrom,"POS":Cpos,"DEPTH":fdepth,"REF":fchrom,"R+":fmeth,"R-":0,"A+":0,"A-":0,"C+":0,"C-":0,"T+":funmeth,"T-":0,"G+":0,"G-":0} 
+	 
 	
 	rchrom,rdepth,rmeth,runmeth=parseDepthCol(gPart)
 	if (rchrom!="G"):
 		print ("wrong reverse strand")
 		sys.exit(1)
 
-	Grow={"CHR":chrom,"POS":Gpos,"DEPTH":rdepth,"REF":rchrom,"R+":rmeth,"R-":0,"A+":runmeth,"A-":0,"C+":0,"C-":0,"T+":0,"T-":0,"G+":0,"G-":0}
+
+	total_depth=int(onerow[4])
+	if total_depth!=(fdepth+rdepth):
+		print(total_depth)
+		print(fdepth)
+		print(rdepth)
+		print("depth missmatch")
+		sys.exit(1)
+
+
+	Crow={"CHR":chrom,"POS":Cpos,"DEPTH":total_depth,"REF":fchrom,"R+":fmeth,"R-":rmeth,"A+":0,"A-":0,"C+":0,"C-":0,"T+":funmeth,"T-":runmeth,"G+":0,"G-":0}
+	#Grow={"CHR":chrom,"POS":Gpos,"DEPTH":rdepth,"REF":rchrom,"R+":rmeth,"R-":0,"A+":runmeth,"A-":0,"C+":0,"C-":0,"T+":0,"T-":0,"G+":0,"G-":0}
 
 
 
-	return Crow,Grow
+	return Crow
 	
 
 
