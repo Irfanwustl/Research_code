@@ -1,0 +1,1 @@
+Accomando data are Like reinuis data but no pval. So use these two files here to handle this instead of corresponding reinius code. For other than these two code files use reinius codes. 
