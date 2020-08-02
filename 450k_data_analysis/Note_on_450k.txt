@@ -17,4 +17,9 @@ uniq_pos.sh: I have code this and working (but if not necessary for 450k data pr
 
 
 
+To convert WGBS to 450 use: wgbsto450_easier
+
+
+
+
 
