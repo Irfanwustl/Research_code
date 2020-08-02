@@ -1,0 +1,2 @@
+the input of ourfile450kpos.sh should be a bg or rolled_bg file.
+the ourfile450kpos.sh code is enough (no need to sort or rolling after this code).
