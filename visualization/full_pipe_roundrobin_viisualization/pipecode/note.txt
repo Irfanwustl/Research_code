@@ -1,0 +1,6 @@
+if want to add neu check mergegt_in_onefile.py line:
+
+
+prdictedlist=["CD14","CD19","CD56","CD4","CD8"] ###  
+
+
