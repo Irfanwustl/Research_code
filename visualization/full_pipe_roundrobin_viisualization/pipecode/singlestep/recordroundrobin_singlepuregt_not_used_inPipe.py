@@ -10,6 +10,7 @@ import os
 
 
 
+
 # In[2]:
 
 
@@ -19,8 +20,8 @@ allinonefile=sys.argv[1] #"data/diffDataExpanded_SigMatrixpy_g50Onlyposition_int
 gtpath=sys.argv[2] #"dummyfolder/gtfolder"
 allgtlist=[f for f in os.listdir(gtpath) if not f.startswith('.')] #["blueprint_rein_our_pbmc_puregt.txt","rendata_gt3.txt"]
 gtfilename=sys.argv[3] #"rendata_gt3.txt"
-purgtfilename=["blueprint_rein_our_pbmc_puregt.txt","blueprint_puregt.txt","our_pbmc_puregt.txt","rein_puregt.txt"]
-masterfilename=sys.argv[4] #"data/Masterperf.txt"
+purgtfilename=sys.argv[4] #"blueprint_rein_our_pbmc_puregt.txt"
+masterfilename=sys.argv[5] #"data/Masterperf.txt"
 allinonedf=pd.read_csv(allinonefile,sep="\t")
 #print(allgtlist)
 
@@ -50,7 +51,7 @@ def metric_for_pure(df):
 def savetomastermat(df,gtfilename,purgtfilename,masterperf,dffilename):
     
     
-    if gtfilename in purgtfilename:
+    if gtfilename==purgtfilename:
         metric=metric_for_pure(df)
     else:
         metric=metric_for_mixture(df)

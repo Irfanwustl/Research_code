@@ -1,4 +1,4 @@
-
+#puregtfilename is hardcoded in recordroundrobin.py
 
 
 csxoutfolder=$1
@@ -8,7 +8,7 @@ mergedfolder=$3
 
 masterfilename=$4  ### should be in the parent of csxoutfolder and gtfolder
 
-puregtfilename=blueprint_rein_our_pbmc_puregt.txt
+#puregtfilename=blueprint_rein_our_pbmc_puregt.txt
 
 suffixonefile=onefile
 
@@ -36,7 +36,7 @@ do
 
 		python3 mergegt_in_onefile.py ${mergedfolder}/${csxList[i]}/${csxList[i]}_${gtlist[j]} ${mergedfolder}/${csxList[i]}/${csxList[i]}_${gtlist[j]}_${suffixonefile}
 
-		python3 recordroundrobin.py ${mergedfolder}/${csxList[i]}/${csxList[i]}_${gtlist[j]}_${suffixonefile} ${gtfolder} ${gtlist[j]}  ${puregtfilename}  ${masterfilename}
+		python3 recordroundrobin.py ${mergedfolder}/${csxList[i]}/${csxList[i]}_${gtlist[j]}_${suffixonefile} ${gtfolder} ${gtlist[j]}  ${masterfilename}
 
 		(( j++ ))
 	done
