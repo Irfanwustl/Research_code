@@ -1,0 +1,1 @@
+only for hypo. if we want hyper or combined need to change preparefordecon  in CoreAlgo. Also the input sm related file should consider that info for every feature(MHB).
