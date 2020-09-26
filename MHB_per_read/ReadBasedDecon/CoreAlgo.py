@@ -4,7 +4,7 @@ import sys
 import CountingDecon
 
 class CoreAlgo:
-    def __init__(self, bamfile, quality_score,phred_score, SMbg,outfilename):
+    def __init__(self, bamfile, quality_score,phred_score, SMbg,outfilename,mode):
         """
 
        :param bamfile: Path to sorted bam file location
@@ -16,7 +16,7 @@ class CoreAlgo:
         self.phred_score=phred_score
         self.SMbg=self.parseSMbg(SMbg)
         self.outfilname=outfilename
-
+        self.mode=mode
         self.pattern_percentage=.8 ###### self.pattern_percentage (e.g. 80%) of a read should be of this pattern to call it pattern specific
 
         self.runCore()
@@ -41,7 +41,7 @@ class CoreAlgo:
             alignedsegmentlist=bp.get_reads(r["chrom"],r["start"],r["end"])
 
 
-            temp=bp.get_metinfoallreads(alignedsegmentlist,1,mhbdfrow=r)
+            temp=bp.get_metinfoallreads(alignedsegmentlist,self.mode,mhbdfrow=r)
             mhbkey=r["chrom"]+":"+str(r["start"])+"-"+str(r["end"])
             #print(mhbkey)
             result.append({"mhb": mhbkey,"celltype":r["celltype"],"info":temp})
@@ -141,9 +141,12 @@ class CoreAlgo:
 
 
 
-bamfile="TWCY-1389-1389-BULK-PBMC_sorted"
+bamfile="TWCY-1382-1382-BULK-PBMC_sorted"
 outname=bamfile+"_out"
 
-c=CoreAlgo("/Users/irffanalahi/Research/weekly/for_9_24_20/Analysis/bamfiles/bamfiles_onlyregionIN_smMHB_cd4_cd8_g50_hypo_mhb_sorted_sorted/"+bamfile,40,20,"/Users/irffanalahi/Research/weekly/for_9_24_20/preparation/SM/MHBcpg2/smMHB_cd4_cd8_g50_hypo_assigned.txt_mhb","/Users/irffanalahi/Research/weekly/for_9_24_20/Analysis/result/"+outname)
+#c=CoreAlgo("/Users/irffanalahi/Research/weekly/for_9_24_20/Analysis/bamfiles/bamfiles_onlyregionIN_smMHB_cd4_cd8_g50_hypo_mhb_sorted_sorted/"+bamfile,40,20,"/Users/irffanalahi/Research/weekly/for_9_24_20/preparation/SM/MHBcpg2/smMHB_cd4_cd8_g50_hypo_assigned.txt_mhb","/Users/irffanalahi/Research/weekly/for_9_24_20/Analysis/result/"+outname)
 
 
+#c=CoreAlgo("/Users/irffanalahi/Research/Research_update/Sequencing/understandBamFiles/try1/bamfiles_onlyregionIN_bluSMsingle450_MHBWGBS_pos_c2brename_corresSAM/bam_sorted/"+bamfile,40,20,"data/testsinglcpgRes/sample_singlecpg.txt_mhb","data/testsinglcpgRes/"+outname,2)
+
+c=CoreAlgo("/Users/irffanalahi/Research/weekly/for_9_24_20/Usig_Single_Cpg_SM/450ksm/bamfiles/bamfiles_onlyregionIN_blleuko450kg50_hypo_pos_sorted_sorted/"+bamfile,40,20,"/Users/irffanalahi/Research/weekly/for_9_24_20/Usig_Single_Cpg_SM/450ksm/SM/blleuko450kg50_hypo_assigned.txt_bg","/Users/irffanalahi/Research/weekly/for_9_24_20/Usig_Single_Cpg_SM/450ksm/result/radius_0/"+outname,2)

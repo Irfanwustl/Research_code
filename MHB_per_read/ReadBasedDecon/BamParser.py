@@ -47,8 +47,12 @@ class BamParser:
 
             if flag==0:
                 corresCpG=self.generate_corressCpG(read,flag)
-            elif flag==1:
+            elif flag==1 or flag==2:
                 corresCpG = self.generate_corressCpG(read, flag,**kwargs)
+            else:
+                print("wrong flag")
+                sys.exit(1)
+
 
             temp=self.get_metinfo(read, corresCpG)
             if len(temp[read.query_name])>0:
@@ -128,7 +132,15 @@ class BamParser:
 
         return result
 
+    def adhocmhbperread(self,read,mhbdfrow,radius):
+        allcpgpos=self.allCpGintheread(read)
 
+        result=[]
+        for cpgpos in allcpgpos:
+            if cpgpos >=(mhbdfrow['start']-radius) and cpgpos<=(mhbdfrow["end"]+radius):
+                result.append(cpgpos)
+
+        return result
 
     def allCpGintheread(self,read):
         refseq=(read.get_reference_sequence()).upper()
@@ -149,5 +161,9 @@ class BamParser:
         elif flag==1:
             mhbdfrow= kwargs['mhbdfrow']
             return self.singlemhbperread(read,mhbdfrow)
+        elif flag==2:
+            mhbdfrow = kwargs['mhbdfrow']
+            radius=0  ####################################################radius has been set only here####
+            return self.adhocmhbperread(read,mhbdfrow,radius)
 
 
