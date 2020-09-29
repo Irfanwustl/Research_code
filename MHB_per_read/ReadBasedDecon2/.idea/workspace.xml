@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcdaf519-e986-4af0-9bc6-219b1f6a2311" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../MHB_DMR_poorman/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MHB_DMR_poorman/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MHB_DMR_poorman/StoreStat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MHB_DMR_poorman/per_feature_algorithm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MHB_DMR_poorman/poormanMHBsm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MHB_DMR_poorman/sm_from_storage_tester.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MHB_DMR_poorman/storagetester.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ReadAssign.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tester.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadAssign.py" beforeDir="false" afterPath="$PROJECT_DIR$/ReadAssign.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tester.py" beforeDir="false" afterPath="$PROJECT_DIR$/tester.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +18,8 @@
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -43,39 +35,40 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="89" />
-          <entry key="py" value="3717" />
+          <entry key="py" value="3960" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="89" />
-          <entry key="Python" value="3717" />
+          <entry key="Python" value="3960" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ReadAssign.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
+            <state relative-caret-position="255">
+              <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="37" />
               <folding>
                 <element signature="e#0#12#0" expanded="true" />
-                <marker date="1601332814318" expanded="true" signature="1792:1799" ph="..." />
-                <marker date="1601332814318" expanded="true" signature="4390:8180" ph="..." />
-                <marker date="1601332814318" expanded="true" signature="9432:9863" ph="..." />
+                <marker date="1601415692790" expanded="true" signature="1811:1818" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tester.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="3" selection-start-column="3" selection-end-column="3" />
+            <state relative-caret-position="315">
+              <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -95,6 +88,8 @@
       <find>read_SMcpg_associate</find>
       <find>singleReadcounthelper</find>
       <find>need to implement</find>
+      <find>print</find>
+      <find>self.howsm</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -104,8 +99,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/BamParser.py" />
-        <option value="$PROJECT_DIR$/tester.py" />
         <option value="$PROJECT_DIR$/ReadAssign.py" />
+        <option value="$PROJECT_DIR$/tester.py" />
       </list>
     </option>
   </component>
@@ -196,12 +191,12 @@
     <frame x="0" y="23" width="1680" height="979" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.24954791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32919955" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996986" weight="0.16234498" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4996986" visible="true" weight="0.36076662" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -219,22 +214,23 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tester.py">
+    <entry file="file://$PROJECT_DIR$/ReadAssign.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="3" selection-start-column="3" selection-end-column="3" />
+        <state relative-caret-position="255">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <marker date="1601415692790" expanded="true" signature="1811:1818" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ReadAssign.py">
+    <entry file="file://$PROJECT_DIR$/tester.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="129" column="8" selection-start-line="129" selection-start-column="8" selection-end-line="129" selection-end-column="8" />
+        <state relative-caret-position="315">
+          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
           <folding>
-            <element signature="e#0#12#0" expanded="true" />
-            <marker date="1601332814318" expanded="true" signature="1792:1799" ph="..." />
-            <marker date="1601332814318" expanded="true" signature="4390:8180" ph="..." />
-            <marker date="1601332814318" expanded="true" signature="9432:9863" ph="..." />
+            <element signature="e#0#17#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -26,7 +26,7 @@ class ReadAssign:
         self.mapping_quality = quality_score
         self.phred_score=phred_score
         self.bamfile = bamfile
-        self.outpath=outpath+"_howsm_"+self.howsm
+
 
 
         sm['celltype'] = sm.celltype.apply(lambda x: x[1:-1].split(','))
@@ -63,9 +63,11 @@ class ReadAssign:
             break
         '''
 
-        allreads = self.OpenBamFile.fetch()
 
 
+        self.outpath = outpath + "_howsm_" + self.howsm
+
+        self.outpath = self.outpath+"_mode_"+self.mode
 
 
         self.CoreAlgo()
@@ -120,9 +122,12 @@ class ReadAssign:
         for read in allreads:
             no_indel_mapping = re.match("^\d+M$", read.cigarstring)
             if no_indel_mapping == None:
-                print("problem cigar, not processing===", read.cigarstring)
+                #print("problem cigar, not processing===", read.cigarstring)
                 continue
-            self.singleReadcounthelper(read)
+
+            readresult = self.singleReadcounthelper(read)
+            if len(readresult) != 0:
+                self.celltypeassigntoread(readresult, read)
             #break
 
 
@@ -130,7 +135,7 @@ class ReadAssign:
         if read.mapping_quality < self.mapping_quality:
             return []
 
-        print(read)
+        #print(read)
         chr=read.reference_name
         block=read.get_blocks()
         if len(block)!=1:
@@ -143,12 +148,13 @@ class ReadAssign:
         end=block[0][1]+1
 
 
-        print(chr,start,end)
+        #print(chr,start,end)
 
         #print(self.getCorresCpgFromSM(chr,start,end))
 
 
         if self.howsm=='mhb':
+
             return self.MHBperRead_SMcpg_associate(self.getCorresCpgFromSM(chr, start, end), read)
 
         else:
@@ -174,7 +180,7 @@ class ReadAssign:
         if read.query_alignment_start != 0:
             print("...................................read query doe not start at 0.....................................")
             print(read.query_name)
-
+            return []
         yd = read.get_tag("YD")
         offset = 0
         if yd == "r":
@@ -239,10 +245,12 @@ class ReadAssign:
         return result
 
     def MHBperRead_SMcpg_associate(self, smsubset, read):
+        print("...................mhbmode..................")
 
         if read.query_alignment_start != 0:
             print("...................................read query doe not start at 0.....................................")
             print(read.query_name)
+            return []
 
         yd = read.get_tag("YD")
         offset = 0
@@ -275,8 +283,7 @@ class ReadAssign:
 
 
 
-                    print("read base ref base mismatch problem==",
-                          cpg)  ####this is not a problem chr1:21317473 read: A00118:116:HJ7VFDSXX:3:2518:7690:26553
+                    print("read base ref base mismatch problem==",cpg)  ####this is not a problem chr1:21317473 read: A00118:116:HJ7VFDSXX:3:2518:7690:26553
                     print(read.query_name)
                     print(refbase)
                     print(readbase)
@@ -308,14 +315,18 @@ class ReadAssign:
                 print("CIGAR prob")
                 continue
             elif no_indel_mapping1==None:
-                print("need to implement")
-                continue
+                r2result=self.singleReadcounthelper(read2)
+                if len(r2result)!=0:
+                    self.celltypeassigntoread(r2result,read2)
+
                 #self.singleReadcounthelper(read2)
             elif no_indel_mapping2==None:
-                print("need to implement")
-                continue
+                r1result=self.singleReadcounthelper(read1)
+                if len(r1result)!=0:
+                    self.celltypeassigntoread(r1result,read1)
 
-                #self.singleReadcounthelper(read1)
+
+
             else:
 
 
@@ -325,8 +336,8 @@ class ReadAssign:
                 pairedresult=read1result+read2result
 
 
-                print(read1result)
-                print(read2result)
+                #print(read1result)
+                #print(read2result)
 
                 if len(pairedresult)!=0:
                     self.celltypeassigntoread(pairedresult,read1)
@@ -337,17 +348,17 @@ class ReadAssign:
     #output of read_SMcpg_associate
     def celltypeassigntoread(self,readCpgAss,read):
 
-        print("in .....celltypeassigntoread..... ")
-        print(readCpgAss)
+        #print("in .....celltypeassigntoread..... ")
+        #print(readCpgAss)
         flat_list = [item for sublist in readCpgAss for item in sublist]
-        print(flat_list)
+        #print(flat_list)
 
         cellwisecount=Counter(flat_list)
 
 
         firsttwo=cellwisecount.most_common(2)
         if len(firsttwo)==1:
-            print("mostcommon")
+            #print("mostcommon")
 
             self.rawreadcount[firsttwo[0][0]].append(read.query_name)
             #self.rawreadcount.append({firsttwo[0][0]:read.query_name})
