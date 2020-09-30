@@ -20,4 +20,4 @@ outpath=outfolder+"/"+outname
 
 
 #### for our data howsm should be default(no need to mention)###
-b=ReadAssign.ReadAssign(bamfilepath, 40, 20,sm,outpath,mode='pp')
+b=ReadAssign.ReadAssign(bamfilepath, 40, 20,sm,outpath)

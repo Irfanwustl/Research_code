@@ -177,6 +177,13 @@ class ReadAssign:
 
     def read_SMcpg_associate(self, smsubset, read):
 
+
+
+        if smsubset.shape[0]<2:
+            print("singleton")
+            print(smsubset)
+            return []
+
         if read.query_alignment_start != 0:
             print("...................................read query doe not start at 0.....................................")
             print(read.query_name)
