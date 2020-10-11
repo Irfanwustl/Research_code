@@ -15,7 +15,7 @@ fname=sys.argv[1] #"/Users/irffanalahi/Research/weekly/for_10_8_20/my/adhocsm_al
 
 atleastcpg=int(sys.argv[2])
 
-outname=fname+"_atleast"+str(atleastcpg)+"cpg.txt"
+outname=sys.argv[3] #fname+"_atleast"+str(atleastcpg)+"cpg.txt"
 
 df=pd.read_csv(fname,sep="\t")
 df.head()
