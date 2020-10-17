@@ -20,6 +20,8 @@ filename=sys.argv[1] #"/Users/irffanalahi/Research/weekly/for_10_15_20/friday_mo
 
 df=pd.read_csv(filename,sep="\t")
 
+#df=df.fillna(0)
+
 x=  'ground_truth'
 y='predicted'
 celltype="celltype" #"Cell Type" #"celltype"
