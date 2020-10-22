@@ -3,7 +3,7 @@
 
 alloutfolder=$1
 
-suffix=ABSreadcount_divisionedNormalized.txt
+suffix=ABSreadcount_divisioned.txt #ABSreadcount_divisionedNormalized.txt
 
 dirList=($( ls ${alloutfolder} ))
 

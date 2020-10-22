@@ -1,0 +1,8 @@
+disk_group_models: "aadel_compute1_gms"
+disk_group_alignments: "aadel_compute1_gms"
+lsb_sub_additional: "docker0(registry.gsc.wustl.edu/apipe-builder/genome_perl_environment:compute1-8)"
+cwl_runner: cromwell
+cromwell_server: "hsqldb:tmp"
+workflow_builder_backend: simple
+disk_group_scratch: aadel_scratch
+lsf_user_group: compute-aadel

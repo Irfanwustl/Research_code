@@ -1,0 +1,6 @@
+disk_group_models: aadel_gms
+disk_group_alignments: aadel_gms
+lsb_sub_additional: docker(registry.gsc.wustl.edu/apipe-builder/genome_perl_environment:20)
+cwl_runner: cromwell
+workflow_builder_backend: simple
+lsf_job_group: '/genome/prod-builder/17eb4eea6cb344f889c546a3a5f7c686'
