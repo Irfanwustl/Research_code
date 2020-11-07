@@ -1,7 +1,7 @@
 
 smfolder=$1  
 
-longlistofcpg=NeuPBLpoormanHypo_assigned.txt_mhb #pblsubsetpoormanMHB_hypo.txt_assigned.txt_mhb
+longlistofcpg=BluNeuEP_poormanHypo_assigned.txt_bg #NeuPBLpoormanHypo_assigned.txt_mhb #pblsubsetpoormanMHB_hypo.txt_assigned.txt_mhb
 
 
 radius=150
