@@ -1,0 +1,1 @@
+run_mean_sample_v3_full_aftermakedepth.sh here is a prefix need to be changed every batch
