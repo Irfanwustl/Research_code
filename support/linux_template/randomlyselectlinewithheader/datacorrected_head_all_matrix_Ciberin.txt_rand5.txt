@@ -1,0 +1,6 @@
+position	Epcam-Tumor-1313.bedgraph_rolled	Epcam-Tumor-1382.bedgraph_rolled	Epcam-Tumor-1389.bedgraph_rolled	amel-139-P-CD14.bedgraph_rolled	amel-167-P-CD14.bedgraph_rolled	bmel-1254-T-CD14.bedgraph_rolled	bmel-1457-T-CD14.bedgraph_rolled	bmel-960-T-CD14.bedgraph_rolled	cmel-139-P-CD4.bedgraph_rolled	cmel-167-P-CD4.bedgraph_rolled	dmel-1254-T-CD4.bedgraph_rolled	dmel-1457-T-CD4.bedgraph_rolled	dmel-960-T-CD4.bedgraph_rolled	emel-139-P-CD8.bedgraph_rolled	emel-167-P-CD8.bedgraph_rolled	fmel-1254-T-CD8.bedgraph_rolled	fmel-1457-T-CD8.bedgraph_rolled	fmel-960-T-CD8.bedgraph_rolled
+chr1:10691	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+chr1:10679	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+chr1:10589	NA	NA	NA	1	NA	NA	NA	NA	NA	NA	NA	NA	NA	1	NA	NA	NA	NA
+chr1:10469	1	NA	0.835	0.5	0.5	0.4	NA	0.198	0.333	0.602	1	NA	0.6	NA	1	NA	0.75	0.75
+chr1:10571	NA	NA	0.333	1	1	1	NA	1	1	0.714	1	NA	1	0.857	1	0.67	1	1

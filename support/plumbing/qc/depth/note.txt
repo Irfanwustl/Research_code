@@ -1,1 +1,3 @@
-run_mean_sample_v3_full_aftermakedepth.sh here is a prefix need to be changed every batch
+run_mean_sample_v3_full_aftermakedepth.sh here is a prefix need to be changed every batch.
+
+makedepth_v2.sh will save the fullinfo of depth on the otherhand makedepth.sh saves only depth without position.

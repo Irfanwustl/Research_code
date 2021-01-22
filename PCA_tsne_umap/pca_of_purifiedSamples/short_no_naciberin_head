@@ -1,0 +1,10 @@
+position	amel-139-P-CD14.bedgraph_rolled	amel-167-P-CD14.bedgraph_rolled	bmel-1254-T-CD14.bedgraph_rolled	bmel-960-T-CD14.bedgraph_rolled	cmel-139-P-CD4.bedgraph_rolled	cmel-167-P-CD4.bedgraph_rolled	dmel-1457-T-CD4.bedgraph_rolled	dmel-960-T-CD4.bedgraph_rolled	emel-139-P-CD8.bedgraph_rolled	emel-167-P-CD8.bedgraph_rolled	F-1393-T-EpCam.bedgraph_rolled	fmel-1254-T-CD8.bedgraph_rolled	fmel-1457-T-CD8.bedgraph_rolled	fmel-960-T-CD8.bedgraph_rolled	GSM4928782_PDAC1-Ep.bed.bedgraph_rolled	GSM4928783_PDAC2-Ep.bed.bedgraph_rolled	GSM4928784_PDAC3-Ep.bed.bedgraph_rolled	GSM4928785_PDAC4-Ep.bed.bedgraph_rolled	GSM4928786_PDAC5-Ep.bed.bedgraph_rolled	GSM4928787_PDAC6-Ep.bed.bedgraph_rolled	GSM4928788_PDAC7-Ep.bed.bedgraph_rolled
+chr1:64563	0.828	0.663	0.337	0.333	0.527	0.537	0.33	0.36	0.209	0.202	0.753	0.143	0.333	0.273	0.571	0.625	0.23	0.772	1	0.75	0.375
+chr1:64764	0.67	0.714	0.33	0.769	0.47	0.849	0.784	0.5	0.65	0.763	0.716	0.91	0.75	0.663	0.333	1	0.888	0.703	0.25	0.391	1
+chr1:922982	0.947	0.957	0.952	0.733	1	0.859	1	0.948	1	0.895	1	1	0.909	0.836	0.9	0.925	0.923	0.833	0.909	0.647	0.666
+chr1:922992	0.901	1	0.945	0.926	0.911	0.867	1	0.954	0.942	0.896	1	1	1	0.824	0.7	0.909	0.812	1	0.96	0.785	0.555
+chr1:923049	0.865	0.854	0.609	0.771	1	1	1	1	1	0.945	0.666	1	1	0.942	0.571	0.535	0.583	0.444	0.695	0.615	0.142
+chr1:923054	0.811	0.663	0.528	0.847	1	0.929	1	1	0.93	0.939	0.57	0.831	0.75	0.833	0.833	0.2	0.538	0.3	0.739	0.538	0
+chr1:923071	0.61	0.667	0.581	1	0.948	0.815	1	0.68	0.831	0.833	0.67	0.73	0.78	0.939	0.2	0.321	0.23	0.066	0.565	0	0.142
+chr1:923082	0.878	0.798	0.633	0.443	1	1	1	0.941	1	0.938	0.645	0.96	1	0.942	0.333	0.76	0.357	0.25	0.727	0.111	0.166
+chr1:923167	0.683	0.585	0.42	0.628	0.762	0.571	0.43	0.384	0.348	0.197	0.571	0.81	0.702	0.618	0.333	0.23	0.3	0.136	0.4	0.173	0.111

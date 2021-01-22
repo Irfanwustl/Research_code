@@ -1,0 +1,10 @@
+chrom	start	end	amel-139-P-CD14.bedgraph_rolled	amel-167-P-CD14.bedgraph_rolled	bmel-1254-T-CD14.bedgraph_rolled	bmel-1457-T-CD14.bedgraph_rolled	bmel-960-T-CD14.bedgraph_rolled	cmel-139-P-CD4.bedgraph_rolled	cmel-167-P-CD4.bedgraph_rolled	dmel-1254-T-CD4.bedgraph_rolled	dmel-1457-T-CD4.bedgraph_rolled	dmel-960-T-CD4.bedgraph_rolled	emel-139-P-CD8.bedgraph_rolled	emel-167-P-CD8.bedgraph_rolled	Epcam-Tumor-1313.bedgraph_rolled	Epcam-Tumor-1389.bedgraph_rolled	fmel-1254-T-CD8.bedgraph_rolled	fmel-1457-T-CD8.bedgraph_rolled	fmel-960-T-CD8.bedgraph_rolled
+chr1	10468	10470	0.5	0.5	0.4	NA	0.198	0.333	0.602	1	NA	0.6	NA	1	1	0.835	NA	0.75	0.75
+chr1	10470	10472	NA	1	0.333	NA	0.75	0.5	0.8	1	NA	0	0.67	1	1	1	0.5	0.667	1
+chr1	10483	10485	NA	0.6	0.714	NA	1	1	0.75	1	NA	0.667	NA	1	1	1	0.75	1	0.2
+chr1	10488	10490	NA	0.8	0.857	NA	1	1	1	0.5	NA	1	1	1	1	1	1	1	1
+chr1	10492	10494	NA	0.8	0.857	NA	0.6	1	1	1	NA	1	NA	1	1	1	NA	1	0.833
+chr1	10496	10498	NA	1	0.747	NA	0.75	1	1	0.5	NA	1	1	1	1	1	1	0.5	1
+chr1	10524	10526	NA	1	1	NA	1	1	1	1	NA	1	1	0.753	1	1	1	1	1
+chr1	10541	10543	0.5	0.8	0.75	NA	1	1	1	1	NA	1	1	1	1	1	1	1	1
+chr1	10562	10564	0.753	1	1	NA	1	0.857	1	0.667	NA	1	0.6	1	1	1	1	1	1

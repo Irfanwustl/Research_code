@@ -1,0 +1,2 @@
+the sampled line can be out of order, which is not a problem for pca
+

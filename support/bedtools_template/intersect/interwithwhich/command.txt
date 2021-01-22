@@ -1,0 +1,1 @@
+bedtools intersect -a b.bed -b a.bed -wa -wb -header > binta.bed

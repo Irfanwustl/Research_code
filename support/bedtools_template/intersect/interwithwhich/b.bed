@@ -1,0 +1,4 @@
+chrom	start	end	celltype
+chr1	4	6	epcam
+chr1	5	11	pbl
+chr6	67	445	til
