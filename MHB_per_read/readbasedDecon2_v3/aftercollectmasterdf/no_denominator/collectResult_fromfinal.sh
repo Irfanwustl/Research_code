@@ -6,7 +6,7 @@ suffix=posCount.txt
 dirList=($( ls ${alloutfolder} ))
 
 
-ultimateOutput=${alloutfolder}_finalizedOut
+ultimateOutput=${alloutfolder}_${suffix}finalizedOut
 
 mkdir ${ultimateOutput}
 
@@ -49,3 +49,6 @@ do
 
 	(( i++ ))
 done
+
+
+./renameMixture_folderflexible.sh ${ultimateOutput}

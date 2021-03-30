@@ -80,6 +80,7 @@ for (i in 1:length(TYPE))
   else
   {
     print ("badddd")
+    print(TYPE[i])
   }
   
   
@@ -96,7 +97,9 @@ out_file=paste(file_input,"pdf",sep=".")
 #out_top_1000=paste(outname,"txt",sep=".")
 
 
-ggsave(out_file,width = 5, height = 4,dpi = 300,units = "in", device='pdf')
+#ggsave(out_file,width = 5, height = 4,dpi = 300,units = "in", device='pdf')
+
+ggsave(out_file,dpi = 300,units = "in", device='pdf')
 
 #write.table(tolog,out_top_1000,sep="\t", quote = FALSE,row.names=FALSE,col.names=FALSE)
 

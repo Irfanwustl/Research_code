@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6b4486d7-ad2a-49c5-a011-6be382e9d418" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../GENE_related/promoter_generator/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GENE_related/promoter_generator/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../GENE_related/promoter_generator/generate_promoter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diagnosisofoutput/detectedCpGrecord/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diagnosisofoutput/detectedCpGrecord/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diagnosisofoutput/detectedCpGrecord/combineAlldf.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diagnosisofoutput/detectedCpGrecord/compatibleSM.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diagnosisofoutput/detectedCpGrecord/detectedCpGrecord.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diagnosisofoutput/detectedCpGrecord/mergewithref.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diagnosisofoutput/onlyinformative/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diagnosisofoutput/onlyinformative/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diagnosisofoutput/onlyinformative/onlyinformative.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diagnosisofoutput/othertools/dividebyall/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diagnosisofoutput/othertools/dividebyall/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../diagnosisofoutput/othertools/dividebyall/dividebycorres.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fragmentlength_analysis/step1/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fragmentlength_analysis/step1/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../fragmentlength_analysis/step1/seperatereadnames.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../preproecess_for_sig_input/notmeteline/efficientnahandle/pipe/converttometinput/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../preproecess_for_sig_input/notmeteline/efficientnahandle/pipe/converttometinput/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../preproecess_for_sig_input/notmeteline/efficientnahandle/pipe/converttometinput/ciberintometinput.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../preproecess_for_sig_input/notmeteline/efficientnahandle/pipe/imputation/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../preproecess_for_sig_input/notmeteline/efficientnahandle/pipe/imputation/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../preproecess_for_sig_input/notmeteline/efficientnahandle/pipe/imputation/imputer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../preproecess_for_sig_input/notmeteline/efficientnahandle/pipe/metpostprocessing/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../preproecess_for_sig_input/notmeteline/efficientnahandle/pipe/metpostprocessing/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../preproecess_for_sig_input/notmeteline/efficientnahandle/pipe/metpostprocessing/combinepos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../preproecess_for_sig_input/notmeteline/efficientnahandle/pipe/metpostprocessing/compartmentmean.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../preproecess_for_sig_input/notmeteline/efficientnahandle/pipe/metpostprocessing/compartmentwisethreshold.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../preproecess_for_sig_input/notmeteline/efficientnahandle/pipe/metpostprocessing/forbamintersect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../preproecess_for_sig_input/notmeteline/efficientnahandle/pipe/metpostprocessing/metthresholdpassed.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../preproecess_for_sig_input/notmeteline/efficientnahandle/pipe/metpostprocessing/sortDMR.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../readbasedDecon2_v3/aftercollectmasterdf/Relative/collectResult_fromfinal.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../readbasedDecon2_v3/aftercollectmasterdf/Relative/renameMixture_folderflexible.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../readbasedDecon2_v3/aftercollectmasterdf/Relative/store_the_results.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../readbasedDecon2_v3/aftercollectmasterdf/no_denominator/collectResult_fromfinal.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../readbasedDecon2_v3/aftercollectmasterdf/no_denominator/collectResult_fromfinal.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PCA_tsne_umap/pca_of_purifiedSamples/addbludata/Rplots.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../PCA_tsne_umap/pca_of_purifiedSamples/addbludata/Rplots.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PCA_tsne_umap/pca_of_purifiedSamples/addbludata/high_res_without_disp_abulmgi_candisc20_blu.R" beforeDir="false" afterPath="$PROJECT_DIR$/../../PCA_tsne_umap/pca_of_purifiedSamples/addbludata/high_res_without_disp_abulmgi_candisc20_blu.R" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../support/imppandastool/merge3dfcbindlike.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../support/imppandastool/merge3dfcbindlike.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../visualization/Pearson_corr_with_label/.ipynb_checkpoints/simple_pearson_corr-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../visualization/Pearson_corr_with_label/.ipynb_checkpoints/simple_pearson_corr-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../visualization/Pearson_corr_with_label/simple_pearson_corr.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../visualization/Pearson_corr_with_label/simple_pearson_corr.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../visualization/heatmap/clustermap.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../visualization/heatmap/clustermap.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../visualization/heatmap/simple_heatmap.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../visualization/heatmap/simple_heatmap.ipynb" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-2000892379">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.opened" value="6" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="3" />
+          <entry key="sh" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Bash" value="3" />
+          <entry key="Python" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="2011" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="2011" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="-1596891913">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="115" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="115" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="1555784196">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.2" value="2" />
+          <entry key="project.open.time.3" value="2" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="9" />
+          <entry key="py" value="2312" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="Python" value="2312" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="1374496302">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="526" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="526" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ReadAssign.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-4103">
+              <caret line="249" column="29" selection-start-line="249" selection-start-column="8" selection-end-line="249" selection-end-column="29" />
+              <folding>
+                <element signature="e#0#12#0" expanded="true" />
+                <marker date="1615654898293" expanded="true" signature="15487:16060" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aRead.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2340">
+              <caret line="156" selection-start-line="156" selection-end-line="156" />
+              <folding>
+                <marker date="1615647164771" expanded="true" signature="1311:1459" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>read.qu</find>
+      <find>refbase</find>
+      <find>qpos</find>
+      <find>firstrefpos = read.get_reference_positions()[0]</find>
+      <find>read.quer</find>
+      <find>self.pattern_percentage</find>
+      <find>Wrong Refbase</find>
+      <find>read.ci</find>
+      <find>readObjectList</find>
+      <find>eadObjectList.append</find>
+      <find>CpGsanityCheck</find>
+      <find>qu</find>
+      <find>toupp</find>
+      <find>upper</find>
+      <find>get_aligned_pairs</find>
+      <find>counter</find>
+      <find>getqposAndRefbase</find>
+      <find>mergewithmate</find>
+      <find>aRead.aread</find>
+      <find>all_notmatched</find>
+      <find>allnotmatched</find>
+      <find>le_allnotmatched</find>
+      <find>query_na</find>
+      <find>que</find>
+      <find>singleReadcounthelper</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/aRead.py" />
+        <option value="$PROJECT_DIR$/ReadAssign.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="979" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ReadBasedDecon5_blue_hypo_hyper_allcpgrecord" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ReadBasedDecon5_blue_hypo_hyper_allcpgrecord" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6b4486d7-ad2a-49c5-a011-6be382e9d418" name="Default Changelist" comment="" />
+      <created>1604407752394</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604407752394</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="979" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.009041592" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3299363" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.25591883" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/EntryReadDecon.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/pandas/core/construction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="379" selection-start-line="379" selection-end-line="379" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReadAssign.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4103">
+          <caret line="249" column="29" selection-start-line="249" selection-start-column="8" selection-end-line="249" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#12#0" expanded="true" />
+            <marker date="1615654898293" expanded="true" signature="15487:16060" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aRead.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2340">
+          <caret line="156" selection-start-line="156" selection-end-line="156" />
+          <folding>
+            <marker date="1615647164771" expanded="true" signature="1311:1459" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

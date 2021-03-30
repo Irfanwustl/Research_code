@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="16538607-8c55-4f12-b29a-4088e8054768" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../../GENE_related/promoter_generator/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../GENE_related/promoter_generator/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../GENE_related/promoter_generator/generate_promoter.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../converttometinput/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../converttometinput/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../converttometinput/ciberintometinput.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imputation/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imputation/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../imputation/imputer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/combinepos.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compartmentmean.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compartmentwisethreshold.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/forbamintersect.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/metthresholdpassed.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sortDMR.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tools/qcutoff.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../MHB_per_read/readbasedDecon2_v3/aftercollectmasterdf/Relative/collectResult_fromfinal.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../MHB_per_read/readbasedDecon2_v3/aftercollectmasterdf/Relative/renameMixture_folderflexible.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../MHB_per_read/readbasedDecon2_v3/aftercollectmasterdf/Relative/store_the_results.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../PCA_tsne_umap/pca_of_purifiedSamples/addbludata/Rplots.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../PCA_tsne_umap/pca_of_purifiedSamples/addbludata/Rplots.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../PCA_tsne_umap/pca_of_purifiedSamples/addbludata/high_res_without_disp_abulmgi_candisc20_blu.R" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../PCA_tsne_umap/pca_of_purifiedSamples/addbludata/high_res_without_disp_abulmgi_candisc20_blu.R" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../visualization/Pearson_corr_with_label/.ipynb_checkpoints/simple_pearson_corr-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../visualization/Pearson_corr_with_label/.ipynb_checkpoints/simple_pearson_corr-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../visualization/Pearson_corr_with_label/simple_pearson_corr.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../visualization/Pearson_corr_with_label/simple_pearson_corr.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../visualization/heatmap/clustermap.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../visualization/heatmap/clustermap.ipynb" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="71342344">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="14" />
+          <entry key="project.open.time.0" value="5" />
+          <entry key="project.open.time.2" value="4" />
+          <entry key="project.open.time.3" value="3" />
+          <entry key="project.open.time.4" value="2" />
+          <entry key="project.opened" value="14" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="15" />
+          <entry key="sh" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Bash" value="2" />
+          <entry key="Python" value="15" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="Python Console" value="19" />
+          <entry key="dummy" value="24" />
+          <entry key="py" value="6284" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="24" />
+          <entry key="Python" value="6303" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tools/qcutoff.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+                <marker date="1613105929244" expanded="true" signature="45:611" ph="..." />
+                <marker date="1613105929244" expanded="true" signature="251:262" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/compartmentwisethreshold.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="233">
+              <caret line="119" selection-start-line="119" selection-end-line="134" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/metthresholdpassed.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="15" selection-start-line="15" selection-end-line="18" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>self.met</find>
+      <find>metriname</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/metthresholdpassed.py" />
+        <option value="$PROJECT_DIR$/combinepos.py" />
+        <option value="$PROJECT_DIR$/venv/allcompartmentmean.py" />
+        <option value="$PROJECT_DIR$/compartmentmean.py" />
+        <option value="$PROJECT_DIR$/compartmentwisethreshold.py" />
+        <option value="$PROJECT_DIR$/sortDMR.py" />
+        <option value="$PROJECT_DIR$/dorreadcountingbam.py" />
+        <option value="$PROJECT_DIR$/forreadcountingDMR.py" />
+        <option value="$PROJECT_DIR$/forbamintersect.py" />
+        <option value="$PROJECT_DIR$/generatefinalref/collectrequirednumCpG.py" />
+        <option value="$PROJECT_DIR$/tools/cutoff.py" />
+        <option value="$PROJECT_DIR$/tools/qcutoff.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="979" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="metpostprocessing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metpostprocessing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metpostprocessing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metpostprocessing" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="metpostprocessing" type="b2602c69:ProjectViewProjectNode" />
+              <item name="metpostprocessing" type="462c0819:PsiDirectoryNode" />
+              <item name="venv" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="16538607-8c55-4f12-b29a-4088e8054768" name="Default Changelist" comment="" />
+      <created>1611565267513</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611565267513</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="979" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32919955" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32919955" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/combinepos.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/run_metthresholdpassed.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="166" lean-forward="true" selection-start-column="43" selection-end-column="166" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/allcompartmentmean.py" />
+    <entry file="file://$PROJECT_DIR$/compartmentmean.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1350">
+          <caret line="90" column="3" selection-start-line="90" selection-start-column="3" selection-end-line="92" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sortDMR.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="33" column="62" selection-start-line="33" selection-start-column="62" selection-end-line="33" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_combinepos.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generatefinalref/collectrequirednumCpG.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1545">
+          <caret line="108" column="4" selection-start-line="108" selection-start-column="4" selection-end-line="108" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/combinepos.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="52" selection-end-line="52" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/forbamintersect.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="49" />
+          <folding>
+            <element signature="e#50#69#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metthresholdpassed.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" selection-start-line="15" selection-end-line="18" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/compartmentwisethreshold.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="119" selection-start-line="119" selection-end-line="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tools/qcutoff.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="54" selection-start-line="17" selection-start-column="54" selection-end-line="17" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+            <marker date="1613105929244" expanded="true" signature="45:611" ph="..." />
+            <marker date="1613105929244" expanded="true" signature="251:262" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
