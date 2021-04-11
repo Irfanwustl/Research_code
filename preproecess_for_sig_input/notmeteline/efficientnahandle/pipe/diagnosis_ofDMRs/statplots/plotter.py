@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 import matplotlib.backends.backend_pdf
+import numpy as np
 
 class Plottter:
 
@@ -44,6 +45,7 @@ class Plottter:
     def storealldfspecificinfo(self):
         #######plot_delta_vs_numdmr#######
         self.delta = self.metoutdf.iloc[:, 4]
+        self.qval = self.metoutdf.iloc[:, 3]
         self.absdelta = self.delta.abs()
         self.lenabsdelta = len(self.absdelta)
 
@@ -73,7 +75,7 @@ class Plottter:
     def plot_delta_vs_numdmrofDMR(self):
 
 
-        return self.coreScatterplot(self.numofDMR_array, self.absdelta, "#DMR", "delta","delta vs #DMR")
+        return self.coreScatterplot(self.numofDMR_array, self.absdelta, "#DMR", "delta","delta vs #DMR",qvalue=self.qval)
 
 
     def plot_delta_vs_numdmrofCpG(self):
@@ -89,7 +91,13 @@ class Plottter:
     def coreScatterplot(self,x,y,xlabel,ylabel,title,**kwargs):
         fig = plt.figure()
 
-        plt.scatter(x,y)
+
+        if 'qvalue' in kwargs:
+            plt.scatter(x, y,c=kwargs['qvalue'],cmap='viridis')
+            plt.colorbar(label="qvalue");
+
+        else:
+            plt.scatter(x,y)
 
 
         
