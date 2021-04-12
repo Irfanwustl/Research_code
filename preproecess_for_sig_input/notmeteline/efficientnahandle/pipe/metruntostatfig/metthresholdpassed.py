@@ -3,13 +3,13 @@ import sys
 
 class ThresholdPass:
     def __init__(self, metout, qcut, diffcut, outname, **kwargs):
-        self.metdf=pd.read_csv(metout,sep="\t")
+        self.metdf=pd.read_csv(metout,sep="\t",header=None)
         self.qcut=qcut
         self.diffcut=diffcut
         self.outname=outname
 
-        self.qcol=self.metdf.columns[3]
-        self.diffcol=self.metdf.columns[4]
+        self.qcol=3
+        self.diffcol=4
 
         self.coreAlgo()
 
@@ -20,11 +20,9 @@ class ThresholdPass:
 
         hypodf=self.metdf.loc[(self.metdf[self.qcol]<=self.qcut) & (self.metdf[self.diffcol]<=-self.diffcut)]
 
-        if hyperdf.shape[0]!=0:
-            hyperdf.to_csv(self.outname+"_hyper.txt",sep="\t",index=False)
+        hyperdf.to_csv(self.outname+"_hyper.txt",sep="\t",index=False,header=None)
 
-        if hypodf.shape[0]!=0:
-            hypodf.to_csv(self.outname + "_hypo.txt", sep="\t", index=False)
+        hypodf.to_csv(self.outname + "_hypo.txt", sep="\t", index=False, header=None)
 
 
 
