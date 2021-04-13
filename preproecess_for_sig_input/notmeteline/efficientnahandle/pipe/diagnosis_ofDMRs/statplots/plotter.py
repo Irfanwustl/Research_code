@@ -34,6 +34,8 @@ class Plottter:
         '''
         fig5=self.plot_logq_vs_delta()
         fig6=self.plot_logq_vs_delta_nolim()
+        fig7=self.plot_logq_vs_deltadiff()
+        fig8=self.plot_logq_vs_deltadiffnolim()
 
 
 
@@ -47,6 +49,8 @@ class Plottter:
         '''
         pdf.savefig(fig5)
         pdf.savefig(fig6)
+        pdf.savefig(fig7)
+        pdf.savefig(fig8)
         pdf.close()
 
 
@@ -58,6 +62,8 @@ class Plottter:
     def storealldfspecificinfo(self):
         if self.deltcol in self.metoutdf.columns:
             self.deltcol=self.deltcol
+            self.deltcol2="diff"  ###it must be present
+            self.delta2 = self.metoutdf[self.deltcol2]
         elif "diff" in self.metoutdf.columns:
             self.deltcol="diff"
         else:
@@ -113,14 +119,31 @@ class Plottter:
         nplog=-np.log10(self.qval)
 
 
-        return  self.coreScatterplot(self.delta, nplog, "delta", "-log10(q)","qval vs delta",xlim=[-1,1])
+        return  self.coreScatterplot(self.delta, nplog, "delta", "-log10(q)","qval vs compamentwise delta",xlim=[-1,1])
+
+    def plot_logq_vs_deltadiff(self):
+
+
+        nplog=-np.log10(self.qval)
+
+
+        return  self.coreScatterplot(self.delta2, nplog, "delta", "-log10(q)","qval vs global delta",xlim=[-1,1])
+
+    def plot_logq_vs_deltadiffnolim(self):
+
+
+        nplog=-np.log10(self.qval)
+
+
+        return  self.coreScatterplot(self.delta2, nplog, "delta", "-log10(q)","qval vs global delta")
+
 
     def plot_logq_vs_delta_nolim(self):
 
         nplog=-np.log10(self.qval)
 
 
-        return  self.coreScatterplot(self.delta, nplog, "delta", "-log10(q)","qval vs delta")
+        return  self.coreScatterplot(self.delta, nplog, "delta", "-log10(q)","qval vs compamentwise delta")
 
 
 
