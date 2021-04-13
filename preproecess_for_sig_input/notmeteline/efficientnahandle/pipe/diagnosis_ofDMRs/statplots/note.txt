@@ -1,0 +1,3 @@
+Pending: store he percentile values.
+If time try to calculate number of DMR for each percentile box.
+ 
