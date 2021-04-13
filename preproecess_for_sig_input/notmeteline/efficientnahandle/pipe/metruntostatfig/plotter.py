@@ -1,8 +1,11 @@
+####### percentile plot only works for hypo
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import sys
 import matplotlib.backends.backend_pdf
 import numpy as np
+import seaborn as sns
 
 class Plottter:
 
@@ -12,6 +15,7 @@ class Plottter:
         self.outname=outname
 
         self.deltcol=deltacol
+
 
        
 
@@ -32,8 +36,16 @@ class Plottter:
         fig3=self.plot_DMRlengthCpG()
         fig4=self.plot_DMRlengthBP()
         '''
-        fig5=self.plot_logq_vs_delta()
-        fig6=self.plot_logq_vs_delta_nolim()
+        logqvsdeltafiglist=self.all_plot_logqvsdelta()
+        logqvsdeltafiglistpercentile = self.all_plot_logqvsdelta(percentile_plot=True)
+
+        logqvsdeltaSIZEfiglist = self.all_plot_logqvsdelta(size=self.numCpG,percentile_plot=True)
+
+        logqvsdeltabpSIZEfiglist=self.all_plot_logqvsdelta(size=self.bplength,percentile_plot=True)
+
+        #logqvsdeltacpgper300bp=self.all_plot_logqvsdelta(size=self.cpgper300bp)
+
+        figlist=logqvsdeltafiglist+logqvsdeltafiglistpercentile + logqvsdeltaSIZEfiglist+logqvsdeltabpSIZEfiglist  #+logqvsdeltacpgper300bp
 
 
 
@@ -45,8 +57,8 @@ class Plottter:
         pdf.savefig(fig3)
         pdf.savefig(fig4)
         '''
-        pdf.savefig(fig5)
-        pdf.savefig(fig6)
+        for fig in figlist:
+            pdf.savefig(fig)
         pdf.close()
 
 
@@ -56,20 +68,30 @@ class Plottter:
 
 
     def storealldfspecificinfo(self):
+        self.isdelta2 =False
         if self.deltcol in self.metoutdf.columns:
-            self.deltcol=self.deltcol
-        elif "diff" in self.metoutdf.columns:
-            self.deltcol="diff"
-        else:
-            print("wrong column")
-            print(self.metout)
-            print("exiting")
-            sys.exit(1)
+
+            self.deltcol2=self.deltcol
+            self.delta2 = self.metoutdf[self.deltcol2]
+            self.isdelta2=True
+
+
+        self.deltcol="diff"
+        self.delta = self.metoutdf[self.deltcol]
+
+        self.numCpG=self.metoutdf.iloc[:, 5]
+
+
+        self.metoutdf['bp_length']=self.metoutdf.iloc[:, 2]-self.metoutdf.iloc[:, 1]
+        self.bplength =self.metoutdf['bp_length']
+
+        self.metoutdf['cpg_per300bp'] = self.numCpG*1.0*300/self.bplength
+        self.cpgper300bp=self.metoutdf['cpg_per300bp']
 
 
 
         #######plot_delta_vs_numdmr#######
-        self.delta = self.metoutdf[self.deltcol]
+
         
         self.qval = self.metoutdf.iloc[:, 3]
         self.absdelta = self.delta.abs()
@@ -107,20 +129,43 @@ class Plottter:
 
 
 
-    def plot_logq_vs_delta(self):
+
+    def all_plot_logqvsdelta(self,size=None,percentile_plot=False):
+        nplog = -np.log10(self.qval)
+        figlist=[]
+
+        figlist.append(self.plot_logq_vs_delta(self.delta, nplog, "global delta", "-log10(q)",
+                                               "qval vs global delta", True,size=size,percentile_plot=percentile_plot))
+        figlist.append(self.plot_logq_vs_delta(self.delta, nplog, "global delta", "-log10(q)",
+                                               "qval vs global delta", False,size=size,percentile_plot=percentile_plot))
+
+        if self.isdelta2==True:
+            figlist.append(self.plot_logq_vs_delta(self.delta2,nplog,"compartmentwise delta", "-log10(q)","qval vs compartmentwise delta",True,size=size,percentile_plot=percentile_plot))
+            figlist.append(self.plot_logq_vs_delta(self.delta2, nplog, "compartmentwise delta", "-log10(q)","qval vs compartmentwise delta", False,size=size,percentile_plot=percentile_plot))
+
+        return figlist
+
+
+
+
+    def plot_logq_vs_delta(self,x,y,xlabel,ylabel,title,islim,size=None,percentile_plot=False):
 
 
         nplog=-np.log10(self.qval)
 
 
-        return  self.coreScatterplot(self.delta, nplog, "delta", "-log10(q)","qval vs delta",xlim=[-1,1])
+        if islim==True:
+            return self.coreScatterplot(self.delta, nplog, xlabel, ylabel, title,size=size,percentile_plot=percentile_plot,xlim=[-1, 1])
+        else:
+            return self.coreScatterplot(self.delta, nplog, xlabel, ylabel, title,size=size,percentile_plot=percentile_plot)
 
-    def plot_logq_vs_delta_nolim(self):
 
-        nplog=-np.log10(self.qval)
+    def core_percentile(self,a,perc):
+        return np.percentile(a,perc)
 
 
-        return  self.coreScatterplot(self.delta, nplog, "delta", "-log10(q)","qval vs delta")
+
+
 
 
 
@@ -134,20 +179,56 @@ class Plottter:
 
 
 
-    def coreScatterplot(self,x,y,xlabel,ylabel,title,**kwargs):
+    def coreScatterplot(self,x,y,xlabel,ylabel,title,size=None,percentile_plot=False,**kwargs):
         fig = plt.figure()
 
 
         if 'qvalue' in kwargs:
+            '''
             plt.scatter(x, y,c=kwargs['qvalue'],cmap='viridis')
             plt.colorbar(label="qvalue")
+            '''
+            print("need to test/implement again. Exiting")
+            sys.exit(1)
 
         elif 'xlim' in kwargs:
-            plt.scatter(x, y)
+            sns.scatterplot(x, y,edgecolor='none',size=size)
             plt.xlim(kwargs['xlim'])
 
         else:
-            plt.scatter(x,y)
+            sns.scatterplot(x, y,edgecolor='none',size=size)
+
+        if percentile_plot==True: ####### only works for hypo
+
+            xpos=np.abs(x)
+            x75=self.core_percentile(xpos,75)
+            x95=self.core_percentile(xpos,95)
+            x99 = self.core_percentile(xpos, 99)
+            y75=self.core_percentile(y,75)
+            y95=self.core_percentile(y,95)
+            y99 = self.core_percentile(y, 99)
+
+
+            #print(x75,x95,x99,y75,y95,y99)  #### need to show on text
+
+            plt.axvline(-x99, color='r', ls='--', label="99 percentile")
+            plt.axvline(-x95, color='g', ls='--', label="95 percentile")
+            plt.axvline(-x75,color='b',ls='--',label="75 percentile")
+
+            plt.axhline(y99, color='r', ls='--')
+            plt.axhline(y95, color='g', ls='--')
+            plt.axhline(y75,color='b',ls='--')
+
+
+
+
+
+            plt.legend()
+
+
+
+
+
 
 
         
@@ -155,6 +236,7 @@ class Plottter:
         plt.title(title)
         plt.xlabel(xlabel)
         plt.ylabel(ylabel)
+        plt.close()
 
         return fig
 

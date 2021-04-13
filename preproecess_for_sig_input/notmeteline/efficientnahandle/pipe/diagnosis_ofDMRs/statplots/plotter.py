@@ -153,6 +153,7 @@ class Plottter:
 
         nplog=-np.log10(self.qval)
 
+
         if islim==True:
             return self.coreScatterplot(self.delta, nplog, xlabel, ylabel, title,size=size,percentile_plot=percentile_plot,xlim=[-1, 1])
         else:
@@ -210,18 +211,17 @@ class Plottter:
 
             #print(x75,x95,x99,y75,y95,y99)  #### need to show on text
 
-
+            plt.axvline(-x99, color='r', ls='--', label="99 percentile")
+            plt.axvline(-x95, color='g', ls='--', label="95 percentile")
             plt.axvline(-x75,color='b',ls='--',label="75 percentile")
 
-            plt.axvline(-x95, color='g',ls='--',label="95 percentile")
-
-            plt.axvline(-x99, color='r',ls='--',label="99 percentile")
-
+            plt.axhline(y99, color='r', ls='--')
+            plt.axhline(y95, color='g', ls='--')
             plt.axhline(y75,color='b',ls='--')
 
-            plt.axhline(y95, color='g',ls='--')
 
-            plt.axhline(y99, color='r',ls='--')
+
+
 
             plt.legend()
 
