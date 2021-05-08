@@ -7,16 +7,20 @@ import matplotlib.backends.backend_pdf
 import numpy as np
 import seaborn as sns
 
+
 class Plottter:
 
-    def __init__(self, metoutile,deltacol,outname,**kwargs):
+    def __init__(self, metoutile,deltacol,outname,annotfile,**kwargs):
         self.metout=metoutile
         self.metoutdf=pd.read_csv(self.metout,sep="\t")
         self.outname=outname
 
         self.deltcol=deltacol
 
+        self.annotationfile=pd.read_csv(annotfile,sep="\t")
+   #("/Users/irffanalahi/Research/weekly/for_4_14_21/newRefs/CD8til/metout/genomic_analysis/meltumMONOvsTCOMBINEDCD4tilexcludedgeneboby_input_out_mincpg2_q0.05_diff0.1_genomic_feature_withrepeat_header_celltypeseperated/plot/subsetofCD8genes.txt",sep="\t")
 
+        
        
 
         #self.corealgo()
@@ -25,8 +29,10 @@ class Plottter:
 
 
     def corealgo(self):
+
        
         self.storealldfspecificinfo()
+        self.annotattionsupport()
 
 
         '''
@@ -67,7 +73,18 @@ class Plottter:
 
 
 
+    def annotattionsupport(self):
+
+
+        self.annotcorresmtout=pd.merge(self.metoutdf,self.annotationfile,left_on=['chrom','start','end'],right_on=['chrom','start','end'])
+
+
+
+
+
     def storealldfspecificinfo(self):
+
+
         self.isdelta2 =False
         if self.deltcol in self.metoutdf.columns:
 
@@ -94,6 +111,7 @@ class Plottter:
 
         
         self.qval = self.metoutdf.iloc[:, 3]
+        self.metoutdf['npqlog'] = -np.log10(self.qval)
         self.absdelta = self.delta.abs()
         self.lenabsdelta = len(self.absdelta)
 
@@ -130,34 +148,35 @@ class Plottter:
 
 
 
-    def all_plot_logqvsdelta(self,size=None,percentile_plot=False):
-        nplog = -np.log10(self.qval)
+    def all_plot_logqvsdelta(self,size=None,percentile_plot=False,**kwargs):
+        nplog = self.metoutdf['npqlog']
         figlist=[]
 
         figlist.append(self.plot_logq_vs_delta(self.delta, nplog, "global delta", "-log10(q)",
-                                               "qval vs global delta", True,size=size,percentile_plot=percentile_plot))
+                                               "qval vs global delta", True,size=size,percentile_plot=percentile_plot,annot=self.deltcol))
         figlist.append(self.plot_logq_vs_delta(self.delta, nplog, "global delta", "-log10(q)",
-                                               "qval vs global delta", False,size=size,percentile_plot=percentile_plot))
+                                               "qval vs global delta", False,size=size,percentile_plot=percentile_plot,annot=self.deltcol))
 
         if self.isdelta2==True:
-            figlist.append(self.plot_logq_vs_delta(self.delta2,nplog,"compartmentwise delta", "-log10(q)","qval vs compartmentwise delta",True,size=size,percentile_plot=percentile_plot))
-            figlist.append(self.plot_logq_vs_delta(self.delta2, nplog, "compartmentwise delta", "-log10(q)","qval vs compartmentwise delta", False,size=size,percentile_plot=percentile_plot))
+            figlist.append(self.plot_logq_vs_delta(self.delta2,nplog,"compartmentwise delta", "-log10(q)","qval vs compartmentwise delta",True,size=size,percentile_plot=percentile_plot,annot=self.deltcol2))
+            figlist.append(self.plot_logq_vs_delta(self.delta2, nplog, "compartmentwise delta", "-log10(q)","qval vs compartmentwise delta", False,size=size,percentile_plot=percentile_plot,annot=self.deltcol2))
 
         return figlist
 
 
 
 
-    def plot_logq_vs_delta(self,x,y,xlabel,ylabel,title,islim,size=None,percentile_plot=False):
+    def plot_logq_vs_delta(self,x,y,xlabel,ylabel,title,islim,size=None,percentile_plot=False,**kwargs):
 
 
-        nplog=-np.log10(self.qval)
+
 
 
         if islim==True:
-            return self.coreScatterplot(self.delta, nplog, xlabel, ylabel, title,size=size,percentile_plot=percentile_plot,xlim=[-1, 1])
+            return self.coreScatterplot(x, y, xlabel, ylabel, title,size=size,percentile_plot=percentile_plot,xlim=[-1, 1],**kwargs)
+
         else:
-            return self.coreScatterplot(self.delta, nplog, xlabel, ylabel, title,size=size,percentile_plot=percentile_plot)
+            return self.coreScatterplot(x, y, xlabel, ylabel, title,size=size,percentile_plot=percentile_plot,**kwargs)
 
 
     def core_percentile(self,a,perc):
@@ -191,12 +210,17 @@ class Plottter:
             print("need to test/implement again. Exiting")
             sys.exit(1)
 
-        elif 'xlim' in kwargs:
+        if 'xlim' in kwargs:
             sns.scatterplot(x, y,edgecolor='none',size=size)
             plt.xlim(kwargs['xlim'])
+            plt.ylim([5,40])  #################################################################################################
+
+
 
         else:
-            sns.scatterplot(x, y,edgecolor='none',size=size)
+            sns.scatterplot(x, y,edgecolor='none',size=size,color='y')
+            #plt.scatter(-0.414764, -np.log10(2.2127e-06),color="black")
+            #plt.annotate("TIGIT", (-0.414764, -np.log10(2.2127e-06)))
 
         if percentile_plot==True: ####### only works for hypo
 
@@ -224,6 +248,44 @@ class Plottter:
 
 
             plt.legend()
+
+        if "annot" in  kwargs:
+
+
+
+            annotdelta=kwargs["annot"]
+            if annotdelta in self.annotcorresmtout.columns:
+                pass
+            elif annotdelta+"_x" in self.annotcorresmtout.columns:
+                annotdelta=annotdelta+"_x"
+            else:
+
+                print(annotdelta)
+                print("above annotation wrong delta. Exiting")
+                sys.exit(1)
+
+
+            if "color" in self.annotcorresmtout.columns:
+                plt.scatter(self.annotcorresmtout[annotdelta], self.annotcorresmtout['npqlog'], color=self.annotcorresmtout['color'])
+            else:
+                plt.scatter(self.annotcorresmtout[annotdelta], self.annotcorresmtout['npqlog'], color="black")
+
+
+
+            for index, row in self.annotcorresmtout.iterrows():
+
+
+                if "color" in self.annotcorresmtout.columns:
+                    if row['color']=="black":
+                        plt.annotate(row['Gene/Repeat type'], (row[annotdelta], row['npqlog']),fontsize=8)
+
+                else:
+                    plt.annotate(row['Gene/Repeat type'], (row[annotdelta], row['npqlog']), fontsize=8)
+
+
+
+
+
 
 
 

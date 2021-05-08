@@ -11,7 +11,7 @@ infocolname=["ReadName","acceptedCpGLen","notacceptedCpGLen","len_hypolist","len
 indf=pd.read_csv(infile,sep="\t")
 outdf=indf[infocolname]
 
-outdf.to_csv(outfile,sep="\t",index=False,header=None)
+outdf.to_csv(outfile,sep="\t",index=False)
 
 
 

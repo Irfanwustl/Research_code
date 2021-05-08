@@ -10,7 +10,7 @@ phenofile=$3
 
 
 
-qcut=0.05
+qcut=0.00001
 diffcut=0.1
 meththrsholdpassed=${metout}_q${qcut}_diff${diffcut}
 

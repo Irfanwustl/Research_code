@@ -21,7 +21,7 @@ class driverCompartmentmean:
 
         self.indir=metoutfolder
 
-        self.pheno=pd.read_csv(phenofile, sep="\t", header=None, index_col=0)
+        self.pheno=pd.read_csv(phenofile, sep="\t", header=None, index_col=0,low_memory=False)
 
         self.outdir=outname
 
@@ -35,10 +35,11 @@ class driverCompartmentmean:
             self.rowmeandf[['chrom', 'pos']] = self.rowmeandf.iloc[:, 0].str.split(":", expand=True)
 
             self.rowmeandf['pos'] = self.rowmeandf['pos'].astype(int)
+            self.rowmeanfile=imputedfileorrowmean+"_rowmean.txt"
             self.rowmeandf.to_csv(imputedfileorrowmean+"_rowmean.txt",sep="\t",index=False)
 
         else:
-            self.rowmeandf = pd.read_csv(imputedfileorrowmean,sep="\t")
+            self.rowmeanfile=imputedfileorrowmean
 
         self.runallfilesparallal()
 
@@ -71,7 +72,7 @@ class driverCompartmentmean:
     def runallfilesparallal(self):
         objlist = []
         for file in glob.glob(self.indir+"/*.txt"):
-            tempobj=compartmentmean_parallal.AllCompartmentMean(self.rowmeandf,file,self.pheno,self.outdir+"/"+os.path.basename(file))
+            tempobj=compartmentmean_parallal.AllCompartmentMean(self.rowmeanfile,file,self.pheno,self.outdir+"/"+os.path.basename(file))
             objlist.append(tempobj)
 
         with concurrent.futures.ProcessPoolExecutor() as executor:

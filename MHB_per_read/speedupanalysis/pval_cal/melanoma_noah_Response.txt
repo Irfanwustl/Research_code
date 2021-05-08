@@ -1,0 +1,49 @@
+Mixture	Time point	Response
+Y-3703-cfDNA.bg	pre tx	DCB
+Y-3720-cfDNA.bg	on tx	DCB
+tot-YUCLUE_20-3998-cfDNA.bg	pre tx	NDB
+Y-3920-cfDNA.bg	pre tx	DCB
+Y-3938-cfDNA.bg	on tx	DCB
+y4-YUEVRY_19_3935-cfDNA.bg	pre tx	DCB
+Y-3880-cfDNA.bg	pre tx	NDB
+Y-3893-cfDNA.bg	on tx	NDB
+Y-3918-cfDNA.bg	pre tx	DCB
+Y-3694-cfDNA.bg	pre tx	DCB
+Y-3711-cfDNA.bg	on tx	DCB
+tot-YUMARS_15-3443-cfDNA.bg	pre tx	DCB
+Y-3879-cfDNA.bg	pre tx	DCB
+tot-YUMICRO_20-4006-cfDNA.bg	pre tx	NDB
+y4-YUMORF_17_3654-cfDNA.bg	pre tx	exclude 
+tot-YUMOTE_17-3755-cfDNA.bg	pre tx	NDB
+y4-YUPARK_18_3832-cfDNA.bg	pre tx	exclude 
+y4-YUPARK_18_3856-cfDNA.bg	on tx	exclude 
+Y-3925-cfDNA.bg	pre tx	DCB
+Y-3941-cfDNA.bg	on tx	DCB
+tot-YUPRAF_19-3925-cfDNA.bg	pre tx	DCB
+tot-YUREIL_17-3713-cfDNA.bg	pre tx	DCB
+Y-3814-cfDNA.bg	pre tx	DCB
+Y-3824-cfDNA.bg	on tx	DCB
+Y-3715-cfDNA.bg	pre tx	DCB
+Y-3737-cfDNA.bg	on tx	DCB
+tot-YUSTRAW_20-4002-cfDNA.bg	pre tx	DCB
+Y-3674-cfDNA.bg	pre tx	DCB
+Y-3685-cfDNA.bg	on tx	DCB
+tot-YUTAUR_19-3926-cfDNA.bg	pre tx	NDB
+tot-YUTHEA_20-4000-cfDNA.bg	pre tx	DCB
+Y-3688-cfDNA.bg	pre tx	NDB
+Y-3706-cfDNA.bg	on tx	NDB
+tot-YUVIRTUE_20-4029-cfDNA.bg	pre tx	NDB
+Y-3707-cfDNA.bg	pre tx	NDB
+Y-3735-cfDNA.bg	on tx	NDB
+med-H1-cfDNA.bg	Notime	Healthy
+med-H2-cfDNA.bg	Notime	Healthy
+med-H3-cfDNA.bg	Notime	Healthy
+med-H4-cfDNA.bg	Notime	Healthy
+tot-66-cfDNA.bg	Notime	Healthy
+tot-67-cfDNA.bg	Notime	Healthy
+tot-72-cfDNA.bg	Notime	Healthy
+tot-PH1-cfDNA.bg	Notime	Healthy
+tot-PH16-cfDNA.bg	Notime	Healthy
+tot-PH17-cfDNA.bg	Notime	Healthy
+tot-PH4-cfDNA.bg	Notime	Healthy
+tot-PH7-cfDNA.bg	Notime	Healthy

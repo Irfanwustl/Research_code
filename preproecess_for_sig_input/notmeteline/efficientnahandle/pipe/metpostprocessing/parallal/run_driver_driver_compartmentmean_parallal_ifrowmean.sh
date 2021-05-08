@@ -12,7 +12,8 @@ mkdir ${outdir}
 
 
 
-python3  driver_compartmentmean_parallal.py ${metoutfolder} ${phenfile} ${imputedfile} 1 ${outdir}
+#python3  driver_compartmentmean_parallal.py ${metoutfolder} ${phenfile} ${imputedfile} 1 ${outdir}
+python3  driver_compartmentmean_slightparallal.py ${metoutfolder} ${phenfile} ${imputedfile} 1 ${outdir}
 
 
 
