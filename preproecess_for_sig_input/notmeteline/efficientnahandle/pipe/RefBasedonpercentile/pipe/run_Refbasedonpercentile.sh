@@ -14,6 +14,6 @@ while (( i < ${#dirList[@]} ))
 do
 
 	
-	python3 Refbasedonpercentile.py ${indir}/${dirList[i]} ${outdir}/${dirList[i]}
+	python3 Refbasedondifferentpercentile.py ${indir}/${dirList[i]} ${outdir}/${dirList[i]}
  	(( i++ ))
 done

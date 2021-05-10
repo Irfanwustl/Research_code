@@ -272,15 +272,17 @@ class Plottter:
 
 
 
-            for index, row in self.annotcorresmtout.iterrows():
+            if 'Gene/Repeat type' in self.annotcorresmtout.columns:
+
+                for index, row in self.annotcorresmtout.iterrows():
 
 
-                if "color" in self.annotcorresmtout.columns:
-                    if row['color']=="black":
-                        plt.annotate(row['Gene/Repeat type'], (row[annotdelta], row['npqlog']),fontsize=8)
+                    if "color" in self.annotcorresmtout.columns:
+                        if row['color']=="black":
+                            plt.annotate(row['Gene/Repeat type'], (row[annotdelta], row['npqlog']),fontsize=8)
 
-                else:
-                    plt.annotate(row['Gene/Repeat type'], (row[annotdelta], row['npqlog']), fontsize=8)
+                    else:
+                        plt.annotate(row['Gene/Repeat type'], (row[annotdelta], row['npqlog']), fontsize=8)
 
 
 
