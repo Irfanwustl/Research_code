@@ -12,17 +12,8 @@ mkdir ${outdir}
 
 
 
-dirList=($( ls ${metoutfolder} ))
-
-
-i=0
-while (( i < ${#dirList[@]} ))
-do
-
-	echo now=========${dirList[i]} 
-	python3 compartmentmean_parallal.py ${imputedfile} ${metoutfolder}/${dirList[i]} ${phenfile} ${outdir}/${dirList[i]}
- 	(( i++ ))
-done
+#python3  driver_compartmentmean_parallal.py ${metoutfolder} ${phenfile} ${imputedfile} 1 ${outdir}
+python3  driver_compartmentmean_slightparallal.py ${metoutfolder} ${phenfile} ${imputedfile} 1 ${outdir}
 
 
 

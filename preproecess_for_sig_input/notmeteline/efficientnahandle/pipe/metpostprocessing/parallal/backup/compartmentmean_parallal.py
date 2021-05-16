@@ -7,33 +7,22 @@ import re
 import multiprocessing
 
 
-
-
-def funcreadfile(rowmeanfile):
-	global rowmeandf
-	rowmeandf=pd.read_csv(rowmeanfile,sep="\t",low_memory=False)
-
-
 class AllCompartmentMean:
 	def __init__(self, rowmeancalculstedelsewhere, metoutfile, phenofile, outname, **kwargs):
 
 
 		self.rowmeancalculstedelsewhere=rowmeancalculstedelsewhere
 		self.metoutfile = pd.read_csv(metoutfile,sep="\t",low_memory=False,header=None)
-		self.pheno = pd.read_csv(phenofile, sep="\t", header=None, index_col=0)
+		self.pheno = phenofile
 		self.outname = outname
 
 		self.metoutfilename = os.path.basename(metoutfile)
 
-		self.coreAlgo()
-
 
 	def coreAlgo(self):
 
-		
-		funcreadfile(self.rowmeancalculstedelsewhere)
 
-		
+		#rowmeandf=self.rowmeancalculstedelsewhere
 
 
 
@@ -110,7 +99,7 @@ class AllCompartmentMean:
 
 	def setupparallalrun(self):
 
-		chunk =600 #multiprocessing.cpu_count()-1
+		chunk =multiprocessing.cpu_count()-1
 		print("chunk===")
 		print(chunk)
 
@@ -142,23 +131,14 @@ class AllCompartmentMean:
 
 			processlist = []
 			for trdgrtemp in range(chunk):
-				if trdend==totalrow:
-					break
 				trdstart = trdend
 				trdend = trdstart + trdGroupSize  ###end excluded in python subset
 				if trdgrtemp == chunk - 1:
 					trdend = totalrow
 
-				if trdend>totalrow:
-					trdend = totalrow
-
-				print(trdstart,trdend)
-
 				currentdf = self.metoutfile[trdstart:trdend]
 
-				
-
-				processlist.append(executor.submit(finalout, currentdf,self.pheno))
+				processlist.append(executor.submit(finalout, currentdf,self.pheno, self.rowmeancalculstedelsewhere))
 
 			for process in concurrent.futures.as_completed(processlist):
 				multiresult.append(process.result())
@@ -168,9 +148,8 @@ class AllCompartmentMean:
 		return multiresultdf
 
 
-def finalout(metoutfile,pheno):
-	
-	
+def finalout(metoutfile,pheno,rowmeanfile):
+	rowmeandf=pd.read_csv(rowmeanfile,sep="\t",low_memory=False)
 
 
 	rowlist=[]
@@ -196,7 +175,6 @@ def finalout(metoutfile,pheno):
 
 	outdf = pd.DataFrame(rowlist)
 
-	
 
 
 	return outdf
@@ -206,13 +184,13 @@ def finalout(metoutfile,pheno):
 
 
 def main():
-	rowmeanfile=sys.argv[1]
+	rowmeandf=sys.argv[1]
 	metoutfile = sys.argv[2]
 	phenfile = sys.argv[3]
 
 	outname = sys.argv[4]
 
-	acm = AllCompartmentMean(rowmeanfile,metoutfile,phenfile,outname)
+	acm = AllCompartmentMean(rowmeandf,metoutfile,phenfile,outname)
 
 if __name__ == '__main__':
 	main()
