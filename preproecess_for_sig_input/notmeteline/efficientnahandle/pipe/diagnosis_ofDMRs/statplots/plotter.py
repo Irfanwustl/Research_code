@@ -218,7 +218,7 @@ class Plottter:
 
 
         else:
-            sns.scatterplot(x, y,edgecolor='none',size=size,color='y')
+            sns.scatterplot(x, y,edgecolor='none',size=size,color='dimgrey')
             #plt.scatter(-0.414764, -np.log10(2.2127e-06),color="black")
             #plt.annotate("TIGIT", (-0.414764, -np.log10(2.2127e-06)))
 
@@ -271,6 +271,11 @@ class Plottter:
                 plt.scatter(self.annotcorresmtout[annotdelta], self.annotcorresmtout['npqlog'], color="black")
 
 
+            if "c" in self.annotcorresmtout.columns:
+
+                plt.scatter(self.annotcorresmtout[annotdelta], self.annotcorresmtout['npqlog'],
+                            c=self.annotcorresmtout['c'] ,vmin=.5,vmax=1)
+                plt.colorbar()
 
             if 'Gene/Repeat type' in self.annotcorresmtout.columns:
 
@@ -281,6 +286,8 @@ class Plottter:
                         if row['color']=="black":
                             plt.annotate(row['Gene/Repeat type'], (row[annotdelta], row['npqlog']),fontsize=8)
 
+                    elif "c" in self.annotcorresmtout.columns:
+                        pass
                     else:
                         plt.annotate(row['Gene/Repeat type'], (row[annotdelta], row['npqlog']), fontsize=8)
 
