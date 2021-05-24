@@ -110,7 +110,7 @@ class AllCompartmentMean:
 
 	def setupparallalrun(self):
 
-		chunk =600 #multiprocessing.cpu_count()-1
+		chunk =multiprocessing.cpu_count()-1
 		print("chunk===")
 		print(chunk)
 
@@ -179,7 +179,7 @@ def finalout(metoutfile,pheno):
 		mstart=row[1]
 		mend=row[2]
 
-		tempdf=rowmeandf[(rowmeandf['chrom']==mchrom) & (rowmeandf['pos']>=mstart) & (rowmeandf['pos']< mend)]
+		tempdf=rowmeandf[(rowmeandf['shouldbechrom']==mchrom) & (rowmeandf['pos']>=mstart) & (rowmeandf['pos']< mend)]
 
 
 		tempsize=pd.Series({"mycpgcount":tempdf.shape[0]})
