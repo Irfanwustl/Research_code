@@ -18,10 +18,13 @@ alldmrperformancedf=pd.read_csv(alldmrperformance,sep="\t")
 
 
 alldmrperformancedf.rename(columns={AucCOL: 'c'},inplace=True)
-alldmrperformancedf[['chrom','start','end']] = alldmrperformancedf['Unnamed: 0'].str.split("_",expand=True)
 
+new= alldmrperformancedf['Unnamed: 0'].str.split("_",expand=True)
+alldmrperformancedf['chrom']=new[0]
+alldmrperformancedf['start']=new[1]
+alldmrperformancedf['end'] =new[2]
 
-alldmrperformancedf['end'] = alldmrperformancedf['end'].str.replace(r'.txt$', '')
+#alldmrperformancedf['end'] = alldmrperformancedf['end'].str.replace(r'.txt$', '')
 outdf=alldmrperformancedf[['chrom','start','end','c']]
 
 
