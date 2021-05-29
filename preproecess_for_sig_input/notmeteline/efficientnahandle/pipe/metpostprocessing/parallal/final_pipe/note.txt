@@ -1,0 +1,2 @@
+Checked thoroughly. Should not be any duplicate DMR position in the output. Still I have included a print option for that. So after running the pipeline just eye ball the output to make sure that there is no print from "duplicated rows" print option. (however, I am  sure there wont be any duplicated rows, still included the "duplicated rows" print option as sanity check.)
+ 
