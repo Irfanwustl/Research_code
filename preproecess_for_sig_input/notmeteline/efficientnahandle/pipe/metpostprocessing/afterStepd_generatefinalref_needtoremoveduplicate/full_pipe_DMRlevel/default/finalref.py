@@ -52,9 +52,9 @@ class CollectCpG:
             li.append(finaltmpdf)
 
         frame = pd.concat(li, axis=0, ignore_index=True)
-        frame.rename(columns={0: "DMRchr", 1: "DMRstart", 2: "DMRend", 3: "q", 4: "diff", 16: "chrom", 17: "start", 18: "end"},inplace=True)
+        frame.rename(columns={0: "DMRchr", 1: "DMRstart", 2: "DMRend", frame.columns[-4]: "chrom", frame.columns[-3]: "start", frame.columns[-2]: "end"},inplace=True)
 
-        outdf = frame[["DMRchr", "DMRstart", "DMRend", "q", "diff", "chrom", "start", "end", 'celltype']]
+        outdf = frame[["DMRchr", "DMRstart", "DMRend", "chrom", "start", "end", 'celltype']]
 
         outdfref = outdf[["chrom", "start", "end", 'celltype']]
 

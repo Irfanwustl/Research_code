@@ -14,6 +14,7 @@ while (( i < ${#dirList[@]} ))
 do
 
 	
-	python3 Refbasedondifferentpercentile.py ${indir}/${dirList[i]} ${outdir}/${dirList[i]}
+	python3 Refbasedondifferentpercentile.py ${indir}/${dirList[i]} ${outdir}/${dirList[i]} diff
+	python3 Refbasedondifferentpercentile.py ${indir}/${dirList[i]} ${outdir}/${dirList[i]} maxCompartmentwisedelta
  	(( i++ ))
 done
