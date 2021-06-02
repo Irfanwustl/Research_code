@@ -2,7 +2,7 @@ start=$SECONDS
 
 imputedfile=$1   #/Users/irffanalahi/Research/Research_code/gitignorefolder/SMwithlog_test/metpostprocessing/towards_final_ref/againtest/numberofDMR/flexiblecolumn/promdataready_all_matrixCin_nr0.5_imputed_head20.txt
 sortedDMRdirectory=$2 #/Users/irffanalahi/Research/Research_code/gitignorefolder/SMwithlog_test/metpostprocessing/towards_final_ref/againtest/numberofDMR/flexiblecolumn/PBLtILMEL_input_out_mincpg2_head_addedcol_sorted3_1
-targetednumDMR=$3  #5
+targetednumDMR=$3  #5 negative means all dmr
 
 imputedfilebed=${imputedfile}_onlypos.bed
 
