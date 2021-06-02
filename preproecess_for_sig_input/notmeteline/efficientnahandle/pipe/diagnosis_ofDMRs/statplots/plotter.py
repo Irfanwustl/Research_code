@@ -6,11 +6,12 @@ import sys
 import matplotlib.backends.backend_pdf
 import numpy as np
 import seaborn as sns
+from sklearn import preprocessing
 
 
 class Plottter:
 
-    def __init__(self, metoutile,deltacol,outname,annotfile,**kwargs):
+    def __init__(self, metoutile,deltacol,outname,annotfile,mode,**kwargs):
         self.metout=metoutile
         self.metoutdf=pd.read_csv(self.metout,sep="\t")
         self.outname=outname
@@ -18,6 +19,8 @@ class Plottter:
         self.deltcol=deltacol
 
         self.annotationfile=pd.read_csv(annotfile,sep="\t")
+
+        self.mode=mode
    #("/Users/irffanalahi/Research/weekly/for_4_14_21/newRefs/CD8til/metout/genomic_analysis/meltumMONOvsTCOMBINEDCD4tilexcludedgeneboby_input_out_mincpg2_q0.05_diff0.1_genomic_feature_withrepeat_header_celltypeseperated/plot/subsetofCD8genes.txt",sep="\t")
 
         
@@ -213,12 +216,12 @@ class Plottter:
         if 'xlim' in kwargs:
             sns.scatterplot(x, y,edgecolor='none',size=size)
             plt.xlim(kwargs['xlim'])
-            plt.ylim([5,40])  #################################################################################################
+           # plt.ylim([5,40])  #################################################################################################
 
 
 
         else:
-            sns.scatterplot(x, y,edgecolor='none',size=size,color='dimgrey')
+            sns.scatterplot(x, y,edgecolor='none',size=size,color='lightgrey')
             #plt.scatter(-0.414764, -np.log10(2.2127e-06),color="black")
             #plt.annotate("TIGIT", (-0.414764, -np.log10(2.2127e-06)))
 
@@ -277,12 +280,32 @@ class Plottter:
                             c=self.annotcorresmtout['c'] ,vmin=.5,vmax=1)
                 plt.colorbar()
 
+            if self.mode=="allgenes":
+                le = preprocessing.LabelEncoder()
+                le.fit(self.annotcorresmtout['Gene/Repeat type'])
+                self.annotcorresmtout['categorical_label'] = le.transform(self.annotcorresmtout['Gene/Repeat type'])
+
+                uniquegenesnumber=list(set(self.annotcorresmtout['categorical_label'].tolist()))
+                uniquegenesname=le.inverse_transform(uniquegenesnumber)
+               
+                uniquegenesname=list(uniquegenesname)
+            
+                genecolormap = "Set3"
+                                
+                allgenesscatter=plt.scatter(self.annotcorresmtout[annotdelta], self.annotcorresmtout['npqlog'], c=self.annotcorresmtout['categorical_label'],cmap=genecolormap,edgecolor='black')
+                
+                plt.legend(handles=allgenesscatter.legend_elements()[0], labels=uniquegenesname)
+               
+                
+
             if 'Gene/Repeat type' in self.annotcorresmtout.columns:
 
                 for index, row in self.annotcorresmtout.iterrows():
 
+                    if self.mode=="allgenes":
+                        pass
 
-                    if "color" in self.annotcorresmtout.columns:
+                    elif "color" in self.annotcorresmtout.columns:
                         if row['color']=="black":
                             plt.annotate(row['Gene/Repeat type'], (row[annotdelta], row['npqlog']),fontsize=8)
 
