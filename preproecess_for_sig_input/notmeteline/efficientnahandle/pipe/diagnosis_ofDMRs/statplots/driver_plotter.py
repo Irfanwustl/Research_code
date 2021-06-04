@@ -23,6 +23,7 @@ class Driver_plotter:
     def runallfilesparallal(self):
         objlist = []
         for file in glob.glob(self.metoutwithheaderdir + "/*.txt"):
+            
             tempobj = plotter.Plottter(file,self.deltacol, self.outtfolder + "/" + os.path.basename(file),self.annotfile,self.mode)
             objlist.append(tempobj)
 
