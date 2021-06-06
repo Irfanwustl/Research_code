@@ -1,0 +1,8 @@
+works for almost any type of DMR infpu folder wih header like  
+
+/Users/irffanalahi/Research/Research_code/gitignorefolder/metpostprocess/frommetDMRtoBamintersectBEDfile_test/inONLYDMR
+
+and
+
+
+/Users/irffanalahi/Research/Research_code/gitignorefolder/metpostprocess/frommetDMRtoBamintersectBEDfile_test/inmorecolumns
