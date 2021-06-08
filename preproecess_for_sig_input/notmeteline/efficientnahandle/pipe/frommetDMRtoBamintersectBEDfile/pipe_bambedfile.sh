@@ -29,7 +29,10 @@ done
 
 python3 mergealldfinafolderrbindlike_noheader.py ${intermediatefolder} ${intermediatefolder}_rc
 
-uniq ${intermediatefolder}_rc > ${intermediatefolder}_rc_uniq
 
-sort -k 1,1 -k2,2n ${intermediatefolder}_rc_uniq > ${infolder}_readyforBAM.bed
+sort -k 1,1 -k2,2n ${intermediatefolder}_rc > ${intermediatefolder}_rc_sorted
+
+uniq ${intermediatefolder}_rc_sorted > ${intermediatefolder}_rc_sorted_uniq
+
+sort -k 1,1 -k2,2n ${intermediatefolder}_rc_sorted_uniq > ${infolder}_readyforBAM.bed
 

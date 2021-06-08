@@ -280,10 +280,14 @@ class Plottter:
                             c=self.annotcorresmtout['c'] ,vmin=.5,vmax=1)
                 plt.colorbar()
 
-            if self.mode=="allgenes":
+            if self.mode=="allgenes" or self.mode=="Region":
                 le = preprocessing.LabelEncoder()
-                le.fit(self.annotcorresmtout['Gene/Repeat type'])
-                self.annotcorresmtout['categorical_label'] = le.transform(self.annotcorresmtout['Gene/Repeat type'])
+                if self.mode=="Region":
+                    le.fit(self.annotcorresmtout["Region"])
+                    self.annotcorresmtout['categorical_label'] = le.transform(self.annotcorresmtout["Region"])
+                else:
+                    le.fit(self.annotcorresmtout['Gene/Repeat type'])
+                    self.annotcorresmtout['categorical_label'] = le.transform(self.annotcorresmtout['Gene/Repeat type'])
 
                 uniquegenesnumber=list(set(self.annotcorresmtout['categorical_label'].tolist()))
                 uniquegenesname=le.inverse_transform(uniquegenesnumber)
@@ -291,10 +295,30 @@ class Plottter:
                 uniquegenesname=list(uniquegenesname)
             
                 genecolormap = "Set3"
-                                
-                allgenesscatter=plt.scatter(self.annotcorresmtout[annotdelta], self.annotcorresmtout['npqlog'], c=self.annotcorresmtout['categorical_label'],cmap=genecolormap,edgecolor='black')
+                if self.mode=="Region":
+                    genecolormap = "Accent"
+                    allgenesscatter=plt.scatter(self.annotcorresmtout[annotdelta], self.annotcorresmtout['npqlog'], c=self.annotcorresmtout['categorical_label'],cmap=genecolormap)
+
+                else:                
+                    allgenesscatter=plt.scatter(self.annotcorresmtout[annotdelta], self.annotcorresmtout['npqlog'], c=self.annotcorresmtout['categorical_label'],cmap=genecolormap,edgecolor='black')
                 
-                plt.legend(handles=allgenesscatter.legend_elements()[0], labels=uniquegenesname)
+
+                if self.mode=="Region":
+
+                    priority_list=['promoter','cds','3/5 utrexon','intron','repeat']
+                    priority_handlelist=[]
+                    if len(priority_list)==len(uniquegenesname):
+                        for pregion in priority_list:
+                            priority_handlelist.append(allgenesscatter.legend_elements()[0][uniquegenesname.index(pregion)])
+
+
+                        plt.legend(handles=priority_handlelist, labels=priority_list)
+                    else:
+                        plt.legend(handles=allgenesscatter.legend_elements()[0], labels=uniquegenesname)
+
+
+                else:
+                    plt.legend(handles=allgenesscatter.legend_elements()[0], labels=uniquegenesname)
                
                 
 

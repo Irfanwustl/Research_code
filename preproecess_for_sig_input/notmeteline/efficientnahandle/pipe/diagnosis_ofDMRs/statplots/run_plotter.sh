@@ -2,7 +2,7 @@ start=$SECONDS
 
 infolder=$1
 annotfolder=$2
-mode="allgenes"  ####or just any other thing to disable it
+mode="allgenes" #"Region"  ####or "allgenes"  or  just any other thing to disable it
 deltacol=maxCompartmentwisedelta
 
 
