@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="127ae3e7-7045-4aac-b89a-85d9ed7e1f1f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../../../../MHB_per_read/diagnosisofoutput/onlyinformative/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../../MHB_per_read/diagnosisofoutput/onlyinformative/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../../MHB_per_read/diagnosisofoutput/onlyinformative/.idea/onlyinformative.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../../MHB_per_read/diagnosisofoutput/onlyinformative/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../../MHB_per_read/diagnosisofoutput/onlyinformative/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../../MHB_per_read/diagnosisofoutput/onlyinformative/onlyinformative.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../../MHB_per_read/diagnosisofoutput/onlyinformative/run_onlyinformative.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../../MHB_per_read/diagnosisofoutput/onlyinformative/venv/bin/activate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../../MHB_per_read/diagnosisofoutput/onlyinformative/venv/bin/activate.csh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../../MHB_per_read/diagnosisofoutput/onlyinformative/venv/bin/activate.fish" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../../MHB_per_read/diagnosisofoutput/onlyinformative/venv/bin/python" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../../MHB_per_read/diagnosisofoutput/onlyinformative/venv/bin/python3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../../MHB_per_read/diagnosisofoutput/onlyinformative/venv/pyvenv.cfg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../perDMRperformace_efficient/DMRasssignOfragment.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../perDMRperformace_efficient/DMRasssignOfragment.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/differentregion/differentRegion.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/differentregion/differentRegion.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plotter.py" beforeDir="false" afterPath="$PROJECT_DIR$/plotter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../../../support/imppandastool/.ipynb_checkpoints/mergealldfinafolderrbindlike_withfilename-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../support/imppandastool/.ipynb_checkpoints/mergealldfinafolderrbindlike_withfilename-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_plotter.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run_plotter.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../../../support/imppandastool/mergealldfinafolderrbindlike_withfilename.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../../support/imppandastool/mergealldfinafolderrbindlike_withfilename.ipynb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,34 +18,34 @@
     <session id="1107296215">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
+          <entry key="project.closed" value="24" />
           <entry key="project.open.time.0" value="5" />
-          <entry key="project.open.time.2" value="7" />
-          <entry key="project.open.time.3" value="9" />
+          <entry key="project.open.time.2" value="8" />
+          <entry key="project.open.time.3" value="10" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="22" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="3" />
+          <entry key="py" value="4" />
           <entry key="sh" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Bash" value="2" />
-          <entry key="Python" value="3" />
+          <entry key="Python" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4387" />
+          <entry key="py" value="4969" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="4387" />
+          <entry key="Python" value="4969" />
         </counts>
       </usages-collector>
     </session>
@@ -68,23 +55,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plotter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
-              <caret line="276" column="59" selection-start-line="276" selection-start-column="59" selection-end-line="276" selection-end-column="59" />
+            <state relative-caret-position="228">
+              <caret line="224" column="88" selection-start-line="224" selection-start-column="88" selection-end-line="224" selection-end-column="88" />
               <folding>
                 <element signature="e#45#64#0" expanded="true" />
-                <marker date="1621370650252" expanded="true" signature="205:207" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/driver_plotter.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="27" column="66" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -177,7 +151,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="979" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -212,23 +185,22 @@
     <entry file="file://$PROJECT_DIR$/run_plotter.sh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/plotter.py">
+    <entry file="file://$PROJECT_DIR$/driver_plotter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="276" column="59" selection-start-line="276" selection-start-column="59" selection-end-line="276" selection-end-column="59" />
+        <state relative-caret-position="315">
+          <caret line="27" column="35" lean-forward="true" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
           <folding>
-            <element signature="e#45#64#0" expanded="true" />
-            <marker date="1621370650252" expanded="true" signature="205:207" ph="..." />
+            <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/driver_plotter.py">
+    <entry file="file://$PROJECT_DIR$/plotter.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="27" column="66" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
+        <state relative-caret-position="228">
+          <caret line="224" column="88" selection-start-line="224" selection-start-column="88" selection-end-line="224" selection-end-column="88" />
           <folding>
-            <element signature="e#0#19#0" expanded="true" />
+            <element signature="e#45#64#0" expanded="true" />
           </folding>
         </state>
       </provider>

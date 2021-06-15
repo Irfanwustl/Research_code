@@ -1,0 +1,22 @@
+
+start=$SECONDS
+
+echo "BlOurPBLourCD8TIL_diff75percentile"
+mkdir /Users/irffanalahi/Research/Research_update/SM/melcfdref/LargerLTME/BluOurPBL/RD/forfinalcollect/allfinals/BlOurPBLourCD8TIL_diff75percentile
+python3 DMRassignofFragment.py /Users/irffanalahi/Research/Research_update/SM/melcfdref/LargerLTME/BluOurPBL/RD/forfinalcollect/allfinals/BlOurPBLourCD8TILsm_record/BlOurPBLourCD8TIL_diff75percentile_top-1_singleCpG_final_recorduniq.txt /Users/irffanalahi/Research/Research_update/SM/melcfdref/LargerLTME/BluOurPBL/RD/forfinalcollect/allfinals/BlOurPBLourCD8TILsm_model_data_bam_sorted_onlyregionIN_BlOurPBLourCD8TIL_75percentile_withgenes_readyforBAM.bed_sorted_globalout_diff_final_informative_row_combinedfilename.txt  /Users/irffanalahi/Research/Research_update/SM/melcfdref/LargerLTME/BluOurPBL/RD/forfinalcollect/allfinals/BlOurPBLourCD8TIL_diff75percentile 3
+
+
+echo "sanity"
+mkdir /Users/irffanalahi/Research/Research_update/SM/melcfdref/LargerLTME/BluOurPBL/RD/forfinalcollect/allfinals/totincludinghealthy_final_informative_row_combinedfilename_sanity
+python3 DMRassignofFragment.py /Users/irffanalahi/Research/Research_update/SM/melcfdref/LargerLTME/BluOurPBL/RD/forfinalcollect/allfinals/promdatareadyCD8TIL_all_matrixCin_nr0.5_imputed_g1_CD8_TIL_3_g2_others_9.txt_q0.05_diff0.1_hypo.txt_75percentile.txt_recordSM.txt /Users/irffanalahi/Research/Research_update/SM/melcfdref/LargerLTME/BluOurPBL/RD/forfinalcollect/allfinals/totincludinghealthy_final_informative_row_combinedfilename.txt /Users/irffanalahi/Research/Research_update/SM/melcfdref/LargerLTME/BluOurPBL/RD/forfinalcollect/allfinals/totincludinghealthy_final_informative_row_combinedfilename_sanity 3
+
+
+echo "BlOurPBLourCD8TIL_maxcompperc75percetile"
+mkdir /Users/irffanalahi/Research/Research_update/SM/melcfdref/LargerLTME/BluOurPBL/RD/forfinalcollect/allfinals/BlOurPBLourCD8TIL_maxcompperc75percetile
+python3 DMRassignofFragment.py /Users/irffanalahi/Research/Research_update/SM/melcfdref/LargerLTME/BluOurPBL/RD/forfinalcollect/allfinals/BlOurPBLourCD8TILsm_record/BlOurPBLourCD8TIL_maxcompperc75percetile_top-1_singleCpG_final_recorduniq.txt /Users/irffanalahi/Research/Research_update/SM/melcfdref/LargerLTME/BluOurPBL/RD/forfinalcollect/allfinals/BlOurPBLourCD8TILsm_model_data_bam_sorted_onlyregionIN_BlOurPBLourCD8TIL_75percentile_withgenes_readyforBAM.bed_sorted_globalout_compdiff_final_informative_row_combinedfilename.txt   /Users/irffanalahi/Research/Research_update/SM/melcfdref/LargerLTME/BluOurPBL/RD/forfinalcollect/allfinals/BlOurPBLourCD8TIL_maxcompperc75percetile 3
+
+
+
+end=$SECONDS
+duration=$(( end - start ))
+echo "stuff took $duration seconds to complete"

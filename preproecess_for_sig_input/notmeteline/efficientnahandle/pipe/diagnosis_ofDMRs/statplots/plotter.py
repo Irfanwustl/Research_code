@@ -1,8 +1,10 @@
 ####### percentile plot only works for hypo
 
 import pandas as pd
+import matplotlib.markers as mmarkers
 import matplotlib.pyplot as plt
 import sys
+import matplotlib.lines as mlines
 import matplotlib.backends.backend_pdf
 import numpy as np
 import seaborn as sns
@@ -221,7 +223,7 @@ class Plottter:
 
 
         else:
-            sns.scatterplot(x, y,edgecolor='none',size=size,color='lightgrey')
+            sns.scatterplot(x, y,edgecolor='none',size=size,color='lightgrey',marker=".")
             #plt.scatter(-0.414764, -np.log10(2.2127e-06),color="black")
             #plt.annotate("TIGIT", (-0.414764, -np.log10(2.2127e-06)))
 
@@ -277,7 +279,7 @@ class Plottter:
             if "c" in self.annotcorresmtout.columns:
 
                 plt.scatter(self.annotcorresmtout[annotdelta], self.annotcorresmtout['npqlog'],
-                            c=self.annotcorresmtout['c'] ,vmin=.5,vmax=1)
+                            c=self.annotcorresmtout['c'] ,vmin=.5,vmax=1,marker=".")
                 plt.colorbar()
 
             if self.mode=="allgenes" or self.mode=="Region":
@@ -305,7 +307,7 @@ class Plottter:
 
                 if self.mode=="Region":
 
-                    priority_list=['promoter','cds','3/5 utrexon','intron','repeat']
+                    priority_list=['repeat','cds','3/5 utrexon','promoter','intron']  #['promoter','cds','3/5 utrexon','intron','repeat']
                     priority_handlelist=[]
                     if len(priority_list)==len(uniquegenesname):
                         for pregion in priority_list:
@@ -320,7 +322,52 @@ class Plottter:
                 else:
                     plt.legend(handles=allgenesscatter.legend_elements()[0], labels=uniquegenesname)
                
-                
+
+
+
+
+
+            if self.mode=="AUC_Region":
+
+
+                priority_regions=['promoter','cds','3/5 utrexon','intron','repeat','Others']
+                region_marker = ["o", "s", "D", "*", "^","x"]
+
+                #priority_regions=['repeat','promoter','3/5 utrexon','intron','cds','Others']
+                #region_marker = ["^","o","D","*","s","x"]
+
+
+
+                self.annotcorresmtout['marker']=-1
+
+                legendhandles = []
+                prcount=0
+                for pr in priority_regions:
+                    self.annotcorresmtout.loc[self.annotcorresmtout["Region"]==pr,'marker']=region_marker[prcount]
+
+                    legendhandles.append(mlines.Line2D([], [],color="black", marker=region_marker[prcount],
+                                                       label=pr))
+
+
+                    prcount=prcount+1
+
+
+
+
+
+
+                mscatter(self.annotcorresmtout[annotdelta], self.annotcorresmtout['npqlog'],m=self.annotcorresmtout['marker'].tolist(),
+                            c=self.annotcorresmtout['c'] ,vmin=.5,vmax=1)
+
+
+
+
+
+                plt.legend(handles=legendhandles)
+                #plt.legend([matplotlib.markers.MarkerStyle('.'),matplotlib.markers.MarkerStyle('o'),matplotlib.markers.MarkerStyle('v'),matplotlib.markers.MarkerStyle('^'),matplotlib.markers.MarkerStyle('<'),matplotlib.markers.MarkerStyle('>')], uniqueregionname)
+
+
+
 
             if 'Gene/Repeat type' in self.annotcorresmtout.columns:
 
@@ -373,7 +420,22 @@ class Plottter:
 
 
 
-
+def mscatter(x,y,ax=None, m=None, **kw):
+    
+    if not ax: ax=plt.gca()
+    sc = ax.scatter(x,y,**kw)
+    if (m is not None) and (len(m)==len(x)):
+        paths = []
+        for marker in m:
+            if isinstance(marker, mmarkers.MarkerStyle):
+                marker_obj = marker
+            else:
+                marker_obj = mmarkers.MarkerStyle(marker)
+            path = marker_obj.get_path().transformed(
+                        marker_obj.get_transform())
+            paths.append(path)
+        sc.set_paths(paths)
+    return sc
 
 
 
