@@ -96,6 +96,7 @@ def display(
         # vertical lines to mark the computed_chg_pts
 
         if computed_chg_pts is not None:
+            #print(computed_chg_pts)
             for bkp in computed_chg_pts:
                 if bkp != 0 and bkp < n_samples:
                     axe.axvline(
@@ -108,7 +109,7 @@ def display(
             axe.set_xticks(computed_chg_pts)
             relevantCpGs = [cpgnames[i] for i in computed_chg_pts]
             axe.set_xticklabels(relevantCpGs,rotation='vertical',fontsize=10)
-            
+
                     
         colcount=colcount+1
 
