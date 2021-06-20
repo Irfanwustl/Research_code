@@ -81,7 +81,8 @@ def get_pelt_result(signal_pelttuple):
         if forindexgenerate[-1]==len(signal_pelt.index):
             forindexgenerate[-1]=forindexgenerate[-1]-1
         pr=PELT_result(DMR[0],DMR[1],DMR[2],(signal_pelt.index[forindexgenerate]).tolist())
-    except:
+    except: ### gives error if #cpg is smaller.thats why try-except commannd
+        
         pr=PELT_result(DMR[0],DMR[1],DMR[2],[signal_pelt.index[len(signal_pelt.index)-1]])
     return pr
 
