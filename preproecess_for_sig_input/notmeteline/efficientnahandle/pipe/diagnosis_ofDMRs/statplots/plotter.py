@@ -388,6 +388,11 @@ class Plottter:
 
 
 
+            if 'totalPeltSegement' in self.annotcorresmtout.columns:
+                #Peltcolormap='Set2'
+                plt.scatter(self.annotcorresmtout[annotdelta], self.annotcorresmtout['npqlog'],
+                            c=self.annotcorresmtout['totalPeltSegement'])#, cmap=Peltcolormap)
+                plt.colorbar()
 
 
 

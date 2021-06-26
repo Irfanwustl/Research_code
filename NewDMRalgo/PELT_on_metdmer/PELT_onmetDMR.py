@@ -14,8 +14,9 @@ minCpG=int(sys.argv[2]) #3
 penalty_value = float(sys.argv[3]) #1 
 percormetDMR=int(sys.argv[4])  #2 #### for parallal
 outfile=sys.argv[5] #infile+"_mincpg_"+str(minCpG)+"pelt.txt"
+outsegmentfile=sys.argv[6]
 
-indf=pd.read_csv(infile,sep="\t",index_col=[0,1,2])
+indf=pd.read_csv(infile,sep="\t",low_memory=False,index_col=[0,1,2])
 
 indf.head()
 
@@ -64,6 +65,7 @@ class PELT_result:
        
         self.totalsegment=len(self.peltsegmentlist)-1
         self.metpeltsegmentDICT={'DMRchrom':self.dmrchrom,'DMRstart':self.dmrstart,'DMRend':self.dmrend,"totalPeltSegement":self.totalsegment}
+        self.metpeltsegmentDICTinfo={'DMRchrom':self.dmrchrom,'DMRstart':self.dmrstart,'DMRend':self.dmrend,"PeltSegement":self.peltsegmentlist}
         
         
 
@@ -100,6 +102,8 @@ def run_get_pelt_result(signalchunks):
 signallist=segment_generator()
 chunks = [signallist[x:x+percormetDMR] for x in range(0, len(signallist), percormetDMR)]
 
+print(len(chunks))
+
 
 # In[7]:
 
@@ -119,9 +123,14 @@ with concurrent.futures.ProcessPoolExecutor() as executor:
 
 
 allresultdictlist=[]
+allresultsegmentinfolist=[]
 for resultobj in multiresult:
     allresultdictlist.append(resultobj.metpeltsegmentDICT)
+    allresultsegmentinfolist.append(resultobj.metpeltsegmentDICTinfo)
+    
 allresultdf=pd.DataFrame(allresultdictlist)
+allresultsegmentinfodf=pd.DataFrame(allresultsegmentinfolist)
+
 
 
 # In[9]:
@@ -140,4 +149,12 @@ foroutsubdf.head()
 outdf=foroutsubdf.merge(allresultdf,how='inner',on=['DMRchrom','DMRstart','DMRend'])
 outdf=outdf.rename(columns ={'DMRchrom':'chrom','DMRstart':'start','DMRend':'end'},errors='raise')
 outdf.to_csv(outfile,sep="\t",index=False)
+
+
+allresultsegmentinfodf.to_csv(outsegmentfile,sep="\t",index=False)
+
+
+
+
+
 
