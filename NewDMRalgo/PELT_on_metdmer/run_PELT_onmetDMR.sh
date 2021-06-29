@@ -26,7 +26,7 @@ do
 
 	echo nowPELT=========${dirList[i]} 
 
-	python3 PELT_onmetDMR2.py ${infolder}/${dirList[i]} ${minCpG} ${penaltyvalue} ${percoreMetDMR}  ${outdir}/${dirList[i]}  ${seginfooutdir}/${dirList[i]}
+	python3 PELT_onmetDMR2_childrencorr.py ${infolder}/${dirList[i]} ${minCpG} ${penaltyvalue} ${percoreMetDMR}  ${outdir}/${dirList[i]}  ${seginfooutdir}/${dirList[i]}
  	(( i++ ))
 done
 
