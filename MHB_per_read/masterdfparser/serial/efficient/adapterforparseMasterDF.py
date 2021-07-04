@@ -53,7 +53,7 @@ if masterdf.shape!=adjustedDF.shape:
     sys.exit(1)
 
 
-celllist=["'CD14'","'CD19'","'CD4'","'CD8'","'CD56'","'Neu'","'EPCAM'"]      ###########################################################################
+celllist=["MEL_TUMOR","PBL","TIL"]      ###########################################################################
 
 
 pMDF=parseMasterDF.ParseMasterDF(adjustedDF,celllist,percentCpGcoverforrejection=percentcpgforrejection,minCpGforpositivecall=mincpgforpoditivecall,rejectionmode=rejectionMode)

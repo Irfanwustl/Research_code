@@ -1,4 +1,4 @@
-start=$SECONDS
+
 
 
 alloutfolder=$1
@@ -32,16 +32,7 @@ do
 	(( i++ ))
 done
 
-
-
 ./collectResult_fromfinal.sh ${alloutfolder} ABSreadcount_divisioned.txt
 
 ./collectResult_fromfinal.sh ${alloutfolder} ABSreadcount_divisionedNormalized.txt
-
-
-
-
-end=$SECONDS
-duration=$(( end - start ))
-echo "stuff took $duration seconds to complete"
 

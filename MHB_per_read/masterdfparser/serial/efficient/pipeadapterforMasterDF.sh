@@ -30,16 +30,7 @@ do
 	tempdirnov=${outdir}/nocov_mincpg${j}
 	mkdir ${tempdirnov}
 
-	tempdira=${outdir}/cov${cpgcova}_mincpg${j}
-	mkdir ${tempdira}
-	tempdirb=${outdir}/cov${cpgcovb}_mincpg${j}
-	mkdir ${tempdirb}
-	tempdirc=${outdir}/cov${cpgcovc}_mincpg${j}
-	mkdir ${tempdirc}
-	tempdird=${outdir}/cov${cpgcovd}_mincpg${j}
-	mkdir ${tempdird}
-	tempdire=${outdir}/cov${cpgcove}_mincpg${j}
-	mkdir ${tempdire}
+	
 
 
 
@@ -47,13 +38,9 @@ do
 	while (( i < ${#dirList[@]} ))
 	do
 
-		python3 adapterforparseMasterDF.py ${masterdfinfolder}/${dirList[i]} ${tempdirnov}  -99999  ${j}  nov   &
+		python3 adapterforparseMasterDF.py ${masterdfinfolder}/${dirList[i]} ${tempdirnov}  -99999  ${j}  nov   
 
-		python3 adapterforparseMasterDF.py ${masterdfinfolder}/${dirList[i]} ${tempdira}  ${cpgcova}  ${j}  ov   &
-		python3 adapterforparseMasterDF.py ${masterdfinfolder}/${dirList[i]} ${tempdirb}  ${cpgcovb}  ${j}  ov   &
-		python3 adapterforparseMasterDF.py ${masterdfinfolder}/${dirList[i]} ${tempdirc}  ${cpgcovc}  ${j}  ov   &
-		python3 adapterforparseMasterDF.py ${masterdfinfolder}/${dirList[i]} ${tempdird}  ${cpgcovd}  ${j}  ov   &
-		python3 adapterforparseMasterDF.py ${masterdfinfolder}/${dirList[i]} ${tempdire}  ${cpgcove}  ${j}  ov   &
+		
 
 		(( i++ ))
 

@@ -1,6 +1,5 @@
 import pandas as pd
 from collections import defaultdict
-import sys
 
 class ParseMasterDF:
     def __init__(self,MasterDf,celltyplist,**kwargs):
@@ -131,7 +130,6 @@ class ParseMasterDF:
             positiverows=self.masterdf[self.masterdf['assignedcelltype']==cell]
 
             cellcorresrejectiondf=self.cellspecificrejectiondf(cell)
-            self.findcorressnegativereads(cell,cellcorresrejectiondf)
 
 
             for index, prow in positiverows.iterrows():
@@ -144,7 +142,7 @@ class ParseMasterDF:
 
 
 
-                    
+                    self.findcorressnegativereads(cell,prow,cellcorresrejectiondf)
 
 
 
@@ -156,7 +154,7 @@ class ParseMasterDF:
 
 
 
-    '''
+
     def cellspecificrejectiondf(self,cell):
         cellrejectionlist = []
         for index, row in self.notassignedrelevantDF.iterrows():
@@ -167,22 +165,12 @@ class ParseMasterDF:
 
 
         return crdf
-    '''
-    def cellspecificrejectiondf(self,cell):
-
-        crdf=(self.notassignedrelevantDF[pd.DataFrame(self.notassignedrelevantDF.ucelltype.tolist()).isin([cell]).any(1).values]).copy()
-        
-        return crdf
 
     
 
-    def findcorressnegativereads(self,cell,cellcorresrejectiondf):
+    def findcorressnegativereads(self,cell,prow,cellcorresrejectiondf):
         if self.rejectionmode=="ov":
-            print("ov not implemented")
-            sys.exit(1)
-
-            #self.ovcorressnegativereads(cell,prow,cellcorresrejectiondf)
-
+            self.ovcorressnegativereads(cell,prow,cellcorresrejectiondf)
         elif self.rejectionmode=="nov":
             self.novcorressnegativereads(cell,cellcorresrejectiondf)
 
@@ -198,8 +186,7 @@ class ParseMasterDF:
                         self.masterdf.loc[index, 'finalrejectedfor'].append(cell)
 
 
-    ######not efficient. So not using. If necessary, implelement again#####
-    '''
+
     def ovcorressnegativereads(self,cell,prow,cellcorresrejectiondf):
         poscpg=set(prow['acceptedCpG'])
         poscpglen=len(poscpg)
@@ -232,7 +219,11 @@ class ParseMasterDF:
                 flag=1
 
         '''
-        
+        if flag==0:
+            print("no rejection")
+            print(cell)
+            print(poscpg)
+        '''
         
 
 
