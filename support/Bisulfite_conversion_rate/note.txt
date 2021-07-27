@@ -1,0 +1,2 @@
+Though BCReval_cstranderror.py may give error in smaller file, it is probably better as it may indicate downsample issue.
+
