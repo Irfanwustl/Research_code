@@ -1,0 +1,10 @@
+p-value annotation legend:
+ns: 5.00e-02 < p <= 1.00e+00
+*: 1.00e-02 < p <= 5.00e-02
+**: 1.00e-03 < p <= 1.00e-02
+***: 1.00e-04 < p <= 1.00e-03
+****: p <= 1.00e-04
+
+BCR_New healthy v.s. BCR_Previous healthy: Mann-Whitney-Wilcoxon test two-sided, P_val=3.749e-01 U_stat=3.600e+01
+BCR_Previous healthy v.s. BCR_CRC: Mann-Whitney-Wilcoxon test two-sided, P_val=2.186e-02 U_stat=3.000e+01
+BCR_New healthy v.s. BCR_CRC: Mann-Whitney-Wilcoxon test two-sided, P_val=1.292e-02 U_stat=4.500e+01

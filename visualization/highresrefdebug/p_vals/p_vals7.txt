@@ -1,0 +1,10 @@
+p-value annotation legend:
+ns: 5.00e-02 < p <= 1.00e+00
+*: 1.00e-02 < p <= 5.00e-02
+**: 1.00e-03 < p <= 1.00e-02
+***: 1.00e-04 < p <= 1.00e-03
+****: p <= 1.00e-04
+
+1-rc1_stdev_New healthy v.s. 1-rc1_stdev_Previous healthy: Mann-Whitney-Wilcoxon test two-sided, P_val=3.959e-01 U_stat=5.950e+01
+1-rc1_stdev_Previous healthy v.s. 1-rc1_stdev_CRC: Mann-Whitney-Wilcoxon test two-sided, P_val=6.127e-02 U_stat=4.500e+00
+1-rc1_stdev_New healthy v.s. 1-rc1_stdev_CRC: Mann-Whitney-Wilcoxon test two-sided, P_val=6.016e-02 U_stat=8.000e+00
