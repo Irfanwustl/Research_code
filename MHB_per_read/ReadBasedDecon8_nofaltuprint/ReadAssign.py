@@ -507,9 +507,9 @@ class ReadAssign:
         refCbase = (read.get_reference_sequence()[Cpos]).upper()
         refGbase= (read.get_reference_sequence()[Cpos+1]).upper()
 
-        if refCbase!="C" or refGbase!="G":
-            print("wrong in CpGsanityCheck. But not Exiting  cause may be prob in the SM position")
-            print(read.query_name,refCbase,refGbase,Cpos,cpg)
+        #if refCbase!="C" or refGbase!="G":
+            #print("wrong in CpGsanityCheck. But not Exiting  cause may be prob in the SM position")
+            #print(read.query_name,refCbase,refGbase,Cpos,cpg)
             #sys.exit(1)
 
 
