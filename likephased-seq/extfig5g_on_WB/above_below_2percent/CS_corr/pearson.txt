@@ -1,0 +1,2 @@
+File	gt/CSx_some.txt_nB	gt/CSx_some.txt_NK	gt/CSx_some.txt_mNeu	gt/CSx_some.txt_DC
+BL14_atleast.2_top-1_singleCpG_final_assignedref_uniq.txt_result_nocov_mincpg3_ABSreadcount_divisioned.txt_CSxOut.txt	0.8611399177993121	0.9072479624235651	0.9678157988212893	-0.14771719573200534
