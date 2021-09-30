@@ -307,7 +307,7 @@ class Plottter:
 
                 if self.mode=="Region":
 
-                    priority_list=['repeat','cds','3/5 utrexon','promoter','intron']  #['promoter','cds','3/5 utrexon','intron','repeat']
+                    priority_list=['promoter','cds','3/5 utrexon','intron','repeat'] #['repeat','cds','3/5 utrexon','promoter','intron']  #['promoter','cds','3/5 utrexon','intron','repeat']
                     priority_handlelist=[]
                     if len(priority_list)==len(uniquegenesname):
                         for pregion in priority_list:

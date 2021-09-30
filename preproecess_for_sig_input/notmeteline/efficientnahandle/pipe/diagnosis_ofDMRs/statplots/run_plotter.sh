@@ -2,7 +2,7 @@ start=$SECONDS
 
 infolder=$1
 annotfolder=$2
-mode="habijabi" #"AUC_Region" #"Region"  ####or "allgenes"  or  just any other thing to disable it
+mode="Region" #"habijabi" #"AUC_Region" #"Region"  ####or "allgenes"  or  just any other thing to disable it
 deltacol=maxCompartmentwisedelta
 
 
