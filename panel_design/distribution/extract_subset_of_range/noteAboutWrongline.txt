@@ -1,0 +1,1 @@
+this line in extract_subset.py: outdict['total_cpg'].append(tempdf.shape[0]) should be the sum of CpGs as fixed in the other place where I am really using the statsitics relate dto this line. However, here it should not be a problem as I am not using this line's output here anayway.

@@ -39,7 +39,7 @@ for uc in unique_cpg_number:
     tempdf=indf[indf['#cpg']>=uc]
     
     outdict['atleast_linked_group_size'].append(uc)
-    outdict['total_cpg'].append(tempdf.shape[0])
+    outdict['total_cpg'].append(tempdf['#cpg'].sum())
 
 outdf=pd.DataFrame.from_dict(outdict)
 
