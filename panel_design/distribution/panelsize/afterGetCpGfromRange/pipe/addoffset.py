@@ -10,7 +10,7 @@ import sys
 infile=sys.argv[1] #'/Users/irffanalahi/Research/Research_code/panel_design/distribution/mergetest/toy1.bed'
 outfile=sys.argv[2] #infile+"_offsetadded.txt"
 
-offset=50
+offset=5
 indf=pd.read_csv(infile,sep="\t",header=None)
 #indf.head()
 
