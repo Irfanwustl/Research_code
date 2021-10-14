@@ -1,0 +1,5 @@
+
+
+
+bedtools intersect -a BL14_all_matrixCin_nr0.4_imputed_g1_mNeu_3_g2_others_33.txt -b BL14_atleast.2_top-1_singleCpG_final_assignedref_uniqnoheader.txt -c -header > BL14_all_matrixCin_nr0.4_imputed_g1_mNeu_3_g2_others_33_allCpGs.txt
+
