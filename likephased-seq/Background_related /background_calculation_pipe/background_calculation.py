@@ -4,7 +4,7 @@ from collections import defaultdict
 
 def decode_files(infile, celltype):
     sample_name = os.path.basename(infile.split('_sorted')[0])
-    mincpg = int(infile.split('_mincpg')[1][0])
+    mincpg = int((infile.split('_mincpg')[1]).split('_')[0])
     
     row = defaultdict(list)
 
