@@ -110,12 +110,32 @@ outFPdf=pd.concat(FPdflist)
 outTPdf.to_csv(outfile+"_TP.txt",sep="\t",index=False)
 outFPdf.to_csv(outfile+"_FP.txt",sep="\t",index=False)
 
+outFPdf_sample=outFPdf.sample(n=outTPdf.shape[0])
+
+
+outFPdf_sample.to_csv(outfile+"_FP_downsampled.txt",sep="\t",index=False)
+
 
 # In[9]:
 
 
 import seaborn as sns
 import matplotlib.pyplot as plt
+
+
+fig2 = plt.figure()
+
+
+sns.kdeplot(outTPdf['acceptedCpG_length'],label='TP_fragment', shade=True,color='green')
+sns.kdeplot(outFPdf_sample['acceptedCpG_length'],label='FP_fragment', shade=True,color='red')
+
+fig2.savefig(outfile+'FPsowsampled_kde.pdf',dpi=300, bbox_inches='tight')
+
+plt.close(fig2)
+
+
+
+
 fig = plt.figure()
 
 
@@ -123,6 +143,11 @@ sns.kdeplot(outTPdf['acceptedCpG_length'],label='TP_fragment', shade=True,color=
 sns.kdeplot(outFPdf['acceptedCpG_length'],label='FP_fragment', shade=True,color='red')
 
 fig.savefig(outfile+'_kde.pdf',dpi=300, bbox_inches='tight')
+
+plt.close(fig)
+
+
+
 
 
 # In[12]:
