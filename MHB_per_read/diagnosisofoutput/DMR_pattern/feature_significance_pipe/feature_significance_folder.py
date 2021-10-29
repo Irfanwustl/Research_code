@@ -56,9 +56,13 @@ for name, group in cpgwisegroup:
     group_subset=(group[['#TP_fragment','#FP_fragment','#TN_fragment','#FN_fragment','#Total_Fragment','TPR','FPR','FDR']]).mean(axis=0)
     group_subset['chrom']=(group['chrom'].tolist())[0]
     group_subset['start']=(group['start'].tolist())[0]
-    group_subset['end']=(group['end'].tolist())[0]    
+    group_subset['end']=(group['end'].tolist())[0] 
+
+    group_subset['DMRchr']=(group['DMRchr'].tolist())[0]
+    group_subset['DMRstart']=(group['DMRstart'].tolist())[0]
+    group_subset['DMRend']=(group['DMRend'].tolist())[0]   
     
-    group_subset=group_subset[['chrom','start','end','#TP_fragment','#FP_fragment','#TN_fragment','#FN_fragment','#Total_Fragment','TPR','FPR','FDR']]
+    group_subset=group_subset[['DMRchr','DMRstart','DMRend','chrom','start','end','#TP_fragment','#FP_fragment','#TN_fragment','#FN_fragment','#Total_Fragment','TPR','FPR','FDR']]
     
     cpgwisegroupList.append(group_subset)
     
