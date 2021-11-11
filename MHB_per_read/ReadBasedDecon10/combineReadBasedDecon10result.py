@@ -35,7 +35,7 @@ for smresult in allsmresult:
    
     resultfile=glob.glob(smresult+"/*"+"weightedCellProportion_mincpg1.txt")
     
-    resultdf = pd.concat([pd.read_csv(fp,sep="\t").assign(Mixture=os.path.basename(fp)) for fp in resultfile])
+    resultdf = pd.concat([pd.read_csv(fp,sep="\t").assign(Mixture=os.path.basename(fp)) for fp in resultfile],sort=True)
     resultdf=resultdf.set_index('Mixture')
     
     resultdf.to_csv(outfolderWCP+"/"+os.path.basename(smresult)+'_weightedCellProportion_mincpg1_CSxOut.txt',sep="\t")
@@ -43,7 +43,7 @@ for smresult in allsmresult:
     
     
     resultWF=glob.glob(smresult+"/*"+"weightedFragmentResult_mincpg1.txt")
-    resultWFdf=pd.concat([pd.read_csv(fp,sep="\t").assign(Mixture=os.path.basename(fp)) for fp in resultWF])
+    resultWFdf=pd.concat([pd.read_csv(fp,sep="\t").assign(Mixture=os.path.basename(fp)) for fp in resultWF],sort=True)
     resultWFdf=resultWFdf.set_index('Mixture')
     resultWFdf.to_csv(outfolderWFrag+"/"+os.path.basename(smresult)+'_weightedFragmentResult_mincpg1_CSxOut.txt',sep="\t")
     

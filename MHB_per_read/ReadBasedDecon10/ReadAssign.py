@@ -163,7 +163,7 @@ class ReadAssign:
         mdf['efficientFinalRejectedForNoCrossTalk']=mdf['efficientFinalRejectedFor'].copy()
 
 
-        mdf.loc[mdf['smCpG_accepted_length']>1,'efficientFinalAcceptedForNoCrossTalk']='crosstalk'
+        mdf.loc[mdf['smCT_accepted_lengthunique']>1,'efficientFinalAcceptedForNoCrossTalk']='crosstalk'
         mdf.loc[mdf['smCT_notacceped_lengthuniqe']>1,'efficientFinalRejectedForNoCrossTalk']='crosstalk'
 
         
@@ -229,11 +229,11 @@ class ReadAssign:
 
         mincpg=min(storectBasedinfoDF['smCpG_accepted_length'].tolist()+storectBasedinfoDF['smCpG_notacceped_length'].tolist())
 
-        weightedFragmentResultDF.to_csv(self.outpath + "_weightedFragmentResult_mincpg"+str(mincpg)+".txt", sep="\t", index=False)
+        weightedFragmentResultDF.to_csv(self.outpath + "_weightedFragmentResult_mincpg"+str(int(mincpg))+".txt", sep="\t", index=False)
 
         weightedAVGdf=pd.DataFrame(weightedAVGdict)
 
-        weightedAVGdf.to_csv(self.outpath + "_weightedCellProportion_mincpg"+str(mincpg)+".txt", sep="\t", index=False)
+        weightedAVGdf.to_csv(self.outpath + "_weightedCellProportion_mincpg"+str(int(mincpg))+".txt", sep="\t", index=False)
 
 
         storectBasedinfoDF.to_csv(self.outpath + "_fragCpGinfo.txt", sep="\t", index=False,na_rep='NA')

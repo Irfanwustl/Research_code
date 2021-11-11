@@ -1,7 +1,7 @@
 infolder=$1
 
-x=$2 #2
-y=$3  #26
+x=2
+y=26
 
 outdir=${infolder}_out_DMC_X${x}_Y${y}
 
