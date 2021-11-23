@@ -21,7 +21,6 @@ score_matrix_file =sys.argv[2] #'/Users/irffanalahi/Research/Research_code/gitig
 
 outfile=sys.argv[3]
 
-
 deltagreaterforpositive=0  ##############>0
 
 deltasmallerfornegative=0 ############<0
@@ -65,7 +64,8 @@ for cindex, cpg_scores in score_matrix_dict.items():
     
     Refchrom=cindex[0]
     
-   
+    hypoFRAGset=set()
+    hyperFRAGset=set()
  
     for pileupcolumn in input_bam.pileup(Refchrom, start=cindex[1],ignore_orphans=False,ignore_overlaps=False, stop=cindex[1]+2,truncate=True, max_depth=maxpileupdepth, min_mapping_quality=mapping_quality,min_base_quality=base_quality):
         
@@ -167,6 +167,14 @@ for cindex, cpg_scores in score_matrix_dict.items():
                 if bisulfite_parent_strand_is_reverse==False:
                     
                     if readbase=='T':
+                        
+                        if Readname in hypoFRAGset:
+                            continue
+                        else:
+                            hypoFRAGset.add(Readname)
+                        
+                        
+                        
                         accpeted=-1
 
                         if len(hypoCpGdict[Readname])==0:
@@ -192,6 +200,13 @@ for cindex, cpg_scores in score_matrix_dict.items():
 
 
                     elif readbase=='C':
+                        
+                        if Readname in hyperFRAGset:
+                            continue
+                        else:
+                            hyperFRAGset.add(Readname)
+                        
+                        
                         if len(hyperCpGdict[Readname])==0:
                             hyperCpGdict[Readname]=[[Refchrom+":"+str(cindex[1])]]
 
@@ -219,6 +234,13 @@ for cindex, cpg_scores in score_matrix_dict.items():
 
                 elif bisulfite_parent_strand_is_reverse==True:
                     if readbase=='A':
+                        
+                        if Readname in hypoFRAGset:
+                            continue
+                        else:
+                            hypoFRAGset.add(Readname)
+                        
+                        
                         accpeted=-1
 
                         if len(hypoCpGdict[Readname])==0:
@@ -242,6 +264,12 @@ for cindex, cpg_scores in score_matrix_dict.items():
                             print('prob in lenhypoCpGdict')
                             sys.exit(1)
                     elif readbase=='G':
+                        
+                        if Readname in hyperFRAGset:
+                            continue
+                        else:
+                            hyperFRAGset.add(Readname)
+                        
                         if len(hyperCpGdict[Readname])==0:
                             hyperCpGdict[Readname]=[[Refchrom+":"+str(cindex[1])]]
 
@@ -301,6 +329,10 @@ for cindex, cpg_scores in score_matrix_dict.items():
    
 
     
+
+
+# In[6]:
+
 
 
 
@@ -451,7 +483,7 @@ ctposscoredf.to_csv(outfile+"_posscore.txt",sep="\t",index=False)
 ctposfragdf.to_csv(outfile+"_posfrag.txt",sep="\t",index=False)
 
 
-# In[22]:
+# In[21]:
 
 
 
@@ -459,13 +491,15 @@ outdf.to_csv(outfile+"_rawscoreStats.txt",sep="\t")
 outdfcpgweighted.to_csv(outfile+"_binnedstats.txt",sep="\t")
 
 
-# In[23]:
+# In[22]:
 
 
 hyperinfo.to_csv(outfile+"_exclusivehyperinfo.txt",sep="\t")
 outdf.to_csv(outfile+"_scored.txt",sep="\t")
 
 
-# In[24]:
+# In[23]:
+
+
 
 
