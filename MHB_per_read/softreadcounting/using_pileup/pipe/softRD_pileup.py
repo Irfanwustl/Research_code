@@ -46,6 +46,7 @@ input_bam = pysam.AlignmentFile(bamfile, 'rb')
 
 scorecolumns=score_matrix_df.columns
 scoredict=defaultdict(list)
+scorehyperdict=defaultdict(list)
 
 
 # In[4]:
@@ -200,6 +201,7 @@ for cindex, cpg_scores in score_matrix_dict.items():
 
 
                     elif readbase=='C':
+                        accpeted=1
                         
                         if Readname in hyperFRAGset:
                             continue
@@ -227,7 +229,7 @@ for cindex, cpg_scores in score_matrix_dict.items():
                             print('prob in lenhyperCpGdict')
                             sys.exit(1)
 
-                    #    accpeted=1
+                        
 
 
 
@@ -265,6 +267,7 @@ for cindex, cpg_scores in score_matrix_dict.items():
                             sys.exit(1)
                     elif readbase=='G':
                         
+                        accpeted=1
                         if Readname in hyperFRAGset:
                             continue
                         else:
@@ -297,7 +300,7 @@ for cindex, cpg_scores in score_matrix_dict.items():
                 
                 
                 
-                if accpeted!=0 :
+                if accpeted==-1 :
                    
                     
 
@@ -314,6 +317,20 @@ for cindex, cpg_scores in score_matrix_dict.items():
                             scoredict[Readname]=list(accpeted*smrow)
                     else:
                         scoredict[Readname]=list(np.array(scoredict[Readname])+(accpeted*smrow))
+                
+                elif accpeted==1 :
+                    
+                    smrow=list(cpg_scores.values())
+
+
+
+                    smrow=np.array(smrow)
+
+
+                    if len(scorehyperdict[Readname])==0:
+                            scorehyperdict[Readname]=list(-1*smrow)
+                    else:
+                        scorehyperdict[Readname]=list(np.array(scorehyperdict[Readname])+(-1*smrow))
 
                 
                 
@@ -347,6 +364,47 @@ scoredf.head()
 # In[8]:
 
 
+scorehyperdf=pd.DataFrame.from_dict(scorehyperdict, orient='index',columns=scorecolumns)
+scorehyperdf.head()
+
+
+# In[9]:
+
+
+totalhyperdf=scorehyperdf[~scorehyperdf.index.isin(scoredf.index.tolist())]
+totalhyperdf.head()
+
+
+# In[10]:
+
+
+scoredf.shape
+
+
+# In[11]:
+
+
+totalhyperdf.shape
+
+
+# In[15]:
+
+
+scoredf=pd.concat([scoredf,totalhyperdf],axis=0)
+scoredf.shape
+
+
+# In[17]:
+
+
+if scoredf[scoredf.index.duplicated].shape[0]!=0:
+    print("prob in generation of scoreDF")
+    sys.exit(1)
+
+
+# In[18]:
+
+
 hypoCpGdf=pd.DataFrame.from_dict(hypoCpGdict, orient='index',columns=['hypoCpG'])
 lenhypoCpGdf=pd.DataFrame.from_dict(lenhypoCpGdict, orient='index',columns=['LENhypoCpG'])
 hyperCpGdf=pd.DataFrame.from_dict(hyperCpGdict, orient='index',columns=['hyperCpG'])
@@ -359,29 +417,40 @@ if hyperCpGdf.shape[0]!=lenhyperCpGdf.shape[0]:
 hyperinfo=pd.concat([hyperCpGdf,lenhyperCpGdf],axis=1)
 
 
-if (lenhypoCpGdf.shape[0]==hypoCpGdf.shape[0]) and (scoredf.shape[0]==lenhypoCpGdf.shape[0]):
-    
-    
-    outdf=pd.concat([scoredf,hypoCpGdf,lenhypoCpGdf],axis=1)
-    
-    outdf=outdf.merge(hyperinfo,left_index=True,right_index=True,how='left')
-else:
-    
-    print('problem in merging')
+
+if hypoCpGdf.shape[0]!=lenhypoCpGdf.shape[0]:
+    print("problem in hyper merging")
     sys.exit(1)
+    
+hypoinfo=pd.concat([hypoCpGdf,lenhypoCpGdf],axis=1)
+
+    
+    
+outdf=scoredf.merge(hypoinfo,left_index=True,right_index=True,how='left')
+    
+outdf=outdf.merge(hyperinfo,left_index=True,right_index=True,how='left')
+
+
 if scoredf.shape[0]!=outdf.shape[0]:
     print("somehow wrong")
     sys.exit(1)
 
 
-# In[9]:
+# In[19]:
 
 
 outdf['LENhyperCpG'].fillna(0, inplace=True)
 outdf.head()
 
 
-# In[10]:
+# In[20]:
+
+
+outdf['LENhypoCpG'].fillna(0, inplace=True)
+outdf.head()
+
+
+# In[21]:
 
 
 outdf['total_cpg']=outdf['LENhypoCpG']+outdf['LENhyperCpG']
@@ -398,46 +467,60 @@ if max_value >1 or min_value<0:
 outdf.head()
 
 
-# In[11]:
+# In[22]:
+
+
+outdf['maxscoredCT_beforeCpGweight']=(outdf[scorecolumns]).idxmax(axis=1)
+outdf.head()
+
+
+# In[23]:
+
+
+outdf['maxscore_beforeCpGweight']=outdf[scorecolumns].max(axis=1)
+outdf.head()
+
+
+# In[24]:
 
 
 outdfcpgweighted=outdf.copy()
 
 
-# In[12]:
+# In[25]:
 
 
 for scolumn in scorecolumns:
     outdfcpgweighted[scolumn]=outdfcpgweighted[scolumn]*outdfcpgweighted['LENhypoCpG_BY_total_cpg']
 
 
-# In[13]:
+# In[26]:
 
 
 outdfcpgweighted.head()
 
 
-# In[14]:
+# In[27]:
 
 
 outdf.head()
 
 
-# In[15]:
+# In[28]:
 
 
 outdfcpgweighted['maxscoredCT']=(outdfcpgweighted[scorecolumns]).idxmax(axis=1)
 outdfcpgweighted.head()
 
 
-# In[16]:
+# In[29]:
 
 
 outdfcpgweighted['maxscore']=outdfcpgweighted[scorecolumns].max(axis=1)
 outdfcpgweighted.head()
 
 
-# In[17]:
+# In[30]:
 
 
 outdfcpgweighted['deltabasedfragassignment']='NotAssigned'
@@ -445,7 +528,7 @@ outdfcpgweighted.loc[outdfcpgweighted['maxscore']>deltagreaterforpositive,'delta
 outdfcpgweighted.head()
 
 
-# In[18]:
+# In[31]:
 
 
 ctposscoredict= defaultdict(list)
@@ -468,7 +551,7 @@ for score in scorecolumns:
     ctposfragdict[ctname].append(temp_posfrag)
 
 
-# In[19]:
+# In[32]:
 
 
 ctposscoredf=pd.DataFrame.from_dict(ctposscoredict)
@@ -476,14 +559,14 @@ ctposfragdf=pd.DataFrame.from_dict(ctposfragdict)
 ctposscoredf.head()
 
 
-# In[20]:
+# In[33]:
 
 
 ctposscoredf.to_csv(outfile+"_posscore.txt",sep="\t",index=False)
 ctposfragdf.to_csv(outfile+"_posfrag.txt",sep="\t",index=False)
 
 
-# In[21]:
+# In[34]:
 
 
 
@@ -491,14 +574,13 @@ outdf.to_csv(outfile+"_rawscoreStats.txt",sep="\t")
 outdfcpgweighted.to_csv(outfile+"_binnedstats.txt",sep="\t")
 
 
-# In[22]:
+# In[35]:
 
 
 hyperinfo.to_csv(outfile+"_exclusivehyperinfo.txt",sep="\t")
-outdf.to_csv(outfile+"_scored.txt",sep="\t")
 
 
-# In[23]:
+# In[36]:
 
 
 
