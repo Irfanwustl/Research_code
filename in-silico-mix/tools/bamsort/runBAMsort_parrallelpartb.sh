@@ -1,6 +1,6 @@
 
 
- #./bam_sort_flexi_job_parallal.sh mNeu 30
+ ./bam_sort_flexi_job_parallal.sh mNeu 30
 
 
 ./bam_sort_flexi_job_parallal.sh Mn 30
