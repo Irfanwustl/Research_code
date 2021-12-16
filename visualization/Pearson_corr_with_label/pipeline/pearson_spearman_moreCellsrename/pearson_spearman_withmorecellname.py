@@ -52,8 +52,8 @@ if y== 'predicted':
 
 ####df[celltype] = df[celltype].replace(['CD1hgcc9'],'B Chcxell') #### to test the following will be ignored if there is no such cell type
 
-df[celltype] = df[celltype].replace(['CD4'],'CD4 T')
-df[celltype] = df[celltype].replace(['CD8'],'CD8 T')
+df[celltype] = df[celltype].replace(['CD4'],'Naive CD4 T')
+df[celltype] = df[celltype].replace(['CD8'],'Naive CD8 T')
 df[celltype] = df[celltype].replace(['CD14'],'Mono')
 df[celltype] = df[celltype].replace(['CD19'],'B Cell')
 df[celltype] = df[celltype].replace(['nB'],'Naive B cell')
