@@ -89,6 +89,11 @@ def renamect(act):
         return 'Naive CD4 T'
     if act=='CD8':
         return 'Naive CD8 T'
+
+    if act=='NaiveCD4':
+        return 'Naive CD4 T'
+    if act=='NaiveCD8':
+        return 'Naive CD8 T'
     if act=='Tr':
         return 'Tregs'
     if act=='mB':
@@ -101,6 +106,23 @@ def renamect(act):
         return 'Memory CD8 T'
     if act=='Mn':
         return 'Mono'
+
+
+    if act=='em8':
+        return 'CD8 effector memory'
+    if act=='cm8':
+        return 'CD8 central memory'
+
+    if act=='em4':
+        return 'CD4 effector memory'
+    if act=='cm4':
+        return 'CD4 central memory'
+
+
+    if act=='ed8':
+        return 'CD8 effector'
+
+
     return act
 
 
@@ -123,7 +145,7 @@ for i, cell in enumerate(new_columns):
     
     rnamedcell=renamect(cell)
     
-    axs[i].set_title(rnamedcell, fontsize=18)
+    axs[i].set_title(rnamedcell, fontsize=32)
     corrs = 'R = ' + str(np.around(pearson_dic[cell], decimals=3)) + '\nrho = ' + str(np.around(spearman_dic[cell], decimals=3))
     axs[i].annotate(corrs, xy = (np.mean(GT) / 5, max(RC)), fontsize=20)
 

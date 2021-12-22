@@ -52,12 +52,14 @@ if y== 'predicted':
 
 ####df[celltype] = df[celltype].replace(['CD1hgcc9'],'B Chcxell') #### to test the following will be ignored if there is no such cell type
 
-df[celltype] = df[celltype].replace(['CD4'],'Naive CD4 T')
-df[celltype] = df[celltype].replace(['CD8'],'Naive CD8 T')
+df[celltype] = df[celltype].replace(['NaiveCD4'],'Naive CD4 T')
+df[celltype] = df[celltype].replace(['NaiveCD8'],'Naive CD8 T')
+#df[celltype] = df[celltype].replace(['CD4'],'Naive CD4 T')
+#df[celltype] = df[celltype].replace(['CD8'],'Naive CD8 T')
 df[celltype] = df[celltype].replace(['CD14'],'Mono')
 df[celltype] = df[celltype].replace(['CD19'],'B Cell')
-df[celltype] = df[celltype].replace(['nB'],'Naive B cell')
-df[celltype] = df[celltype].replace(['PC'],'Palsma')
+df[celltype] = df[celltype].replace(['nB'],'Naive B')
+df[celltype] = df[celltype].replace(['PC'],'Plasma')
 df[celltype] = df[celltype].replace(['cm8'],'CD8 central memory')
 df[celltype] = df[celltype].replace(['em8'],'CD8 effector memory')
 df[celltype] = df[celltype].replace(['m8'],'CD8 memory')
@@ -69,7 +71,7 @@ df[celltype] = df[celltype].replace(['mNeu'],'PMN')
 df[celltype] = df[celltype].replace(['Eo'],'Eosinophil')
 df[celltype] = df[celltype].replace(['Tr'],'Tregs')
 df[celltype] = df[celltype].replace(['Mg'],'Megakaryocyte')
-df[celltype] = df[celltype].replace(['mB'],'Memory B cell')
+df[celltype] = df[celltype].replace(['mB'],'Memory B')
 df[celltype] = df[celltype].replace(['Mn'],'Mono')
 
 
@@ -100,8 +102,8 @@ text='r = %s \nrho = %s' % (format(corr[0], '.3f'), format(corr_spear[0], ".3f")
 
 sns.set(style="ticks",font_scale=1.5)
 if xyfixed_lim==True:
-    plt.xlim([0, 0.8])
-    plt.ylim([0, 0.8])
+    #plt.xlim([0, 0.8])
+    plt.ylim([0, 0.45])
 
 g=sns.scatterplot(df[x], df[y],hue=df[celltype],edgecolor='none')
 g.legend(loc='center left', bbox_to_anchor=(1.02, 0.5), ncol=1)
