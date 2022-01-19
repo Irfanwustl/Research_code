@@ -18,7 +18,12 @@ outfile=sys.argv[2]
 
 
 ####BL22LTME#####
-scorecolumns=['NaiveCD4-others','NaiveCD8-others','nB-others','NK-others','PC-others','Mono-others','M0-others','M1-others','M2-others','iDC-others','mDC-others','PMN-others','cm8-others','em8-others','Eo-others','Tregs-others','em4-others','ed8-others','Mg-others','cm4-others','Er-others','mB-others','TIL-others','MelTumor-others']
+#scorecolumns=['NaiveCD4-others','NaiveCD8-others','nB-others','NK-others','PC-others','Mono-others','M0-others','M1-others','M2-others','iDC-others','mDC-others','PMN-others','cm8-others','em8-others','Eo-others','Tregs-others','em4-others','ed8-others','Mg-others','cm4-others','Er-others','mB-others','TIL-others','MelTumor-others']
+
+
+
+#CD8TIL_mel_naiveMylid_activated
+scorecolumns=['CD8TIL-others','MelTumor-others','activated-others','NaiveMyloid-others']
 
 
 ####mel 3 compartment####
