@@ -122,19 +122,22 @@ def corelgo(score_matrix_dict):
                     assert pileupread.alignment.has_tag("XB") or pileupread.alignment.has_tag("YD")
 
 
-                    if pileupread.alignment.has_tag("XB"): # gem3 / blueprint tag
+                    
+                    if pileupread.alignment.has_tag("YD"): # Biscuit tag
+                        yd_tag = pileupread.alignment.get_tag("YD")
+                        if yd_tag == "f": # Forward = C→T
+                            bisulfite_parent_strand_is_reverse = False
+                        elif yd_tag == "r": # Reverse = G→A
+                            bisulfite_parent_strand_is_reverse = True
+
+                    elif pileupread.alignment.has_tag("XB"): # gem3 / blueprint tag
                         xb_tag = pileupread.alignment.get_tag("XB") # XB:C = Forward / Reference was CG
                         # TODO: Double check one or two of these gem3 tags manually.
                         if xb_tag == "C":
                             bisulfite_parent_strand_is_reverse = False
                         elif xb_tag == "G": # XB:G = Reverse / Reference was GA
                             bisulfite_parent_strand_is_reverse = True
-                    elif pileupread.alignment.has_tag("YD"): # Biscuit tag
-                        yd_tag = pileupread.alignment.get_tag("YD")
-                        if yd_tag == "f": # Forward = C→T
-                            bisulfite_parent_strand_is_reverse = False
-                        elif yd_tag == "r": # Reverse = G→A
-                            bisulfite_parent_strand_is_reverse = True
+
 
                     #print(cpg_location[0], cpg_location[1])
 
@@ -386,7 +389,7 @@ end_time = time.time()
 
 time_elapsed = (end_time - start_time)
 
-print(time_elapsed)
+#print(time_elapsed)
 
 
 # In[5]:
@@ -415,7 +418,7 @@ end_time = time.time()
 
 time_elapsed = (end_time - start_time)
 
-print(time_elapsed)
+#print(time_elapsed)
 
 
 # In[8]:
@@ -599,7 +602,7 @@ end_time = time.time()
 
 time_elapsed = (end_time - start_time)
 
-print(time_elapsed)
+#print(time_elapsed)
 
 
 # In[29]:

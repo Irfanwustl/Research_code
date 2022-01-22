@@ -29,7 +29,7 @@ i=0
 while (( i < ${#dirList[@]} ))
 do
 
-	echo now=========${dirList[i]}
+	#echo now=========${dirList[i]}
 	
 
 	python3 softRDmultiprocessing.py ${bamfolder}/${dirList[i]} ${smfile}  ${outdir}/${dirList[i]} ${coretouse}
