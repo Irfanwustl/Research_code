@@ -17,7 +17,7 @@ i=0
 while (( i < ${#dirList[@]} ))
 do
 
-	echo now=========${dirList[i]} 
-	bedtools intersect -wa -wb -a ${infolder}/${dirList[i]} -b ${intwith} > ${outdir}/${dirList[i]}_${intwithbase}.txt 
+	#echo now=========${dirList[i]} 
+	bedtools intersect -wa -wb -a ${infolder}/${dirList[i]} -b ${intwith} > ${outdir}/${dirList[i]}_${intwithbase}
  	(( i++ ))
 done

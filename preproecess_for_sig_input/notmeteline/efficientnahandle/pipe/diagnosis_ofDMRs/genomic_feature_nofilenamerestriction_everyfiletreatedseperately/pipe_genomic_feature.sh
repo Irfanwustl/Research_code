@@ -45,7 +45,7 @@ headeradded=${outdir}_header
 
 celltypeseperated=${headeradded}_celltypeseperated
 
-./run_mycopy.sh ${headeradded} ${celltypeseperated}
+./run_mycopy.sh ${headeradded} ${celltypeseperated} ${genomicfeaturefolder}
 
 ./run_mergealldfinafolderrbindlike.sh ${celltypeseperated}
 
