@@ -55,14 +55,19 @@ for col in columns:
 
 def generate_df_dic(correlation, df, columns):
     df_corr = {}
+    dfp_corr = {}
     df = df.loc[samples, :]
     for cell in columns:
         if cell in df.columns:
             corr = correlation(list(df[cell]), list(df[cell + '_real']))[0]
             df_corr[cell] = corr
+
+            dfp_corr[cell]=correlation(list(df[cell]), list(df[cell + '_real']))[1]
         else:
             df_corr[cell].append(float('NaN'))
-    return df_corr
+            dfp_corr[cell].append(float('NaN'))
+
+    return df_corr,dfp_corr
 
 def linear_reg(df, columns):
     df_reg = {}
@@ -76,8 +81,8 @@ def linear_reg(df, columns):
 # In[6]:
 
 
-pearson_dic = generate_df_dic(pearsonr, df, new_columns)
-spearman_dic = generate_df_dic(spearmanr, df, new_columns)
+pearson_dic,pearson_dicp = generate_df_dic(pearsonr, df, new_columns)
+spearman_dic,spearman_dicp = generate_df_dic(spearmanr, df, new_columns)
 reg = linear_reg(df, new_columns)
 
 
@@ -137,20 +142,23 @@ fig, axs = plt.subplots(1, len(new_columns), figsize=(len(new_columns) * 10, 10)
 for i, cell in enumerate(new_columns):
     GT = np.array(df[cell + '_real'])
     RC = np.array(df[cell])
-    axs[i].scatter(GT, RC)
+    axs[i].scatter(GT, RC,s=100)
     axs[i].set_xlim(0, max(GT) + np.mean(GT) / 5)
     axs[i].set_ylim(0, max(RC) + np.mean(RC) / 5)
     m = reg[cell][0]
     b = reg[cell][1]
     axs[i].plot(GT, GT * m + b, c='k')
+
+    axs[i].tick_params(axis="x", labelsize=20)
+    axs[i].tick_params(axis="y", labelsize=20)
     #axs[i].set_xlabel('Ground Truth', fontsize=16)
     #axs[i].set_ylabel('Read Counting', fontsize=16)
     
     rnamedcell=renamect(cell)
     
     axs[i].set_title(rnamedcell, fontsize=32)
-    corrs = 'R = ' + str(np.around(pearson_dic[cell], decimals=3)) + '\nrho = ' + str(np.around(spearman_dic[cell], decimals=3))
-    axs[i].annotate(corrs, xy = (np.mean(GT) / 5, max(RC)), fontsize=20)
+    corrs = 'R = ' + str(np.around(pearson_dic[cell], decimals=3)) +', P = ' + str(np.around(pearson_dicp[cell], decimals=3)) + '\nrho = ' + str(np.around(spearman_dic[cell], decimals=3))+', P = ' + str(np.around(spearman_dicp[cell], decimals=3))
+    axs[i].annotate(corrs, xy = (np.mean(GT) / 5, max(RC)), fontsize=25)
 
 plt.savefig(file+ '_cellcorr.pdf', bbox_inches='tight')
 

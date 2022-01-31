@@ -5,7 +5,6 @@
 
 
 from scipy.stats import pearsonr
-from scipy.stats import spearmanr
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -29,7 +28,7 @@ celltype="celltype" #"Cell Type" #"celltype"
 
 
 
-xyfixed_lim=False
+xyfixed_lim=True
 
 only_scatter=False
 
@@ -52,30 +51,10 @@ if y== 'predicted':
 
 ####df[celltype] = df[celltype].replace(['CD1hgcc9'],'B Chcxell') #### to test the following will be ignored if there is no such cell type
 
-df[celltype] = df[celltype].replace(['NaiveCD4'],'Naive CD4 T')
-df[celltype] = df[celltype].replace(['NaiveCD8'],'Naive CD8 T')
 df[celltype] = df[celltype].replace(['CD4'],'CD4 T')
 df[celltype] = df[celltype].replace(['CD8'],'CD8 T')
 df[celltype] = df[celltype].replace(['CD14'],'Mono')
-df[celltype] = df[celltype].replace(['CD19'],'B')
-df[celltype] = df[celltype].replace(['CD56'],'NK')
-df[celltype] = df[celltype].replace(['nB'],'Naive B')
-df[celltype] = df[celltype].replace(['PC'],'Plasma')
-df[celltype] = df[celltype].replace(['cm8'],'CD8 central memory')
-df[celltype] = df[celltype].replace(['em8'],'CD8 effector memory')
-df[celltype] = df[celltype].replace(['m8'],'CD8 memory')
-df[celltype] = df[celltype].replace(['ed8'],'CD8 effector')
-df[celltype] = df[celltype].replace(['cm4'],'CD4 central memory')
-df[celltype] = df[celltype].replace(['em4'],'CD4 effector memory')
-df[celltype] = df[celltype].replace(['m4'],'CD4 memory')
-df[celltype] = df[celltype].replace(['mNeu'],'PMN')
-df[celltype] = df[celltype].replace(['Neu'],'PMN')
-df[celltype] = df[celltype].replace(['Eo'],'Eosinophil')
-df[celltype] = df[celltype].replace(['Tr'],'Tregs')
-df[celltype] = df[celltype].replace(['Mg'],'Megakaryocyte')
-df[celltype] = df[celltype].replace(['mB'],'Memory B')
-df[celltype] = df[celltype].replace(['Mn'],'Mono')
-
+df[celltype] = df[celltype].replace(['CD19'],'B Cell')
 
 
 
@@ -92,11 +71,9 @@ df.corr()
 
 corr = pearsonr(df[x], df[y])
 
-corr_spear=spearmanr(df[x], df[y])
-
 #corr = [np.round(c, 5) for c in corr]
 #print(corr)
-text='r = %s, p = %s \nrho = %s, p = %s' % (format(corr[0], '.3f'), format(corr[1], ".3e"), format(corr_spear[0], ".3f"),format(corr_spear[1], ".3f")  )
+text='r = %s \nP = %s' % (format(corr[0], '.3f'), format(corr[1], ".3e") )
 
 
 # In[6]:
@@ -105,13 +82,13 @@ text='r = %s, p = %s \nrho = %s, p = %s' % (format(corr[0], '.3f'), format(corr[
 sns.set(style="ticks",font_scale=1.5)
 if xyfixed_lim==True:
     #plt.xlim([0, 0.8])
-    plt.ylim([0, 0.45])
+    plt.ylim([0, 0.128])
 
 g=sns.scatterplot(df[x], df[y],hue=df[celltype],edgecolor='none')
 g.legend(loc='center left', bbox_to_anchor=(1.02, 0.5), ncol=1)
 
 if only_scatter==False:
-    ax=sns.regplot(df[x], df[y],scatter=False)
+    ax=sns.regplot(df[x], df[y],scatter=False,ci = None)
 
 
 
