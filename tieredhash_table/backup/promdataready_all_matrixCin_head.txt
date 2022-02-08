@@ -1,0 +1,10 @@
+position	amel-139-P-CD14.bedgraph_rolled	amel-167-P-CD14.bedgraph_rolled	bmel-1254-T-CD14.bedgraph_rolled	bmel-1457-T-CD14.bedgraph_rolled	bmel-960-T-CD14.bedgraph_rolled	cmel-139-P-CD4.bedgraph_rolled	cmel-167-P-CD4.bedgraph_rolled	dmel-1254-T-CD4.bedgraph_rolled	dmel-1457-T-CD4.bedgraph_rolled	dmel-960-T-CD4.bedgraph_rolled	emel-139-P-CD8.bedgraph_rolled	emel-167-P-CD8.bedgraph_rolled	fmel-1254-T-CD8.bedgraph_rolled	fmel-1457-T-CD8.bedgraph_rolled	fmel-960-T-CD8.bedgraph_rolled	gmel-1254-T-CD45-Negative.bedgraph_rolled	gmel-1340-T-CD45-Negative.bedgraph_rolled	gmel-1457-T-CD45-Negative.bedgraph_rolled
+chr1:64495	0.5	1	NA	1	NA	0.83	1	NA	NA	1	0.598	NA	0	NA	NA	NA	1	0
+chr1:64563	0.828	0.663	0.337	0.557	0.333	0.527	0.537	0.6	0.33	0.36	0.209	0.202	0.143	0.333	0.273	0.33	0.667	0
+chr1:64764	0.67	0.714	0.33	0.456	0.769	0.47	0.849	0.335	0.784	0.5	0.65	0.763	0.91	0.75	0.663	0.375	1	0.143
+chr1:64900	0.909	0.5	NA	NA	1	0.749	0.5	NA	0.25	1	0.7	NA	0.5	0.5	NA	NA	NA	0
+chr1:66900	0.67	1	NA	NA	NA	0.33	NA	NA	NA	NA	0	NA	NA	NA	NA	NA	NA	NA
+chr1:67183	1	1	NA	0.716	0.911	0.802	0.769	NA	0.8	1	0.868	1	NA	1	0.67	NA	NA	0
+chr1:67223	0.763	1	NA	0.57	0.887	0.775	0.925	NA	0.602	0.732	0.736	0.875	NA	0.875	0.543	NA	NA	0
+chr1:68239	0.8	1	NA	0.5	NA	0.33	0.67	NA	1	0.5	0	0.5	NA	1	1	NA	NA	NA
+chr1:68246	0.83	0.5	NA	1	NA	0.5	0.67	NA	0.5	0.5	0.5	0.5	NA	1	1	NA	NA	NA

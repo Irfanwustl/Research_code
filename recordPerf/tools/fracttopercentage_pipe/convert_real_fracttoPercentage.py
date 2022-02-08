@@ -14,7 +14,7 @@ outfile=sys.argv[2]
 suffix='_real'
 
 
-indf=pd.read_csv(infile,sep='\t')
+indf=pd.read_csv(infile,sep='\t',index_col=0)
 indf.head()
 
 
@@ -29,8 +29,8 @@ allcols
 
 
 for acol in allcols:
-    if suffix in acol:
-        indf[acol]=indf[acol]*100
+    #if suffix in acol:
+    indf[acol]=indf[acol]*100
 
         
 indf.head()
@@ -39,5 +39,5 @@ indf.head()
 # In[4]:
 
 
-indf.to_csv(outfile,sep='\t',index=False)
+indf.to_csv(outfile,sep='\t')
 
