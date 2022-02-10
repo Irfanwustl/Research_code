@@ -1,0 +1,4 @@
+###bookkeeping intersect hoy na.
+
+bedtools intersect -a a.bed -b b.bed -wa -header > a_intwith_b_shouldnotbeunique.bed
+bedtools intersect -a a.bed -b b.bed -wa -header -u > a_intwith_b_shouldbeunique.bed
