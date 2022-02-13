@@ -8,6 +8,7 @@ import pandas as pd
 import concurrent.futures
 import os
 import sys
+import time
 
 reffile=sys.argv[1]  #'promdataready_all_matrix_head'
 phenfile=sys.argv[2]  #'CD8TIL_PHENOCLASS.txt'
@@ -16,6 +17,7 @@ NA_tolerate_rate=0.5
 
 outfolder=sys.argv[4]   #'testout'
 
+start_time = time.time()
 
 refdf=pd.read_csv(reffile,sep="\t")
 refdf.set_index(['chrom','start','end'], inplace=True)
@@ -96,33 +98,40 @@ def coreAlgo(class1indices,class2indices,class1name,class2name):
 # In[5]:
 
 
-#with concurrent.futures.ProcessPoolExecutor() as executor:
+with concurrent.futures.ProcessPoolExecutor() as executor:
 
-for i in range(phendf.shape[0]):
-    classes = phendf.iloc[i, :]
-    class1 = (classes == 1).tolist()
+    for i in range(phendf.shape[0]):
+        classes = phendf.iloc[i, :]
+        class1 = (classes == 1).tolist()
 
-    if  True in class1:
+        if  True in class1:
 
-        allclass2 = (classes == 2).tolist()
-        
-        nowprofilethiscell=phendf.index[i]
-        os.mkdir(outfolder+'/'+nowprofilethiscell)
-        for j in range(compartmentdf.shape[0]):
-            compartmentclasses = compartmentdf.iloc[j, :]
+            allclass2 = (classes == 2).tolist()
+            
+            nowprofilethiscell=phendf.index[i]
+            os.mkdir(outfolder+'/'+nowprofilethiscell)
+            for j in range(compartmentdf.shape[0]):
+                compartmentclasses = compartmentdf.iloc[j, :]
 
-            ###find compartment class memeber###
-            compartmentclass1=(compartmentclasses==1).tolist()
+                ###find compartment class memeber###
+                compartmentclass1=(compartmentclasses==1).tolist()
 
-            ###find which files to compare against from this compartment ######## 
-            compare_against_from_this_compartment=[allclass2 and compartmentclass1 for allclass2, compartmentclass1 in zip(allclass2, compartmentclass1)]
+                ###find which files to compare against from this compartment ######## 
+                compare_against_from_this_compartment=[allclass2 and compartmentclass1 for allclass2, compartmentclass1 in zip(allclass2, compartmentclass1)]
 
 
-            if True in compare_against_from_this_compartment:
+                if True in compare_against_from_this_compartment:
 
-                coreAlgo(class1,compare_against_from_this_compartment,nowprofilethiscell,compartmentdf.index[j])
-                #executor.submit(coreAlgo,class1,compare_against_from_this_compartment,phendf.index[i],compartmentdf.index[j])
+                    #coreAlgo(class1,compare_against_from_this_compartment,nowprofilethiscell,compartmentdf.index[j])
+                    executor.submit(coreAlgo,class1,compare_against_from_this_compartment,phendf.index[i],compartmentdf.index[j])
 
 
 print('finished')
+
+end_time = time.time()
+
+time_elapsed = (end_time - start_time)
+
+print(time_elapsed)
+
 

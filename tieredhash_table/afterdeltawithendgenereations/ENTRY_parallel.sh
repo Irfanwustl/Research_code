@@ -9,7 +9,7 @@ dirList=($( ls ${infol} ))
 
 subdirs=()
 
-celltypes=(MEL_TUMOR PBL CD8TIL)
+#celltypes=(MEL_TUMOR PBL CD8TIL)
 
 i=0
 while (( i < ${#dirList[@]} ))
