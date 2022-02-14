@@ -7,13 +7,15 @@ compartmentfile=$3
 
 coretouse=$4
 
+MAXWORKER=$5
+
 
 outfolder=${reffile}_allout
 
 mkdir ${outfolder}
 
 
-python3 tieredhashgeneration.py ${reffile}  ${phenfile} ${compartmentfile} ${outfolder}
+python3 tieredhashgeneration.py ${reffile}  ${phenfile} ${compartmentfile} ${outfolder}  ${MAXWORKER}
 
 
 ./ENTRY_parallel.sh ${outfolder} ${coretouse}

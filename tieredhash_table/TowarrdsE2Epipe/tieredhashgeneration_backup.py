@@ -17,8 +17,6 @@ NA_tolerate_rate=0.5
 
 outfolder=sys.argv[4]   #'testout'
 
-maxworkerhere=int(sys.argv[5])
-
 start_time = time.time()
 
 refdf=pd.read_csv(reffile,sep="\t")
@@ -100,7 +98,7 @@ def coreAlgo(class1indices,class2indices,class1name,class2name):
 # In[5]:
 
 
-with concurrent.futures.ProcessPoolExecutor(max_workers=maxworkerhere) as executor:
+with concurrent.futures.ProcessPoolExecutor() as executor:
 
     for i in range(phendf.shape[0]):
         classes = phendf.iloc[i, :]
