@@ -1,0 +1,17 @@
+cp  cfDNA/Y-3703-cfDNA*   RunonSOMEmelonly/irAEcohort/   
+cp  cfDNA/Y-3920-cfDNA*   RunonSOMEmelonly/irAEcohort/
+cp  cfDNA/y4-YUEVRY_19_3935-cfDNA*   RunonSOMEmelonly/irAEcohort/
+cp  cfDNA/Y-3880-cfDNA*   RunonSOMEmelonly/irAEcohort/
+cp  cfDNA/Y-3893-cfDNA*   RunonSOMEmelonly/irAEcohort/
+cp  cfDNA/Y-3918-cfDNA*   RunonSOMEmelonly/irAEcohort/
+cp  cfDNA/Y-3879-cfDNA*   RunonSOMEmelonly/irAEcohort/
+cp  cfDNA/y4-YUPARK_18_3832-cfDNA*   RunonSOMEmelonly/irAEcohort/
+cp  cfDNA/tot-YUPRAF_19-3925-cfDNA*   RunonSOMEmelonly/irAEcohort/
+cp  cfDNA/Y-3814-cfDNA*   RunonSOMEmelonly/irAEcohort/
+cp  cfDNA/Y-3824-cfDNA*   RunonSOMEmelonly/irAEcohort/
+cp  cfDNA/Y-3715-cfDNA*   RunonSOMEmelonly/irAEcohort/
+cp  cfDNA/Y-3674-cfDNA*   RunonSOMEmelonly/irAEcohort/
+cp  cfDNA/tot-YUTAUR_19-3926-cfDNA*   RunonSOMEmelonly/irAEcohort/
+cp  cfDNA/tot-YUTHEA_20-4000-cfDNA*   RunonSOMEmelonly/irAEcohort/
+cp  cfDNA/Y-3688-cfDNA*   RunonSOMEmelonly/irAEcohort/
+cp  cfDNA/Y-3707-cfDNA*   RunonSOMEmelonly/irAEcohort/
