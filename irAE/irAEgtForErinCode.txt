@@ -1,0 +1,26 @@
+Mixture	Time point	Response
+Y-3918-cfDNA	PreTx	DCB
+Y-3703-cfDNA	PreTx	DCB
+Y-3920-cfDNA	PreTx	DCB
+Y-3715-cfDNA	PreTx	DCB
+tot-YUTAUR_19-3926-cfDNA	PreTx	DCB
+Y-3688-cfDNA	PreTx	DCB
+Y-3880-cfDNA	PreTx	NDB
+Y-3893-cfDNA	On-tx	NDB
+Y-3879-cfDNA	PreTx	NDB
+Y-3814-cfDNA	PreTx	NDB
+Y-3824-cfDNA	On-tx	NDB
+y4-YUEVRY_19_3935-cfDNA	PreTx	NDB
+tot-YUPRAF_19-3925-cfDNA	PreTx	NDB
+tot-YUTHEA_20-4000-cfDNA	PreTx	NDB
+y4-YUPARK_18_3832-cfDNA	PreTx	NDB
+Y-3674-cfDNA	PreTx	NDB
+Y-3707-cfDNA	PreTx	NDB
+tot-66-cfDNA	Notime	Healthy
+tot-67-cfDNA	Notime	Healthy
+tot-72-cfDNA	Notime	Healthy
+tot-PH1-cfDNA	Notime	Healthy
+tot-PH16-cfDNA	Notime	Healthy
+tot-PH17-cfDNA	Notime	Healthy
+tot-PH4-cfDNA	Notime	Healthy
+tot-PH7-cfDNA	Notime	Healthy
