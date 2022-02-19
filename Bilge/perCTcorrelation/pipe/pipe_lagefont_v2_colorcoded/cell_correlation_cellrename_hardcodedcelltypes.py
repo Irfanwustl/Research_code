@@ -137,7 +137,7 @@ def renamect(act):
 # In[8]:
 
 
-new_columns=['Mono', 'NK', 'mB', 'nB', 'NaiveCD4', 'NaiveCD8', 'Tregs', 'cm4', 'em4', 'cm8']
+new_columns=[ 'cm4', 'em4']
 
 colorlist=['tab:blue','orange','green','red','purple','brown','magenta','gray','olive','tab:cyan']
 

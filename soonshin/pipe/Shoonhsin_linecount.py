@@ -52,7 +52,7 @@ for filename in filenames:
     
     # determine number of lines
     with open(join(mypath, filename), 'r') as f:
-        count = -1 # account for first row
+        count = 0 #-1 # account for first row
         for line in f:
             count += 1
     counts.append(count)
