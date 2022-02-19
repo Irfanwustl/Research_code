@@ -1,0 +1,4 @@
+Mixture	cm4	em4	Tcell
+tot-66-cfDNA_binnedstats.pkl	0.0	0	0
+tot-67-cfDNA_binnedstats.pkl	3.16069375	0	0
+tot-72-cfDNA_binnedstats.pkl	3.261274285714286	0	0
