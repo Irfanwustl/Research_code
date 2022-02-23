@@ -26,7 +26,7 @@ outfile=sys.argv[2]
 #######outfile=inbinfile
 
 
-mincpgLIST=[1,3]
+mincpgLIST=[1,2,3]
 
 consideringALLheyper=True
 
@@ -319,5 +319,5 @@ end_time = time.time()
 
 time_elapsed = (end_time - start_time)
 
-print(time_elapsed)
+#print(time_elapsed)
 
