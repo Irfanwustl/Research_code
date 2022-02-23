@@ -74,6 +74,9 @@ echo NowHARDrc
 
 ./run_HardRC.sh ${suffixoutfolder}
 
+echo NowHARDrcTOsoftRC
+./run_HardRCtosoftRC.sh ${suffixoutfolder}
+
 
 
 
