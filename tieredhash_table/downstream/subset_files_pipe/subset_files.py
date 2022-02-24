@@ -17,7 +17,7 @@ import sys
 fol = sys.argv[1] #'PMN_thresholdpos_allthresholdcombinations'
 outfol = fol + '_subset'
 files = os.listdir(fol)
-cutoff = 400
+cutoff = 100
 cpgs = 2
 os.mkdir(outfol)
 
@@ -36,7 +36,7 @@ def subset(file):
             start = df_ch.at[i, 'Start']
             low = int(start) - cutoff
             high = int(start) + cutoff
-            df_sub = df_ch[(df_ch['Start'] >= low) & (df_ch['Start'] <= high)]
+            df_sub = df_ch[(df_ch['Start'] > low) & (df_ch['Start'] < high)]
             if len(df_sub) >= cpgs:
                 df_new = df_new.append(df_ch[df_ch['Start'] == start])
     df_new.to_csv(outfol + '/' + file, sep='\t', index=None,header=None)
