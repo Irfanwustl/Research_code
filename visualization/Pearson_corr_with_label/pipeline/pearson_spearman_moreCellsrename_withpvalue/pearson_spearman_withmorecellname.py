@@ -96,7 +96,7 @@ corr_spear=spearmanr(df[x], df[y])
 
 #corr = [np.round(c, 5) for c in corr]
 #print(corr)
-text='r = %s, p = %s \nrho = %s, p = %s' % (format(corr[0], '.2f'), format(corr[1], ".2f"), format(corr_spear[0], ".2f"),format(corr_spear[1], ".2f")  )
+text='r = %s, p = %s \nrho = %s, p = %s' % (format(corr[0], '.2f'), format(corr[1], ".2e"), format(corr_spear[0], ".2f"),format(corr_spear[1], ".2e")  )
 
 
 # In[6]:
