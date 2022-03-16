@@ -58,7 +58,7 @@ for indexfile in indexfiles:
     
     sortedres=resdf.reindex(indexdf.index)
     
-    sortedres.to_csv(outdir+"/"+os.path.basename(res[0])+"_sorted.txt",sep="\t")
+    sortedres.to_csv(outdir+"/"+os.path.basename(res[0])+"_sorted.txt",sep="\t",na_rep='NA')
     
     
 
