@@ -46,45 +46,32 @@ scorcols
 # In[4]:
 
 
-indf.columns
-
-
-# In[5]:
-
-
-colforneg=scorcols+['maxdelta', 'mindelta','Avgdelta']
-colforneg
-
-
-# In[6]:
-
-
-indf[colforneg]=-1*indf[colforneg]
+indf[scorcols]=-1*indf[scorcols]
 indf.head()
 
 
-# In[7]:
+# In[5]:
 
 
 indf.rename(columns={'maxdelta':'Minimum delta','mindelta':'Maximum delta','Avgdelta':'Average delta'},inplace=True)
 indf.head()
 
 
-# In[8]:
+# In[6]:
 
 
 indf['(Minimum delta+Average delta)/2']=(indf['Minimum delta']+indf['Average delta'])/2
 indf.head()
 
 
-# In[9]:
+# In[7]:
 
 
 outdf=indf.sort_values('(Minimum delta+Average delta)/2',ascending=False)
 outdf.head()
 
 
-# In[10]:
+# In[8]:
 
 
 outdf=outdf.sort_values('Minimum delta',ascending=False)
@@ -93,7 +80,7 @@ outdf.reset_index(inplace=True)
 outdf.head()
 
 
-# In[11]:
+# In[9]:
 
 
 outdf.rename(columns={'index':'Minimum delta rank'},inplace=True)
@@ -101,7 +88,7 @@ outdf.set_index(['chrom','start','end'],inplace=True)
 outdf.head()
 
 
-# In[12]:
+# In[10]:
 
 
 outdf=outdf.sort_values('Average delta',ascending=False)
@@ -112,7 +99,7 @@ outdf.set_index(['chrom','start','end'],inplace=True)
 outdf.head()
 
 
-# In[13]:
+# In[11]:
 
 
 outdf['(Minimum delta rank+Average delta rank)/2']=(outdf['Minimum delta rank']+outdf['Average delta rank'])/2
@@ -120,7 +107,7 @@ outdf=outdf.sort_values('(Minimum delta rank+Average delta rank)/2')
 outdf.head()
 
 
-# In[14]:
+# In[12]:
 
 
 ####find out group delta####
@@ -134,7 +121,7 @@ owngroupcols=list(set(scorcols)-set(outgroupcols))
 #print(owngroupcols)
 
 
-# In[15]:
+# In[13]:
 
 
 outdf['OwnGroup_avg_delta']=outdf[owngroupcols].mean(axis=1)
@@ -147,7 +134,7 @@ outdf.set_index(['chrom','start','end'],inplace=True)
 outdf.head()
 
 
-# In[16]:
+# In[14]:
 
 
 outdf=outdf.sort_values('OtherGroup_avg_delta',ascending=False)
@@ -158,7 +145,7 @@ outdf.set_index(['chrom','start','end'],inplace=True)
 outdf.head()
 
 
-# In[17]:
+# In[15]:
 
 
 outdf['(OwnGroup_avg_delta rank+OtherGroup_avg_delta rank)/2']=(outdf['OwnGroup_avg_delta rank']+outdf['OtherGroup_avg_delta rank'])/2
@@ -167,14 +154,14 @@ outdf['(OwnGroup_avg_delta rank+Average delta rank)/2']=(outdf['OwnGroup_avg_del
 outdf.head()
 
 
-# In[18]:
+# In[16]:
 
 
 outdfv3=outdf.sort_values('(OwnGroup_avg_delta rank+Average delta rank)/2')
 outdfv3.head()
 
 
-# In[19]:
+# In[17]:
 
 
 scorcols
@@ -186,7 +173,7 @@ currentCttoconsider=currentCttoconsider[0]
 currentCttoconsider
 
 
-# In[20]:
+# In[18]:
 
 
 outdf=outdf.sort_values(currentCttoconsider)
@@ -197,7 +184,7 @@ outdf.set_index(['chrom','start','end'],inplace=True)
 outdf.head()
 
 
-# In[21]:
+# In[19]:
 
 
 outdf['(Methylation rank+OtherGroup_avg_delta rank+OwnGroup_avg_delta rank)/3']=(outdf['Methylation rank']+outdf['OtherGroup_avg_delta rank']+outdf['OwnGroup_avg_delta rank'])/3
@@ -207,7 +194,7 @@ outdf['(Methylation rank+Average delta rank+OwnGroup_avg_delta rank)/3']=(outdf[
 outdf['(Methylation rank+Average delta rank+Minimum delta rank)/3']=(outdf['Methylation rank']+outdf['Average delta rank']+outdf['Minimum delta rank'])/3
 
 
-# In[22]:
+# In[20]:
 
 
 outdfv2hyporanked=outdf.sort_values('(Methylation rank+OtherGroup_avg_delta rank+OwnGroup_avg_delta rank)/3')
@@ -216,7 +203,7 @@ outdfv1hyporanked=outdf.sort_values('(Methylation rank+Average delta rank+Minimu
 outdfv3hyporanked=outdf.sort_values('(Methylation rank+Average delta rank+OwnGroup_avg_delta rank)/3')
 
 
-# In[23]:
+# In[21]:
 
 
 outdfv2hyporankedtop=outdfv2hyporanked.copy()
@@ -233,7 +220,7 @@ if outdfv1hyporanked.shape[0]>howmanytop:
     outdfv1hyporankedtop=outdfv1hyporanked.head(n=howmanytop)
 
 
-# In[24]:
+# In[22]:
 
 
 
