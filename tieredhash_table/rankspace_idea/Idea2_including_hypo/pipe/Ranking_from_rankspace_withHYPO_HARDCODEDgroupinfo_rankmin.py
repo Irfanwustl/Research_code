@@ -86,13 +86,13 @@ outdf=indf.copy()
 # In[10]:
 
 
-outdf['Minimum delta rank']=outdf['Minimum delta'].rank(method='dense',ascending=False)
+outdf['Minimum delta rank']=outdf['Minimum delta'].rank(method='min',ascending=False)
 
 
 # In[11]:
 
 
-outdf['Average delta rank']=outdf['Average delta'].rank(method='dense',ascending=False)
+outdf['Average delta rank']=outdf['Average delta'].rank(method='min',ascending=False)
 
 
 # In[12]:
@@ -125,13 +125,13 @@ outdf['OtherGroup_avg_delta']=outdf[outgroupcols].mean(axis=1)
 # In[15]:
 
 
-outdf['OwnGroup_avg_delta rank']=outdf['OwnGroup_avg_delta'].rank(method='dense',ascending=False)
+outdf['OwnGroup_avg_delta rank']=outdf['OwnGroup_avg_delta'].rank(method='min',ascending=False)
 
 
 # In[16]:
 
 
-outdf['OtherGroup_avg_delta rank']=outdf['OtherGroup_avg_delta'].rank(method='dense',ascending=False)
+outdf['OtherGroup_avg_delta rank']=outdf['OtherGroup_avg_delta'].rank(method='min',ascending=False)
 
 
 # In[17]:
@@ -158,7 +158,7 @@ currentCttoconsider
 # In[19]:
 
 
-outdf['Methylation rank']=outdf[currentCttoconsider].rank(method='dense')
+outdf['Methylation rank']=outdf[currentCttoconsider].rank(method='min')
 outdf.head()
 
 
@@ -224,35 +224,35 @@ outdfv2hyporankedtop.reset_index(inplace=True)
 outdfv3hyporankedtop.reset_index(inplace=True)
 outdfv1hyporankedtop.reset_index(inplace=True)
 
-outdf.to_csv(outname+"_fullinfo.txt",sep='\t',index=False,na_rep='NA')
+outdf.to_csv(outname+"_fullinfo.txt",sep='\t',index=False)
 
 
-outdfv1top.to_csv(outname+"_V1_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False,na_rep='NA')
+outdfv1top.to_csv(outname+"_V1_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False)
 
-outdfv2top.to_csv(outname+"_V2_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False,na_rep='NA')
+outdfv2top.to_csv(outname+"_V2_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False)
 
-outdfv3top.to_csv(outname+"_V3_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False,na_rep='NA')
+outdfv3top.to_csv(outname+"_V3_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False)
 
-outdfv1top[['chrom','start','end']].to_csv(outname+"_V1_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False,na_rep='NA')
+outdfv1top[['chrom','start','end']].to_csv(outname+"_V1_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False)
 
-outdfv2top[['chrom','start','end']].to_csv(outname+"_V2_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False,na_rep='NA')
+outdfv2top[['chrom','start','end']].to_csv(outname+"_V2_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False)
 
-outdfv3top[['chrom','start','end']].to_csv(outname+"_V3_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False,na_rep='NA')
-
-
-
-outdfv2hyporankedtop.to_csv(outname+"_V2hypo_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False,na_rep='NA')
-
-outdfv3hyporankedtop.to_csv(outname+"_V3hypo_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False,na_rep='NA')
-
-outdfv1hyporankedtop.to_csv(outname+"_V1hypo_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False,na_rep='NA')
+outdfv3top[['chrom','start','end']].to_csv(outname+"_V3_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False)
 
 
 
+outdfv2hyporankedtop.to_csv(outname+"_V2hypo_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False)
 
-outdfv2hyporankedtop[['chrom','start','end']].to_csv(outname+"_V2hypo_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False,na_rep='NA')
-outdfv3hyporankedtop[['chrom','start','end']].to_csv(outname+"_V3hypo_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False,na_rep='NA')
-outdfv1hyporankedtop[['chrom','start','end']].to_csv(outname+"_V1hypo_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False,na_rep='NA')
+outdfv3hyporankedtop.to_csv(outname+"_V3hypo_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False)
+
+outdfv1hyporankedtop.to_csv(outname+"_V1hypo_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False)
+
+
+
+
+outdfv2hyporankedtop[['chrom','start','end']].to_csv(outname+"_V2hypo_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False)
+outdfv3hyporankedtop[['chrom','start','end']].to_csv(outname+"_V3hypo_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False)
+outdfv1hyporankedtop[['chrom','start','end']].to_csv(outname+"_V1hypo_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False)
 
 
 

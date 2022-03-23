@@ -80,28 +80,47 @@ indf.head()
 # In[9]:
 
 
-outdf=indf.copy()
+outdf=indf.sort_values('(Minimum delta+Average delta)/2',ascending=False)
+outdf.head()
 
 
 # In[10]:
 
 
-outdf['Minimum delta rank']=outdf['Minimum delta'].rank(method='dense',ascending=False)
+outdf=outdf.sort_values('Minimum delta',ascending=False)
+outdf.reset_index(inplace=True)
+outdf.reset_index(inplace=True)
+outdf.head()
 
 
 # In[11]:
 
 
-outdf['Average delta rank']=outdf['Average delta'].rank(method='dense',ascending=False)
+outdf.rename(columns={'index':'Minimum delta rank'},inplace=True)
+outdf.set_index(['chrom','start','end'],inplace=True)
+outdf.head()
 
 
 # In[12]:
 
 
-outdf['(Minimum delta rank+Average delta rank)/2']=(outdf['Minimum delta rank']+outdf['Average delta rank'])/2
+outdf=outdf.sort_values('Average delta',ascending=False)
+outdf.reset_index(inplace=True)
+outdf.reset_index(inplace=True)
+outdf.rename(columns={'index':'Average delta rank'},inplace=True)
+outdf.set_index(['chrom','start','end'],inplace=True)
+outdf.head()
 
 
 # In[13]:
+
+
+outdf['(Minimum delta rank+Average delta rank)/2']=(outdf['Minimum delta rank']+outdf['Average delta rank'])/2
+outdf=outdf.sort_values('(Minimum delta rank+Average delta rank)/2')
+outdf.head()
+
+
+# In[14]:
 
 
 ####find out group delta####
@@ -115,23 +134,28 @@ owngroupcols=list(set(scorcols)-set(outgroupcols))
 #print(owngroupcols)
 
 
-# In[14]:
+# In[15]:
 
 
 outdf['OwnGroup_avg_delta']=outdf[owngroupcols].mean(axis=1)
 outdf['OtherGroup_avg_delta']=outdf[outgroupcols].mean(axis=1)
-
-
-# In[15]:
-
-
-outdf['OwnGroup_avg_delta rank']=outdf['OwnGroup_avg_delta'].rank(method='dense',ascending=False)
+outdf=outdf.sort_values('OwnGroup_avg_delta',ascending=False)
+outdf.reset_index(inplace=True)
+outdf.reset_index(inplace=True)
+outdf.rename(columns={'index':'OwnGroup_avg_delta rank'},inplace=True)
+outdf.set_index(['chrom','start','end'],inplace=True)
+outdf.head()
 
 
 # In[16]:
 
 
-outdf['OtherGroup_avg_delta rank']=outdf['OtherGroup_avg_delta'].rank(method='dense',ascending=False)
+outdf=outdf.sort_values('OtherGroup_avg_delta',ascending=False)
+outdf.reset_index(inplace=True)
+outdf.reset_index(inplace=True)
+outdf.rename(columns={'index':'OtherGroup_avg_delta rank'},inplace=True)
+outdf.set_index(['chrom','start','end'],inplace=True)
+outdf.head()
 
 
 # In[17]:
@@ -146,6 +170,13 @@ outdf.head()
 # In[18]:
 
 
+outdfv3=outdf.sort_values('(OwnGroup_avg_delta rank+Average delta rank)/2')
+outdfv3.head()
+
+
+# In[19]:
+
+
 scorcols
 currentCttoconsider=list(set([i.split('-', 1)[0] for i in scorcols]))
 if len(currentCttoconsider)!=1:
@@ -155,14 +186,18 @@ currentCttoconsider=currentCttoconsider[0]
 currentCttoconsider
 
 
-# In[19]:
+# In[20]:
 
 
-outdf['Methylation rank']=outdf[currentCttoconsider].rank(method='dense')
+outdf=outdf.sort_values(currentCttoconsider)
+outdf.reset_index(inplace=True)
+outdf.reset_index(inplace=True)
+outdf.rename(columns={'index':'Methylation rank'},inplace=True)
+outdf.set_index(['chrom','start','end'],inplace=True)
 outdf.head()
 
 
-# In[20]:
+# In[21]:
 
 
 outdf['(Methylation rank+OtherGroup_avg_delta rank+OwnGroup_avg_delta rank)/3']=(outdf['Methylation rank']+outdf['OtherGroup_avg_delta rank']+outdf['OwnGroup_avg_delta rank'])/3
@@ -172,15 +207,7 @@ outdf['(Methylation rank+Average delta rank+OwnGroup_avg_delta rank)/3']=(outdf[
 outdf['(Methylation rank+Average delta rank+Minimum delta rank)/3']=(outdf['Methylation rank']+outdf['Average delta rank']+outdf['Minimum delta rank'])/3
 
 
-# In[21]:
-
-
-
-outdfv1=outdf.sort_values('(Minimum delta rank+Average delta rank)/2')
-outdfv2=outdf.sort_values('(OwnGroup_avg_delta rank+OtherGroup_avg_delta rank)/2')
-outdfv3=outdf.sort_values('(OwnGroup_avg_delta rank+Average delta rank)/2')
-
-
+# In[22]:
 
 
 outdfv2hyporanked=outdf.sort_values('(Methylation rank+OtherGroup_avg_delta rank+OwnGroup_avg_delta rank)/3')
@@ -189,70 +216,47 @@ outdfv1hyporanked=outdf.sort_values('(Methylation rank+Average delta rank+Minimu
 outdfv3hyporanked=outdf.sort_values('(Methylation rank+Average delta rank+OwnGroup_avg_delta rank)/3')
 
 
-# In[22]:
-
-
-
-  
-outdfv1top=outdfv1.head(n=howmanytop)
-outdfv2top=outdfv2.head(n=howmanytop)
-outdfv3top=outdfv3.head(n=howmanytop)
-
-
-
-
-
-
-outdfv1hyporankedtop=outdfv1hyporanked.head(n=howmanytop)
-outdfv2hyporankedtop=outdfv2hyporanked.head(n=howmanytop)
-outdfv3hyporankedtop=outdfv3hyporanked.head(n=howmanytop)
-
-
-
-
 # In[23]:
+
+
+outdfv2hyporankedtop=outdfv2hyporanked.copy()
+if outdfv2hyporanked.shape[0]>howmanytop:
+    outdfv2hyporankedtop=outdfv2hyporanked.head(n=howmanytop)
+
+    
+outdfv3hyporankedtop=outdfv3hyporanked.copy()  
+if outdfv3hyporanked.shape[0]>howmanytop:
+    outdfv3hyporankedtop=outdfv3hyporanked.head(n=howmanytop)
+
+outdfv1hyporankedtop=outdfv1hyporanked.copy()  
+if outdfv1hyporanked.shape[0]>howmanytop:
+    outdfv1hyporankedtop=outdfv1hyporanked.head(n=howmanytop)
+
+
+# In[24]:
 
 
 
 outdf.reset_index(inplace=True)
-outdfv1top.reset_index(inplace=True)
-outdfv2top.reset_index(inplace=True)
-outdfv3top.reset_index(inplace=True)
-
-
 outdfv2hyporankedtop.reset_index(inplace=True)
 outdfv3hyporankedtop.reset_index(inplace=True)
 outdfv1hyporankedtop.reset_index(inplace=True)
 
-outdf.to_csv(outname+"_fullinfo.txt",sep='\t',index=False,na_rep='NA')
+outdf.to_csv(outname+"_fullinfo.txt",sep='\t',index=False)
 
 
-outdfv1top.to_csv(outname+"_V1_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False,na_rep='NA')
+outdfv2hyporankedtop.to_csv(outname+"_V2hypo_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False)
 
-outdfv2top.to_csv(outname+"_V2_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False,na_rep='NA')
+outdfv3hyporankedtop.to_csv(outname+"_V3hypo_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False)
 
-outdfv3top.to_csv(outname+"_V3_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False,na_rep='NA')
-
-outdfv1top[['chrom','start','end']].to_csv(outname+"_V1_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False,na_rep='NA')
-
-outdfv2top[['chrom','start','end']].to_csv(outname+"_V2_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False,na_rep='NA')
-
-outdfv3top[['chrom','start','end']].to_csv(outname+"_V3_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False,na_rep='NA')
-
-
-
-outdfv2hyporankedtop.to_csv(outname+"_V2hypo_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False,na_rep='NA')
-
-outdfv3hyporankedtop.to_csv(outname+"_V3hypo_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False,na_rep='NA')
-
-outdfv1hyporankedtop.to_csv(outname+"_V1hypo_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False,na_rep='NA')
+outdfv1hyporankedtop.to_csv(outname+"_V1hypo_rankedtop"+str(howmanytop)+".txt",sep='\t',index=False)
 
 
 
 
-outdfv2hyporankedtop[['chrom','start','end']].to_csv(outname+"_V2hypo_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False,na_rep='NA')
-outdfv3hyporankedtop[['chrom','start','end']].to_csv(outname+"_V3hypo_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False,na_rep='NA')
-outdfv1hyporankedtop[['chrom','start','end']].to_csv(outname+"_V1hypo_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False,na_rep='NA')
+outdfv2hyporankedtop[['chrom','start','end']].to_csv(outname+"_V2hypo_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False)
+outdfv3hyporankedtop[['chrom','start','end']].to_csv(outname+"_V3hypo_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False)
+outdfv1hyporankedtop[['chrom','start','end']].to_csv(outname+"_V1hypo_rankedtop"+str(howmanytop)+"_pos",sep='\t',index=False,header=False)
 
 
 
