@@ -109,7 +109,7 @@ g=sns.scatterplot(df[x], df[y],hue=df[celltype],edgecolor='none')
 g.legend(loc='center left', bbox_to_anchor=(1.02, 0.5), ncol=1)
 
 if only_scatter==False:
-    ax=sns.regplot(df[x], df[y],scatter=False)
+    ax=sns.regplot(df[x], df[y],scatter=False,ci = None)
 
 
 
