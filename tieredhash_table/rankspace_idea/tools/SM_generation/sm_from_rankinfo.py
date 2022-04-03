@@ -29,8 +29,8 @@ outdf.head()
 
 # In[3]:
 
-
-total_compartments=['chrom','start','NaiveCD4-others','NaiveCD8-others','nB-others','NK-others','PC-others','Mono-others','M0-others','M1-others','M2-others','iDC-others','mDC-others','PMN-others','cm8-others','em8-others','Eo-others','Tregs-others','em4-others','ed8-others','Mg-others','cm4-others','Er-others','mB-others']
+##BL22_withEPCAM
+total_compartments=['chrom','start','NaiveCD4-others','NaiveCD8-others','nB-others','NK-others','PC-others','Mono-others','M0-others','M1-others','M2-others','iDC-others','mDC-others','PMN-others','cm8-others','em8-others','Eo-others','Tregs-others','em4-others','ed8-others','Mg-others','cm4-others','Er-others','mB-others','EPCAM-others']
 
 finalcompartmentshouldbe=len(total_compartments)
 total_compartments_set=set(total_compartments)
