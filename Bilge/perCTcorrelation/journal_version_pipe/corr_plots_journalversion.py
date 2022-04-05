@@ -24,17 +24,17 @@ data = pd.read_csv(file, sep='\t', index_col=0)
 df = pd.DataFrame(data)
 
 #Cytof
-#order = ['NaiveCD4','cm4', 'em4','Tregs','NK','Mono','NaiveCD8','cm8','em8','ed8', 'nB','mB']
+order = ['NaiveCD4','cm4', 'em4','Tregs','NK','Mono','NaiveCD8','cm8','em8','ed8', 'nB','mB']
 
 #Flow
-order = ['NaiveCD4','cm4', 'em4','Tregs','NK','Mono', 'nB','mB']
+#order = ['NaiveCD4','cm4', 'em4','Tregs','NK','Mono', 'nB','mB']
 
 #order = ['cm4']
 
 colors = ['b','c','g','r','m','y','tab:blue','tab:orange','tab:purple','tab:pink','darkviolet','dodgerblue', 'coral', 'brown']
 
 row_num = 2
-col_num = 4
+col_num = 6 #4
 
 df.columns
 
@@ -112,7 +112,7 @@ fig.tight_layout(pad=10)
 r = 0
 c = 0
 for i, cell in enumerate(order):
-    print(r, c)
+    #print(r, c)
     x = np.array(df[cell + '_real'])
     y = np.array(df[cell])
     m, b = np.polyfit(x, y, deg=1)
