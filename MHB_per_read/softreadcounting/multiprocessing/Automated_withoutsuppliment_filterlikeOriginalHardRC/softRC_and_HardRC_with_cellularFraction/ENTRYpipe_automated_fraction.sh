@@ -94,6 +94,13 @@ maxscoreFtaction=${scoreoutfolder}_maxscoreFraction
 
 
 
+echo Now method1 fraction
+method1fraction=${scoreoutfolder}_method1Fraction
+./run_ct_proportion_idea1.sh ${scoreoutfolder} ${smfolder} ${method1fraction}
+
+
+
+
 end=$SECONDS
 duration=$(( end - start ))
 echo "stuff took $duration seconds to complete"
