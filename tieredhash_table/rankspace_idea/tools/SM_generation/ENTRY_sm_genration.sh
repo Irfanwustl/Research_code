@@ -22,7 +22,7 @@ while (( i < ${#dirList[@]} ))
 do
 
 	
-	python3 sm_from_rankinfo.py ${infolder}/${dirList[i]} ${outdir}/${dirList[i]}
+	python3 sm_from_rankinfoHARDCODED.py ${infolder}/${dirList[i]} ${outdir}/${dirList[i]}
 	
  	(( i++ ))
 done
@@ -36,6 +36,8 @@ done
 
 
 ./run_getheaad_and_combine.sh ${outdir} 1000
+
+./run_getheaad_and_combine.sh ${outdir} 1500
 
 
 

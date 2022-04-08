@@ -1,0 +1,8 @@
+Mixture	Mono_real	NK_real	mB_real	nB_real	NaiveCD4_real	Tregs_real	cm4_real	em4_real	NaiveCD8_real	cm8_real	em8_real	ed8_real
+healthy_NU-03-bulk-PBMC	5.43	6.2	2.2926358	5.2549387	13.95	0.28	10.1	4.8	8.9	1.9	8.9	5.4
+healthy_NU-14-bulk-PBMC	4.94	11.99	4.2878348	4.7286967	11.51	0.12	8.5	3.2	9.96	1.2	10.3	2.8
+healthy_NU-24-bulk-PBMC	5.02	5.02	1.9888791	4.7635055	24.75	0.44	9.3	5.1	8.63	1	7.2	4.5
+healthy_NU-31-bulk-PBMC	7.77	14.17	2.9398209	5.5824608	15.48	0.11	8.2	3.6	8.4	0.8	7.3	4.9
+healthy_NU-49-bulk-PBMC	6.39	3.74	3.0578759	6.9582867	12.74	0.19	8.4	6.6	10.8	1.2	8.2	4.5
+healthy_NU-50-bulk-PBMC	22.45	6.16	2.1422695	8.985444	14.53	0.14	7.7	1.7	4.04	0.9	3.5	1.8
+healthy_NU-51-bulk-PBMC	10.21	10.12	3.5527401	3.8345784	10.61	0.21	5.6	3.5	5.2	0.4	3	2.1

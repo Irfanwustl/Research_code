@@ -184,16 +184,29 @@ plt.savefig(heatname,bbox_inches = "tight")
 # In[13]:
 
 
-outdf['Minimum delta rank']=outdf['Minimum delta'].rank(method='dense',ascending=False)
+outdf=outdf.sort_values('Minimum delta',ascending=False)
+outdf.reset_index(inplace=True)
+outdf.reset_index(inplace=True)
+outdf.head()
 
 
+# In[14]:
 
 
+outdf.rename(columns={'index':'Minimum delta rank'},inplace=True)
+outdf.set_index(['chrom','start','end'],inplace=True)
+outdf.head()
 
-outdf['Average delta rank']=outdf['Average delta'].rank(method='dense',ascending=False)
+
+# In[15]:
 
 
-
+outdf=outdf.sort_values('Average delta',ascending=False)
+outdf.reset_index(inplace=True)
+outdf.reset_index(inplace=True)
+outdf.rename(columns={'index':'Average delta rank'},inplace=True)
+outdf.set_index(['chrom','start','end'],inplace=True)
+outdf.head()
 
 
 # In[16]:
