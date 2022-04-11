@@ -5,6 +5,10 @@ binnedfolder=$1
 
 outfolder=$2
 
+sminfofile=$3
+
+source ${sminfofile}
+
 mkdir ${outfolder}
 
 
@@ -19,8 +23,9 @@ do
 
 	#echo now=========${dirList[i]} 
 
+	#echo ${allhardcodedfile[@]}
 
-	python3 score_flexible_HARDCODED.py ${binnedfolder}/${dirList[i]}   ${outfolder}/${dirList[i]}
+	python3 score_flexible_HARDCODED.py ${binnedfolder}/${dirList[i]}   ${outfolder}/${dirList[i]} ${allhardcodedfile[@]}
 
 
 	(( i++ ))

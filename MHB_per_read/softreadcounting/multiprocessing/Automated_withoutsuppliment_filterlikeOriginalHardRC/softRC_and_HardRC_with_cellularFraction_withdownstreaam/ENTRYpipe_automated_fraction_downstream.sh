@@ -8,8 +8,11 @@ bamfolder=$2
 
 coretouse=$3
 
+sminfofile=$4
+
 gtfolder=gt
 
+source ${sminfofile}
 
 
 
@@ -20,7 +23,7 @@ bambase=$( basename ${bamfolder} )
 outfolder=${smfolder}_${bambase}_globalout
 mkdir ${outfolder}
 
-allresulttogether=${outfolder}_allSoftRCresultogether   #####except hard  RC and Soft RC mincpg cutoff and divide by ctfrag
+allresulttogether=${outfolder}_allSoftRCresultogether   #####except Soft RC  min cpg and divide by ctfrag
 mkdir ${allresulttogether}
 
 
@@ -59,14 +62,14 @@ cp ${suffixoutfolderdupNondup}/*result_dupindex_binnedstats.pkl ${suffixoutfolde
 
 
 scoreoutfolder=${suffixoutfolder}_softRC
-./run_scoreflexible.sh ${suffixoutfolder} ${scoreoutfolder}
+./run_scoreflexible.sh ${suffixoutfolder} ${scoreoutfolder} ${sminfofile}
 
 cp ${scoreoutfolder}/*_maxscore_CSxOut.txt ${allresulttogether}/
 
 
 
 cttotalfragmentfolder=${suffixoutfolder}_ctTotalFrag
-./run_cellsepcificTotalFragment.sh ${suffixoutfolder} ${cttotalfragmentfolder}
+./run_cellsepcificTotalFragment.sh ${suffixoutfolder} ${cttotalfragmentfolder} ${sminfofile}
 
 
 
@@ -79,11 +82,14 @@ divbyctfragfoler=${scoreoutfolder}_divbyctFrag
 
 echo NowHARDrc
 
-./run_HardRC.sh ${suffixoutfolder}
+HardRCoudtir=${suffixoutfolder}_HardRC
+./run_HardRC.sh ${suffixoutfolder} ${HardRCoudtir} ${sminfofile}
+cp ${HardRCoudtir}/*_CSxOut.txt ${allresulttogether}/
+
 
 echo NowHARDrcTOsoftRC
 HARDrcTOsoftRCfolder=${suffixoutfolder}_HardRCtoSoftRC
-./run_HardRCtosoftRC.sh ${suffixoutfolder} ${HARDrcTOsoftRCfolder}
+./run_HardRCtosoftRC.sh ${suffixoutfolder} ${HARDrcTOsoftRCfolder} ${sminfofile}
 
 #cp ${HARDrcTOsoftRCfolder}/*_maxscore_CSxOut.txt ${allresulttogether}/
 
@@ -98,7 +104,7 @@ cp ${HARDrcTOsoftRCfolder}/*FINAL_binnedstats.pkl ${finalbinnedfolder}/
 
 maxscoreFtaction=${scoreoutfolder}_maxscoreFraction
 
-./run_softRC_theoritical.sh ${finalbinnedfolder} ${scoreoutfolder} ${smfolder} ${maxscoreFtaction}
+./run_softRC_theoritical.sh ${finalbinnedfolder} ${scoreoutfolder} ${smfolder} ${maxscoreFtaction} ${sminfofile}
 cp ${maxscoreFtaction}/*_maxscore_CSxOut.txt ${allresulttogether}/
 
 
@@ -123,7 +129,7 @@ echo Now downstream
  
 mergedwithGroundTruth=${allresulttogether}_mereged_${gtfolder}
 
-./downstream.sh ${allresulttogether} ${gtfolder} ${mergedwithGroundTruth}
+./downstream.sh ${allresulttogether} ${gtfolder} ${mergedwithGroundTruth} ${coretouse}
 
 
 end=$SECONDS

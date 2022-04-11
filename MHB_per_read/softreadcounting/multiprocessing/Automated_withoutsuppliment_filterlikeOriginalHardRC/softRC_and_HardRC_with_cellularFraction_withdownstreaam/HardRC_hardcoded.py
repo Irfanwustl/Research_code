@@ -22,11 +22,12 @@ inbinfile=sys.argv[1] #'/Users/irffanalahi/Research/Research_update/SoftRD/repro
 
 outfile=sys.argv[2]
 
+scorecolumns=sys.argv[3:]
 
 #######outfile=inbinfile
 
 
-mincpgLIST=[1,2,3,4,5]
+mincpgLIST=[2,3]
 
 consideringALLheyper=True
 
@@ -53,7 +54,7 @@ inbindf=pd.read_pickle(inbinfile)
 
 
 #em4_cm4
-scorecolumns=['cm4-others','em4-others','Tcell-others']
+#scorecolumns=['cm4-others','em4-others','Tcell-others']
 
 
 
@@ -256,5 +257,5 @@ end_time = time.time()
 
 time_elapsed = (end_time - start_time)
 
-print(time_elapsed)
+#print(time_elapsed)
 

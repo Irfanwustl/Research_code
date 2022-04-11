@@ -1,0 +1,6 @@
+	Index
+Mono	4
+CD4	5
+CD8	5
+NK	7
+Bcell	4

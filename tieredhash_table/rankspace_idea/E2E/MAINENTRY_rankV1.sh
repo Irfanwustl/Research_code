@@ -21,7 +21,7 @@ python3 tieredhashgeneration.py ${reffile}  ${phenfile} ${compartmentfile} ${out
 
 echo now rankspace
 
-./Entry_rankspace.sh ${outfolder} ${howmany}
+./Entry_rankspace.sh ${outfolder} ${howmany} ${reffile} ${compartmentfile}
 
 
 end=$SECONDS

@@ -1,0 +1,8 @@
+Mixture	EPCAM_real
+EM-Seq_07-no-spike	0
+EM-Seq_01-spike	25
+EM-seq_2-spike_v2	10
+EM-Seq_03-spike	5
+EM-Seq_04-spike	2.5
+EM-Seq_05-spike	1
+EM-Seq_06-spike	0.5

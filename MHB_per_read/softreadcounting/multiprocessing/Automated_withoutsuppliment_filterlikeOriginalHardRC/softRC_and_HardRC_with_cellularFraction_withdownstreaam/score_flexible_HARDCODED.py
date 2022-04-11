@@ -18,6 +18,8 @@ inbinfile=sys.argv[1] #'/Users/irffanalahi/Research/Research_update/SoftRD/large
 
 outfile=sys.argv[2]
 
+scorecolumns=sys.argv[3:]
+
 
 consideringALLheyper=True
 
@@ -34,7 +36,7 @@ inbindf=pd.read_pickle(inbinfile)
 #scorecolumns=['NaiveCD4-others','NaiveCD8-others','nB-others','NK-others','PC-others','Mono-others','M0-others','M1-others','M2-others','iDC-others','mDC-others','PMN-others','cm8-others','em8-others','Eo-others','Tregs-others','em4-others','ed8-others','Mg-others','cm4-others','Er-others','mB-others','TIL-others','MelTumor-others']
 
 ###em4_cm4
-scorecolumns=['cm4-others','em4-others','Tcell-others']
+#scorecolumns=['cm4-others','em4-others','Tcell-others']
 
 
 

@@ -4,6 +4,10 @@ infolder=$1
 
 outfolder=$2      #{infolder}_HardRCtoSoftRC
 
+sminfofile=$3
+
+source ${sminfofile}
+
 mkdir ${outfolder}
 
 dirList=($( ls ${infolder} ))
@@ -16,7 +20,7 @@ do
 
 	
 
-	python3 HardRCtosoftRC_hardcoded.py  ${infolder}/${dirList[i]}  ${outfolder}/${dirList[i]}
+	python3 HardRCtosoftRC_hardcoded.py  ${infolder}/${dirList[i]}  ${outfolder}/${dirList[i]} ${allhardcodedfile[@]}
 
 	
 

@@ -26,7 +26,7 @@ orderedcells=['NaiveCD4','cm4', 'em4','Tregs','NK','Mono','NaiveCD8','cm8','em8'
 data = pd.read_csv(file, sep='\t', index_col=0)
 df = pd.DataFrame(data)
 
-df
+df.fillna(0,inplace=True)
 
 if df.shape[0]==0:
     sys.exit()

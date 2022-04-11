@@ -23,6 +23,8 @@ outfile=sys.argv[2]
 data = pd.read_csv(file, sep='\t', index_col=0)
 df = pd.DataFrame(data)
 
+df.fillna(0,inplace=True)
+
 #Cytof
 order = ['NaiveCD4','cm4', 'em4','Tregs','NK','Mono','NaiveCD8','cm8','em8','ed8', 'nB','mB']
 
@@ -85,6 +87,8 @@ row_num = 2
 #col_num = 6
 
 col_num =math.ceil(len(order)/row_num)
+if col_num==1:
+    col_num=2
 
 
 # In[7]:
@@ -153,6 +157,11 @@ def renamect(act):
 
 # In[8]:
 
+'''
+print(cells)
+print(row_num,col_num)
+print(file)
+'''
 
 fig, axs = plt.subplots(row_num, col_num, figsize=(col_num * 7, row_num * 7))
 fig.tight_layout(pad=10)

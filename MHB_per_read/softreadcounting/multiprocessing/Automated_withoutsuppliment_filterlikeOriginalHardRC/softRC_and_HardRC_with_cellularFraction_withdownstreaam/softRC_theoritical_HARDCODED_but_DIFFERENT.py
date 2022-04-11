@@ -20,6 +20,8 @@ softCresult=sys.argv[2] #'/Users/irffanalahi/Research/Research_update/SoftRD/lar
 smfile=sys.argv[3] #'/Users/irffanalahi/Research/Research_update/SoftRD/largerEXP/spike_EXP/cellularfraction/ThatMaxScoreIdea/consider_pending2/withheldoutSM/heldoutvalue_again/allct_towardsSM_dummy_mean_SM.txt_unique_withmincol.txtEPCAM_mean_SM_top1000_heldoutvalue.txt'
 outfile=sys.argv[4] #inbinfile
 
+scorecolumns=sys.argv[5:]
+
 
 consideringALLheyper=True
 
@@ -33,7 +35,7 @@ inbindf=pd.read_pickle(inbinfile)
 #scorecolumns=['NaiveCD4-others','NaiveCD8-others','nB-others','NK-others','PC-others','Mono-others','M0-others','M1-others','M2-others','iDC-others','mDC-others','PMN-others','cm8-others','em8-others','Eo-others','Tregs-others','em4-others','ed8-others','Mg-others','cm4-others','Er-others','mB-others']
 
 
-scorecolumns=['em4-others']
+#scorecolumns=['em4-others']
 
 #scorecolumns=['EPCAM-others']
 

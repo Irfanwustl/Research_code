@@ -4,6 +4,11 @@ infolder=$1
 
 outfolder=$2
 
+
+sminfofile=$3
+
+source ${sminfofile}
+
 mkdir ${outfolder}
 
 dirList=($( ls ${infolder} ))
@@ -16,7 +21,7 @@ do
 
 	
 
-	python3 cellsepcificTotalFragment_HARDCODED.py   ${infolder}/${dirList[i]}  ${outfolder}/${dirList[i]}
+	python3 cellsepcificTotalFragment_HARDCODED.py   ${infolder}/${dirList[i]}  ${outfolder}/${dirList[i]} ${allhardcodedfile[@]}
 
 	
 

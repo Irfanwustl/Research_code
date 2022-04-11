@@ -7,6 +7,11 @@ SMfolder=$3
 outfolder=$4
 
 
+sminfofile=$5
+
+source ${sminfofile}
+
+
 
 mkdir ${outfolder}
 
@@ -58,7 +63,7 @@ do
 
 		
 		
-		python3 softRC_theoritical_HARDCODED_but_DIFFERENT.py  ${infolder}/${currentFINALbinfile} ${CSxfolder}/${csxfile}  ${SMfolder}/${smlist[k]}   ${outfolder}/maxscorFract_${csxfile} 
+		python3 softRC_theoritical_HARDCODED_but_DIFFERENT.py  ${infolder}/${currentFINALbinfile} ${CSxfolder}/${csxfile}  ${SMfolder}/${smlist[k]}   ${outfolder}/maxscorFract_${csxfile} ${smsoftRC_theoritical_HARDCODED[@]}
 		(( j++ ))
 	done
 

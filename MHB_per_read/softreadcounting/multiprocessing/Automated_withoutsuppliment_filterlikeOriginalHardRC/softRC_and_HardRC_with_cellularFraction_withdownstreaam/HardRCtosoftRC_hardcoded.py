@@ -22,6 +22,8 @@ inbinfile=sys.argv[1] #'/Users/irffanalahi/Research/Research_update/SoftRD/repro
 
 outfile=sys.argv[2]
 
+scorecolumns=sys.argv[3:]
+
 
 #######outfile=inbinfile
 
@@ -53,7 +55,7 @@ inbindf=pd.read_pickle(inbinfile)
 
 
 #em4_cm4
-scorecolumns=['cm4-others','em4-others','Tcell-others']
+#scorecolumns=['cm4-others','em4-others','Tcell-others']
 
 
 

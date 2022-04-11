@@ -1,8 +1,14 @@
 infolder=$1
 
+outfolder=$2
 
 
-outfolder=${infolder}_HardRC
+sminfofile=$3
+
+source ${sminfofile}
+
+
+#outfolder=${infolder}_HardRC
 
 mkdir ${outfolder}
 
@@ -16,7 +22,7 @@ do
 
 	
 
-	python3 HardRC_hardcoded.py  ${infolder}/${dirList[i]}  ${outfolder}/${dirList[i]}
+	python3 HardRC_hardcoded.py  ${infolder}/${dirList[i]}  ${outfolder}/${dirList[i]} ${allhardcodedfile[@]}
 
 	
 
