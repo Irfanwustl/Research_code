@@ -23,7 +23,7 @@ bambase=$( basename ${bamfolder} )
 outfolder=${smfolder}_${bambase}_globalout
 mkdir ${outfolder}
 
-allresulttogether=${outfolder}_allSoftRCresultogether   #####except Soft RC  min cpg and divide by ctfrag
+allresulttogether=${outfolder}_allSoftRCresultogether   #####except divide by ctfrag. And hard RC to soft RC now is adjusted score. Need to fix this
 mkdir ${allresulttogether}
 
 
@@ -91,7 +91,7 @@ echo NowHARDrcTOsoftRC
 HARDrcTOsoftRCfolder=${suffixoutfolder}_HardRCtoSoftRC
 ./run_HardRCtosoftRC.sh ${suffixoutfolder} ${HARDrcTOsoftRCfolder} ${sminfofile}
 
-#cp ${HARDrcTOsoftRCfolder}/*_maxscore_CSxOut.txt ${allresulttogether}/
+cp ${HARDrcTOsoftRCfolder}/*_CSxOut.txt ${allresulttogether}/
 
 
 
@@ -125,11 +125,11 @@ rm ${allresulttogether}/*original
 
 
 
-echo Now downstream
+#echo Now downstream
  
-mergedwithGroundTruth=${allresulttogether}_mereged_${gtfolder}
+#mergedwithGroundTruth=${allresulttogether}_mereged_${gtfolder}
 
-./downstream.sh ${allresulttogether} ${gtfolder} ${mergedwithGroundTruth} ${coretouse}
+#./downstream.sh ${allresulttogether} ${gtfolder} ${mergedwithGroundTruth} ${coretouse}
 
 
 end=$SECONDS
