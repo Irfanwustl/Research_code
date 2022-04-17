@@ -16,7 +16,7 @@ source ${sminfofile}
 
 
 
-dirList=($( ls ${smfolder} ))
+dirList=($( find ${smfolder} -maxdepth 1 -type f -not -path '*/\.*'))
 
 bambase=$( basename ${bamfolder} )
 
@@ -30,19 +30,20 @@ mkdir ${allresulttogether}
 
 
 #######this loop should be parallel#######
-i=0
-while (( i < ${#dirList[@]} ))
-do
+#i=0
+#while (( i < ${#dirList[@]} ))
+#do
 
 	
 	#echo nowSM=========${dirList[i]}
 	
-	./pipe_softRDmultiprocessing.sh ${bamfolder}  ${smfolder}/${dirList[i]} ${outfolder} ${coretouse}
+#	./pipe_softRDmultiprocessing.sh ${bamfolder}  ${smfolder}/${dirList[i]} ${outfolder} ${coretouse}
 
-	(( i++ ))
+#	(( i++ ))
 
-done
+#done
 
+parallel -j ${coretouse} ./pipe_softRDmultiprocessing.sh ::: ${bamfolder} ::: ${dirList[@]} ::: ${outfolder} ::: ${coretouse}
 
 
 
@@ -65,7 +66,7 @@ cp ${suffixoutfolderdupNondup}/*result_dupindex_binnedstats.pkl ${suffixoutfolde
 
 scoreoutfolder=${suffixoutfolder}_softRC
 
-#######this script should be parallel#######
+#######this script should be parallel####### DONE
 ./run_scoreflexible.sh ${suffixoutfolder} ${scoreoutfolder} ${sminfofile}
 
 cp ${scoreoutfolder}/*_maxscore_CSxOut.txt ${allresulttogether}/
@@ -73,14 +74,14 @@ cp ${scoreoutfolder}/*_maxscore_CSxOut.txt ${allresulttogether}/
 
 
 cttotalfragmentfolder=${suffixoutfolder}_ctTotalFrag
-#######this script should be parallel#######
+#######this script should be parallel####### DONE
 ./run_cellsepcificTotalFragment.sh ${suffixoutfolder} ${cttotalfragmentfolder} ${sminfofile}
 
 
 
 
 divbyctfragfoler=${scoreoutfolder}_divbyctFrag
-#######this script should be parallel#######
+#######this script should be parallel####### DONE
 ./run_mixdividebyTotalCtFragment.sh ${cttotalfragmentfolder} ${scoreoutfolder}  ${divbyctfragfoler}
 
 
@@ -91,7 +92,7 @@ echo NowHARDrc
 HardRCoudtir=${suffixoutfolder}_HardRC
 
 
-#######this script should be parallel#######
+#######this script should be parallel####### DONE
 ./run_HardRC.sh ${suffixoutfolder} ${HardRCoudtir} ${sminfofile}
 cp ${HardRCoudtir}/*_CSxOut.txt ${allresulttogether}/
 
@@ -100,7 +101,7 @@ echo NowHARDrcTOsoftRC
 HARDrcTOsoftRCfolder=${suffixoutfolder}_HardRCtoSoftRC
 
 
-#######this script should be parallel#######
+#######this script should be parallel####### DONE
 ./run_HardRCtosoftRC.sh ${suffixoutfolder} ${HARDrcTOsoftRCfolder} ${sminfofile}
 
 cp ${HARDrcTOsoftRCfolder}/*_CSxOut.txt ${allresulttogether}/
@@ -116,7 +117,7 @@ cp ${HARDrcTOsoftRCfolder}/*FINAL_binnedstats.pkl ${finalbinnedfolder}/
 
 maxscoreFtaction=${scoreoutfolder}_maxscoreFraction
 
-#######this script should be parallel#######
+#######this script should be parallel####### DONE 
 ./run_softRC_theoritical.sh ${finalbinnedfolder} ${scoreoutfolder} ${smfolder} ${maxscoreFtaction} ${sminfofile}
 cp ${maxscoreFtaction}/*_maxscore_CSxOut.txt ${allresulttogether}/
 
@@ -140,11 +141,11 @@ rm ${allresulttogether}/*original
 
 
 
-#echo Now downstream
+echo Now downstream
  
-#mergedwithGroundTruth=${allresulttogether}_mereged_${gtfolder}
+mergedwithGroundTruth=${allresulttogether}_mereged_${gtfolder}
 
-#./downstream.sh ${allresulttogether} ${gtfolder} ${mergedwithGroundTruth} ${coretouse}
+./downstream.sh ${allresulttogether} ${gtfolder} ${mergedwithGroundTruth} ${coretouse}
 
 
 end=$SECONDS

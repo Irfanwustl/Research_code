@@ -7,6 +7,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import math 
 from scipy.stats import pearsonr
 from scipy.stats import spearmanr
 import sys
@@ -17,11 +18,12 @@ plt.rc('font', family='Arial')
 # In[2]:
 
 
-file =sys.argv[1]  #'/Users/irffanalahi/Research/Research_update/SoftRD/largerEXP/BL22_tiered_rankedidea/cellular_fraction/perctcorr/maxscorect_cytof/maxscorFract_allct_towardsSM_dummy_mean_SM.txt_unique_result_dupindex_binnedstats.pkl_maxscore_CSxOut.txt_cytof.txt'
+file =sys.argv[1] #'/Users/irffanalahi/Research/Research_update/SoftRD/largerEXP/BL22_tiered_rankedidea/cellular_fraction/perctcorr/maxscore_relative/flexible_cross_correlation/Previous_method_TieredV1_NOPC_toy2.txt'
 outfile=sys.argv[2]
-
 data = pd.read_csv(file, sep='\t', index_col=0)
 df = pd.DataFrame(data)
+
+df.fillna(0,inplace=True)
 
 #Cytof
 order = ['NaiveCD4','cm4', 'em4','Tregs','NK','Mono','NaiveCD8','cm8','em8','ed8', 'nB','mB']
@@ -33,13 +35,63 @@ order = ['NaiveCD4','cm4', 'em4','Tregs','NK','Mono','NaiveCD8','cm8','em8','ed8
 
 colors = ['b','c','g','r','m','y','tab:blue','tab:orange','tab:purple','tab:pink','darkviolet','dodgerblue', 'coral', 'brown']
 
-row_num = 2
-col_num = 6 #4
+#row_num = 2
+#col_num = 6
 
 df.columns
 
+if df.shape[0]==0:
+    sys.exit()
 
 # In[3]:
+
+
+gt = []
+est = []
+for col in df.columns:
+    if '_real' in col:
+        gt.append(col[:-5])
+    else:
+        est.append(col)
+        
+cells = list(set(gt) & set(est))
+cells
+
+if len(cells)==0:
+    sys.exit()
+
+
+# In[4]:
+
+
+def intersection(lst1, lst2):
+    lst3 = [value for value in lst1 if value in lst2]
+    return lst3
+
+
+# In[5]:
+
+
+common_cells=intersection(order, cells)
+if len(common_cells)==0:
+    order=cells
+else:
+    order=common_cells
+    
+
+
+# In[6]:
+
+
+row_num = 2
+#col_num = 6
+
+col_num =math.ceil(len(order)/row_num)
+if col_num==1:
+    col_num=2
+
+
+# In[7]:
 
 
 def renamect(act):
@@ -103,8 +155,13 @@ def renamect(act):
     return act
 
 
-# In[4]:
+# In[8]:
 
+'''
+print(cells)
+print(row_num,col_num)
+print(file)
+'''
 
 fig, axs = plt.subplots(row_num, col_num, figsize=(col_num * 7, row_num * 7))
 fig.tight_layout(pad=10)
@@ -124,15 +181,16 @@ for i, cell in enumerate(order):
         r += 1
     axs[r][c].scatter(x, y, c=colors[i], s=170)
     axs[r][c].plot(x, y_fit, c='k', alpha=0.7, lw=3)
-    axs[r][c].set_title(renamect(cell), fontsize=30, pad=20)
+    axs[r][c].set_title(renamect(cell), fontsize=40, pad=12)
     xticks = axs[r][c].get_xticks()
     axs[r][c].set_xticks([xticks[0], (xticks[0] + xticks[-1])/2, xticks[-1]])
     yticks = axs[r][c].get_yticks()
     axs[r][c].set_yticks([yticks[0], (yticks[0] + yticks[-1])/2, yticks[-1]])
-    axs[r][c].tick_params(axis='both', labelsize=24, pad=15, direction='out', length=10, width=2)
+    axs[r][c].tick_params(axis='both', labelsize=34, pad=15, direction='out', length=10, width=2)
     for axis in ['top','bottom','left','right']:
         axs[r][c].spines[axis].set_linewidth(2)
     axs[r][c].text(0.05, 0.9, '$\it{R = }$' + str(R)+", $\it{rho = }$"+str(rho), horizontalalignment='left', verticalalignment='bottom', fontsize=30, transform=axs[r][c].transAxes)
+    #axs[r][c].text(0.05, 0.9, '$\it{R = }$' + str(R), horizontalalignment='left', verticalalignment='bottom', fontsize=38, transform=axs[r][c].transAxes)
     #axs[r][c].annotate('0.25 on axes', (0.25, 0.25), textcoords='axes fraction', size=20)
     #axs[r][c].text(0.5, 0.5, 'R = ' + str(R), size=24, ha='left', va='top')
     #plt.annotate('R = ' + str(R), xy=(0.9, 0.1), xycoords='axes fraction')
@@ -166,11 +224,12 @@ plt.annotate('', xy=(-5.707, 2.365), xycoords='axes fraction', xytext=(-5.827, 2
 #fig.text(-0.005, 0.85, '____________', ha='center', va='top', rotation='vertical', size=35)
 #fig.text(-0.005, 0.17, '___________', ha='center', va='bottom', rotation='vertical', size=35)
 '''
-fig.text(0.5, 0.02, 'Flow', ha='center', va='center', size=35)
-fig.text(0.008, 0.5, 'soft RC score (mincpg=3)', ha='center', va='center', rotation='vertical', size=35)
+fig.text(0.5, 0.02, 'Flow cytometry/CyTOF fraction (%)', ha='center', va='center', size=45)
+#fig.text(0.008, 0.5, 'LiquidTME', ha='center', va='center', rotation='vertical', size=35)
+fig.text(-0.01, 0.5, 'LiquidTME', ha='center', va='center', rotation='vertical', size=45)
 
 
-# In[5]:
+# In[9]:
 
 
 fig.savefig(outfile + '_figure_combined_cell.pdf', dpi=300, bbox_inches='tight')

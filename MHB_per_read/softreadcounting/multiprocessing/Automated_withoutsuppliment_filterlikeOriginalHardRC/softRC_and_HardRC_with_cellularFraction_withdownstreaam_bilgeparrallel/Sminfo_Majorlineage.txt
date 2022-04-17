@@ -1,0 +1,2 @@
+allhardcodedfile=(Mono-others	Bcell-others	CD4-others	CD8-others	NK-others)
+smsoftRC_theoritical_HARDCODED=(Mono-others	Bcell-others	CD4-others	CD8-others	NK-others)

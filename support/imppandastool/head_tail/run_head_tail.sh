@@ -2,7 +2,7 @@ infolder=$1
 
 numofline=$2
 
-outdir=${infolder}_headtail
+outdir=${infolder}_headtail${numofline}
 
 dirList=($( ls ${infolder}  ))
 

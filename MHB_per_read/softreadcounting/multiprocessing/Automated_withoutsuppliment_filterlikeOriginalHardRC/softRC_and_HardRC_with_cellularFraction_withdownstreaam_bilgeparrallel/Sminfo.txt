@@ -1,0 +1,2 @@
+allhardcodedfile=(cm4-others	em8-others	Tcell-others)
+smsoftRC_theoritical_HARDCODED=(em8-others)
