@@ -30,7 +30,7 @@ outdf.head()
 # In[3]:
 
 #major 
-total_compartments=['chrom','start','Mono-others','Bcell-others','CD4-others','CD8-others','NK-others']
+#total_compartments=['chrom','start','Mono-others','Bcell-others','CD4-others','CD8-others','NK-others']
 
 ##BL22_withEPCAM
 #total_compartments=['chrom','start','NaiveCD4-others','NaiveCD8-others','nB-others','NK-others','PC-others','Mono-others','M0-others','M1-others','M2-others','iDC-others','mDC-others','PMN-others','cm8-others','em8-others','Eo-others','Tregs-others','em4-others','ed8-others','Mg-others','cm4-others','Er-others','mB-others','EPCAM-others']
@@ -41,6 +41,9 @@ total_compartments=['chrom','start','Mono-others','Bcell-others','CD4-others','C
 #BL22_with_fullLTME
 
 #total_compartments=['chrom','start','NaiveCD4-others','NaiveCD8-others','nB-others','NK-others','PC-others','Mono-others','M0-others','M1-others','M2-others','iDC-others','mDC-others','PMN-others','cm8-others','em8-others','Eo-others','Tregs-others','em4-others','ed8-others','Mg-others','cm4-others','Er-others','mB-others','CD8TIL-others','CD4TIL-others','CD14TIL-others','MelTumor-others']
+
+#BL22_with_LTMEcdcd8Tilcombined
+total_compartments=['chrom','start','NaiveCD4-others','NaiveCD8-others','nB-others','NK-others','PC-others','Mono-others','M0-others','M1-others','M2-others','iDC-others','mDC-others','PMN-others','cm8-others','em8-others','Eo-others','Tregs-others','em4-others','ed8-others','Mg-others','cm4-others','Er-others','mB-others','CD4CD8TIL-others','CD14TIL-others','MelTumor-others']
 
 
 

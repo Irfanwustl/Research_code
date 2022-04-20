@@ -1,0 +1,2 @@
+Sm	method1Fract_BLU2_inflectionSM.txt_CSxOut.txt
+method1deltaweight_BLU2_majorrankedV1_index.txt_inflectionSM.txt_result_dupindex_binnedstats.pkl_maxscore	0.9941880623963293
