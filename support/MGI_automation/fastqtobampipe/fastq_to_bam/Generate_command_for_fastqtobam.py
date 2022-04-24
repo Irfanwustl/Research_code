@@ -50,7 +50,7 @@ for r1fastq in R1fastqs:
     
     os.mkdir(outforthisbam)
     
-    bsub_command="bsub -M 48000000 -R 'select[mem>48000] rusage[mem=48000]' -oo "+outfolder_logs+"/"+r1fastq_base+".log" + "  -q general -a 'docker(bioslimcontainers/picard:2.18.29)' picard FastqToSam F1="+r1fastq+" F2="+r2fastq_path+     "  O="+outforthisbam+"/"+r1fastq_base+".bam"+" SM="+r1fastq_base+"\n\n"
+    bsub_command="bsub -M 48000000 -R 'select[mem>48000] rusage[mem=48000]' -oo "+outfolder_logs+"/"+r1fastq_base+".log" + "  -q general -a 'docker(bioslimcontainers/picard:2.18.29)' picard FastqToSam F1="+r1fastq+" F2="+r2fastq_path+     "  O="+outforthisbam+"/"+r1fastq_base+".bam"+" SM="+r1fastq_base+"  TMP_DIR=/storage1/fs1/aadel/Active/abul/TempForbamfiles \n\n"
     
     bsub_commandlist.append(bsub_command)
    

@@ -1,0 +1,3 @@
+samtools view -c /Users/irffanalahi/Research/Research_code/support/MGI_automation/toydata/bamfolder/EM_4_cfDNA/tot-67-cfDNA.bam > /Users/irffanalahi/Research/Research_code/support/MGI_automation/toydata/bamfolder_ReadNumber/Readnumber/EM_4_cfDNA
+samtools view -c /Users/irffanalahi/Research/Research_code/support/MGI_automation/toydata/bamfolder/EM_3_cfDNA/tot-66-cfDNA.bam > /Users/irffanalahi/Research/Research_code/support/MGI_automation/toydata/bamfolder_ReadNumber/Readnumber/EM_3_cfDNA
+samtools view -c /Users/irffanalahi/Research/Research_code/support/MGI_automation/toydata/bamfolder/EM_10_cfDNA/tot-72-cfDNA.bam > /Users/irffanalahi/Research/Research_code/support/MGI_automation/toydata/bamfolder_ReadNumber/Readnumber/EM_10_cfDNA
