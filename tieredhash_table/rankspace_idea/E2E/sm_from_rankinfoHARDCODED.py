@@ -43,8 +43,11 @@ outdf.head()
 #total_compartments=['chrom','start','NaiveCD4-others','NaiveCD8-others','nB-others','NK-others','PC-others','Mono-others','M0-others','M1-others','M2-others','iDC-others','mDC-others','PMN-others','cm8-others','em8-others','Eo-others','Tregs-others','em4-others','ed8-others','Mg-others','cm4-others','Er-others','mB-others','CD8TIL-others','CD4TIL-others','CD14TIL-others','MelTumor-others']
 
 #BL22_with_LTMEcdcd8Tilcombined
-total_compartments=['chrom','start','NaiveCD4-others','NaiveCD8-others','nB-others','NK-others','PC-others','Mono-others','M0-others','M1-others','M2-others','iDC-others','mDC-others','PMN-others','cm8-others','em8-others','Eo-others','Tregs-others','em4-others','ed8-others','Mg-others','cm4-others','Er-others','mB-others','CD4CD8TIL-others','CD14TIL-others','MelTumor-others']
+#total_compartments=['chrom','start','NaiveCD4-others','NaiveCD8-others','nB-others','NK-others','PC-others','Mono-others','M0-others','M1-others','M2-others','iDC-others','mDC-others','PMN-others','cm8-others','em8-others','Eo-others','Tregs-others','em4-others','ed8-others','Mg-others','cm4-others','Er-others','mB-others','CD4CD8TIL-others','CD14TIL-others','MelTumor-others']
 
+
+#ECNODE tissues
+total_compartments=['chrom','start','AdrenalGland-others','BodyOfPancreas-others','EsophagusSquamousEpithelium-others','GastroesophagealSphincter-others','HeartLeftVentricle-others','LoweLegSkin-others','Ovary-others','Spleen-others','Stomach-others','Testis-others','ThyroidGland-others','TibialNerve-others','TransverseColon-others','UpperLobeOfLeftLung-others']
 
 
 finalcompartmentshouldbe=len(total_compartments)

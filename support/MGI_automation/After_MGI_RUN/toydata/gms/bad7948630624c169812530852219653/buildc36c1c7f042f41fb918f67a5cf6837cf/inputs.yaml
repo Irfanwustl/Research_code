@@ -1,0 +1,18 @@
+---
+instrument_data_bams:
+- class: File
+  path: /storage1/fs1/aadel/Active/gmsroot/instrument_data/imported/42b17b6b8cb04b6584d582f20b98e21c/N0040.bam
+read_group_id:
+- "@RG\tID:42b17b6b8cb04b6584d582f20b98e21c\tPU:42b17b6b8cb04b6584d582f20b98e21c.unknown\tSM:N0040-healthy_cfDNA\tLB:N0040-healthy_cfDNA-library\tPL:Illumina\tCN:WUGSC"
+reference_index: /gscmnt/gc2560/core/model_data/2887491634/build21f22873ebe0486c8e6f69c15435aa96/biscuit.0.2.2.20170522/all_sequences.fa
+reference_sizes:
+  class: File
+  path: /gscmnt/gc2560/core/model_data/2887491634/build21f22873ebe0486c8e6f69c15435aa96/biscuit.0.2.2.20170522/all_sequences.genome
+sample_name: N0040-healthy_cfDNA
+trimming_adapter_min_overlap: 7
+trimming_adapter_trim_end: RIGHT
+trimming_adapters:
+  class: File
+  path: /gscmnt/gc2560/core/illumina_adapters/illumina_multiplex.fa
+trimming_max_uncalled: 300
+trimming_min_readlength: 25

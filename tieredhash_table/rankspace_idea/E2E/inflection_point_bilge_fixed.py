@@ -9,6 +9,8 @@ import numpy as np
 import os
 import sys
 import matplotlib.pyplot as plt
+plt.rcParams.update({'figure.max_open_warning': 0})
+
 infol =sys.argv[1] #'/Users/irffanalahi/Research/Research_update/SoftRD/hashtable_stats/tieredApproach/rankspace_idea/CD8TIL/BLUgbio_CD14TIL/BLU_GBIO_withCD14TIL'
 
 outtxtfile=sys.argv[2]
