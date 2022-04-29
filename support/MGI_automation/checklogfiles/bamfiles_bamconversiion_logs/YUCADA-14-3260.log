@@ -1,0 +1,92 @@
+2.18.29: Pulling from bioslimcontainers/picard
+9fa17f107b7e: Pulling fs layer
+a7769d3ada48: Pulling fs layer
+01d185cf1bb6: Pulling fs layer
+8fdd4e8dc22b: Pulling fs layer
+8fdd4e8dc22b: Waiting
+9fa17f107b7e: Download complete
+01d185cf1bb6: Verifying Checksum
+01d185cf1bb6: Download complete
+8fdd4e8dc22b: Download complete
+a7769d3ada48: Verifying Checksum
+a7769d3ada48: Download complete
+9fa17f107b7e: Pull complete
+a7769d3ada48: Pull complete
+01d185cf1bb6: Pull complete
+8fdd4e8dc22b: Pull complete
+Digest: sha256:59ec926ac25b3f39cb0a568ddbda247b646d2e505c288b0624d6ad6c1d4567e1
+Status: Downloaded newer image for bioslimcontainers/picard:2.18.29
+docker.io/bioslimcontainers/picard:2.18.29
+INFO	2022-04-24 01:33:39	FastqToSam	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    FastqToSam -F1 /storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUCADA-14-3260_R1.fastq.gz -F2 /storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUCADA-14-3260_R2.fastq.gz -O /storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/bamfiles/bamfiles_allbams/YUCADA-14-3260/YUCADA-14-3260.bam -SM YUCADA-14-3260 -TMP_DIR /storage1/fs1/aadel/Active/abul/TempForbamfiles
+**********
+
+
+01:33:39.367 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/opt/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Sun Apr 24 01:33:39 UTC 2022] FastqToSam FASTQ=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUCADA-14-3260_R1.fastq.gz FASTQ2=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUCADA-14-3260_R2.fastq.gz OUTPUT=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/bamfiles/bamfiles_allbams/YUCADA-14-3260/YUCADA-14-3260.bam SAMPLE_NAME=YUCADA-14-3260 TMP_DIR=[/storage1/fs1/aadel/Active/abul/TempForbamfiles]    USE_SEQUENTIAL_FASTQS=false READ_GROUP_NAME=A SORT_ORDER=queryname MIN_Q=0 MAX_Q=93 STRIP_UNPAIRED_MATE_NUMBER=false ALLOW_AND_IGNORE_EMPTY_LINES=false VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sun Apr 24 01:33:39 UTC 2022] Executing as ausmani@compute1-exec-73.ris.wustl.edu on Linux 3.10.0-957.21.3.el7.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_202-b08; Deflater: Intel; Inflater: Intel; Provider GCS is not available; Picard version: 2.18.29-SNAPSHOT
+[Sun Apr 24 01:33:40 UTC 2022] picard.sam.FastqToSam done. Elapsed time: 0.01 minutes.
+Runtime.totalMemory()=760217600
+To get help, see http://broadinstitute.github.io/picard/index.html#GettingHelp
+Exception in thread "main" htsjdk.samtools.SAMException: Error opening file: /storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUCADA-14-3260_R1.fastq.gz
+	at htsjdk.samtools.util.IOUtil.openGzipFileForReading(IOUtil.java:664)
+	at htsjdk.samtools.util.IOUtil.openFileForReading(IOUtil.java:630)
+	at htsjdk.samtools.util.IOUtil.openFileForBufferedReading(IOUtil.java:894)
+	at htsjdk.samtools.util.IOUtil.openFileForBufferedReading(IOUtil.java:889)
+	at htsjdk.samtools.fastq.FastqReader.<init>(FastqReader.java:77)
+	at picard.sam.FastqToSam.fileToFastqReader(FastqToSam.java:426)
+	at picard.sam.FastqToSam.doWork(FastqToSam.java:316)
+	at picard.cmdline.CommandLineProgram.instanceMain(CommandLineProgram.java:295)
+	at picard.cmdline.PicardCommandLine.instanceMain(PicardCommandLine.java:103)
+	at picard.cmdline.PicardCommandLine.main(PicardCommandLine.java:113)
+Caused by: java.util.zip.ZipException: Not in GZIP format
+	at java.util.zip.GZIPInputStream.readHeader(GZIPInputStream.java:165)
+	at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:79)
+	at java.util.zip.GZIPInputStream.<init>(GZIPInputStream.java:91)
+	at htsjdk.samtools.util.IOUtil.openGzipFileForReading(IOUtil.java:661)
+	... 9 more
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@compute1-exec-73.ris.wustl.edu>
+Subject: Job 725026: <picard FastqToSam F1=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUCADA-14-3260_R1.fastq.gz F2=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUCADA-14-3260_R2.fastq.gz O=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/bamfiles/bamfiles_allbams/YUCADA-14-3260/YUCADA-14-3260.bam SM=YUCADA-14-3260 TMP_DIR=/storage1/fs1/aadel/Active/abul/TempForbamfiles> in cluster <compute1-lsf> Exited
+
+Job <picard FastqToSam F1=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUCADA-14-3260_R1.fastq.gz F2=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUCADA-14-3260_R2.fastq.gz O=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/bamfiles/bamfiles_allbams/YUCADA-14-3260/YUCADA-14-3260.bam SM=YUCADA-14-3260 TMP_DIR=/storage1/fs1/aadel/Active/abul/TempForbamfiles> was submitted from host <compute1-client-1.ris.wustl.edu> by user <ausmani> in cluster <compute1-lsf> at Sat Apr 23 16:22:37 2022
+Job was executed on host(s) <compute1-exec-73.ris.wustl.edu>, in queue <general>, as user <ausmani> in cluster <compute1-lsf> at Sat Apr 23 20:33:32 2022
+</home/abulusmani> was used as the home directory.
+</storage1/fs1/aadel/Active/abul> was used as the working directory.
+Started at Sat Apr 23 20:33:32 2022
+Terminated at Sat Apr 23 20:33:56 2022
+Results reported at Sat Apr 23 20:33:56 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+picard FastqToSam F1=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUCADA-14-3260_R1.fastq.gz F2=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUCADA-14-3260_R2.fastq.gz O=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/bamfiles/bamfiles_allbams/YUCADA-14-3260/YUCADA-14-3260.bam SM=YUCADA-14-3260 TMP_DIR=/storage1/fs1/aadel/Active/abul/TempForbamfiles
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   10.24 sec.
+    Max Memory :                                 8 MB
+    Average Memory :                             7.20 MB
+    Total Requested Memory :                     48000.00 MB
+    Delta Memory :                               47992.00 MB
+    Max Swap :                                   -
+    Max Processes :                              5
+    Max Threads :                                20
+    Run time :                                   28 sec.
+    Turnaround time :                            15079 sec.
+
+The output (if any) is above this job summary.
+

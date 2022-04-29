@@ -1,0 +1,773 @@
+2.18.29: Pulling from bioslimcontainers/picard
+9fa17f107b7e: Pulling fs layer
+a7769d3ada48: Pulling fs layer
+01d185cf1bb6: Pulling fs layer
+8fdd4e8dc22b: Pulling fs layer
+8fdd4e8dc22b: Waiting
+01d185cf1bb6: Verifying Checksum
+01d185cf1bb6: Download complete
+9fa17f107b7e: Verifying Checksum
+9fa17f107b7e: Download complete
+8fdd4e8dc22b: Verifying Checksum
+8fdd4e8dc22b: Download complete
+a7769d3ada48: Verifying Checksum
+a7769d3ada48: Download complete
+9fa17f107b7e: Pull complete
+a7769d3ada48: Pull complete
+01d185cf1bb6: Pull complete
+8fdd4e8dc22b: Pull complete
+Digest: sha256:59ec926ac25b3f39cb0a568ddbda247b646d2e505c288b0624d6ad6c1d4567e1
+Status: Downloaded newer image for bioslimcontainers/picard:2.18.29
+docker.io/bioslimcontainers/picard:2.18.29
+INFO	2022-04-24 08:50:47	FastqToSam	
+
+********** NOTE: Picard's command line syntax is changing.
+**********
+********** For more information, please see:
+********** https://github.com/broadinstitute/picard/wiki/Command-Line-Syntax-Transition-For-Users-(Pre-Transition)
+**********
+********** The command line looks like this in the new syntax:
+**********
+**********    FastqToSam -F1 /storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUARGE-14-3173_R1.fastq.gz -F2 /storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUARGE-14-3173_R2.fastq.gz -O /storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/bamfiles/bamfiles_allbams/YUARGE-14-3173/YUARGE-14-3173.bam -SM YUARGE-14-3173 -TMP_DIR /storage1/fs1/aadel/Active/abul/TempForbamfiles
+**********
+
+
+08:50:47.973 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/opt/picard.jar!/com/intel/gkl/native/libgkl_compression.so
+[Sun Apr 24 08:50:47 UTC 2022] FastqToSam FASTQ=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUARGE-14-3173_R1.fastq.gz FASTQ2=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUARGE-14-3173_R2.fastq.gz OUTPUT=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/bamfiles/bamfiles_allbams/YUARGE-14-3173/YUARGE-14-3173.bam SAMPLE_NAME=YUARGE-14-3173 TMP_DIR=[/storage1/fs1/aadel/Active/abul/TempForbamfiles]    USE_SEQUENTIAL_FASTQS=false READ_GROUP_NAME=A SORT_ORDER=queryname MIN_Q=0 MAX_Q=93 STRIP_UNPAIRED_MATE_NUMBER=false ALLOW_AND_IGNORE_EMPTY_LINES=false VERBOSITY=INFO QUIET=false VALIDATION_STRINGENCY=STRICT COMPRESSION_LEVEL=5 MAX_RECORDS_IN_RAM=500000 CREATE_INDEX=false CREATE_MD5_FILE=false GA4GH_CLIENT_SECRETS=client_secrets.json USE_JDK_DEFLATER=false USE_JDK_INFLATER=false
+[Sun Apr 24 08:50:47 UTC 2022] Executing as ausmani@compute1-exec-187.ris.wustl.edu on Linux 3.10.0-957.21.3.el7.x86_64 amd64; OpenJDK 64-Bit Server VM 1.8.0_202-b08; Deflater: Intel; Inflater: Intel; Provider GCS is not available; Picard version: 2.18.29-SNAPSHOT
+INFO	2022-04-24 08:50:48	FastqToSam	Auto-detected quality format as: Standard.
+INFO	2022-04-24 08:50:55	FastqToSam	Processed     1,000,000 records.  Elapsed time: 00:00:07s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:51:10	FastqToSam	Processed     2,000,000 records.  Elapsed time: 00:00:22s.  Time for last 1,000,000:   14s.  Last read position: */*
+INFO	2022-04-24 08:51:17	FastqToSam	Processed     3,000,000 records.  Elapsed time: 00:00:29s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:51:24	FastqToSam	Processed     4,000,000 records.  Elapsed time: 00:00:36s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:51:31	FastqToSam	Processed     5,000,000 records.  Elapsed time: 00:00:43s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:51:39	FastqToSam	Processed     6,000,000 records.  Elapsed time: 00:00:51s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:51:46	FastqToSam	Processed     7,000,000 records.  Elapsed time: 00:00:58s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:51:53	FastqToSam	Processed     8,000,000 records.  Elapsed time: 00:01:05s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:52:02	FastqToSam	Processed     9,000,000 records.  Elapsed time: 00:01:13s.  Time for last 1,000,000:    8s.  Last read position: */*
+INFO	2022-04-24 08:52:09	FastqToSam	Processed    10,000,000 records.  Elapsed time: 00:01:20s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:52:16	FastqToSam	Processed    11,000,000 records.  Elapsed time: 00:01:28s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:52:23	FastqToSam	Processed    12,000,000 records.  Elapsed time: 00:01:35s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:52:30	FastqToSam	Processed    13,000,000 records.  Elapsed time: 00:01:42s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:52:37	FastqToSam	Processed    14,000,000 records.  Elapsed time: 00:01:49s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:52:44	FastqToSam	Processed    15,000,000 records.  Elapsed time: 00:01:56s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:52:51	FastqToSam	Processed    16,000,000 records.  Elapsed time: 00:02:03s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:52:59	FastqToSam	Processed    17,000,000 records.  Elapsed time: 00:02:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:53:06	FastqToSam	Processed    18,000,000 records.  Elapsed time: 00:02:18s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:53:14	FastqToSam	Processed    19,000,000 records.  Elapsed time: 00:02:25s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:53:21	FastqToSam	Processed    20,000,000 records.  Elapsed time: 00:02:32s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 08:53:28	FastqToSam	Processed    21,000,000 records.  Elapsed time: 00:02:40s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:53:35	FastqToSam	Processed    22,000,000 records.  Elapsed time: 00:02:47s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:53:42	FastqToSam	Processed    23,000,000 records.  Elapsed time: 00:02:54s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:53:49	FastqToSam	Processed    24,000,000 records.  Elapsed time: 00:03:01s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:53:56	FastqToSam	Processed    25,000,000 records.  Elapsed time: 00:03:08s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:54:03	FastqToSam	Processed    26,000,000 records.  Elapsed time: 00:03:15s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:54:11	FastqToSam	Processed    27,000,000 records.  Elapsed time: 00:03:22s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:54:18	FastqToSam	Processed    28,000,000 records.  Elapsed time: 00:03:29s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:54:25	FastqToSam	Processed    29,000,000 records.  Elapsed time: 00:03:37s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:54:32	FastqToSam	Processed    30,000,000 records.  Elapsed time: 00:03:44s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:54:39	FastqToSam	Processed    31,000,000 records.  Elapsed time: 00:03:51s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:54:47	FastqToSam	Processed    32,000,000 records.  Elapsed time: 00:03:59s.  Time for last 1,000,000:    8s.  Last read position: */*
+INFO	2022-04-24 08:54:54	FastqToSam	Processed    33,000,000 records.  Elapsed time: 00:04:06s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:55:02	FastqToSam	Processed    34,000,000 records.  Elapsed time: 00:04:13s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:55:09	FastqToSam	Processed    35,000,000 records.  Elapsed time: 00:04:20s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:55:16	FastqToSam	Processed    36,000,000 records.  Elapsed time: 00:04:27s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:55:23	FastqToSam	Processed    37,000,000 records.  Elapsed time: 00:04:35s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:55:30	FastqToSam	Processed    38,000,000 records.  Elapsed time: 00:04:42s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:55:37	FastqToSam	Processed    39,000,000 records.  Elapsed time: 00:04:49s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:55:44	FastqToSam	Processed    40,000,000 records.  Elapsed time: 00:04:56s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:55:51	FastqToSam	Processed    41,000,000 records.  Elapsed time: 00:05:03s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:55:58	FastqToSam	Processed    42,000,000 records.  Elapsed time: 00:05:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:56:05	FastqToSam	Processed    43,000,000 records.  Elapsed time: 00:05:17s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:56:13	FastqToSam	Processed    44,000,000 records.  Elapsed time: 00:05:24s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:56:20	FastqToSam	Processed    45,000,000 records.  Elapsed time: 00:05:31s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 08:56:27	FastqToSam	Processed    46,000,000 records.  Elapsed time: 00:05:38s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:56:34	FastqToSam	Processed    47,000,000 records.  Elapsed time: 00:05:45s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:56:41	FastqToSam	Processed    48,000,000 records.  Elapsed time: 00:05:52s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:56:48	FastqToSam	Processed    49,000,000 records.  Elapsed time: 00:05:59s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:56:55	FastqToSam	Processed    50,000,000 records.  Elapsed time: 00:06:07s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:57:02	FastqToSam	Processed    51,000,000 records.  Elapsed time: 00:06:14s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:57:09	FastqToSam	Processed    52,000,000 records.  Elapsed time: 00:06:21s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 08:57:16	FastqToSam	Processed    53,000,000 records.  Elapsed time: 00:06:27s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 08:57:24	FastqToSam	Processed    54,000,000 records.  Elapsed time: 00:06:35s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:57:31	FastqToSam	Processed    55,000,000 records.  Elapsed time: 00:06:42s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:57:38	FastqToSam	Processed    56,000,000 records.  Elapsed time: 00:06:50s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:57:45	FastqToSam	Processed    57,000,000 records.  Elapsed time: 00:06:57s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 08:57:52	FastqToSam	Processed    58,000,000 records.  Elapsed time: 00:07:04s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:57:59	FastqToSam	Processed    59,000,000 records.  Elapsed time: 00:07:11s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:58:06	FastqToSam	Processed    60,000,000 records.  Elapsed time: 00:07:18s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:58:13	FastqToSam	Processed    61,000,000 records.  Elapsed time: 00:07:25s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:58:21	FastqToSam	Processed    62,000,000 records.  Elapsed time: 00:07:32s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:58:28	FastqToSam	Processed    63,000,000 records.  Elapsed time: 00:07:40s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:58:36	FastqToSam	Processed    64,000,000 records.  Elapsed time: 00:07:47s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:58:43	FastqToSam	Processed    65,000,000 records.  Elapsed time: 00:07:54s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:58:50	FastqToSam	Processed    66,000,000 records.  Elapsed time: 00:08:02s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:58:57	FastqToSam	Processed    67,000,000 records.  Elapsed time: 00:08:09s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:59:04	FastqToSam	Processed    68,000,000 records.  Elapsed time: 00:08:16s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:59:11	FastqToSam	Processed    69,000,000 records.  Elapsed time: 00:08:23s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:59:18	FastqToSam	Processed    70,000,000 records.  Elapsed time: 00:08:30s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:59:25	FastqToSam	Processed    71,000,000 records.  Elapsed time: 00:08:37s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:59:33	FastqToSam	Processed    72,000,000 records.  Elapsed time: 00:08:44s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:59:40	FastqToSam	Processed    73,000,000 records.  Elapsed time: 00:08:51s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 08:59:47	FastqToSam	Processed    74,000,000 records.  Elapsed time: 00:08:58s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 08:59:54	FastqToSam	Processed    75,000,000 records.  Elapsed time: 00:09:05s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:00:01	FastqToSam	Processed    76,000,000 records.  Elapsed time: 00:09:12s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:00:08	FastqToSam	Processed    77,000,000 records.  Elapsed time: 00:09:19s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:00:15	FastqToSam	Processed    78,000,000 records.  Elapsed time: 00:09:26s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:00:22	FastqToSam	Processed    79,000,000 records.  Elapsed time: 00:09:33s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:00:29	FastqToSam	Processed    80,000,000 records.  Elapsed time: 00:09:40s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:00:36	FastqToSam	Processed    81,000,000 records.  Elapsed time: 00:09:47s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:00:43	FastqToSam	Processed    82,000,000 records.  Elapsed time: 00:09:54s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:00:50	FastqToSam	Processed    83,000,000 records.  Elapsed time: 00:10:01s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:00:57	FastqToSam	Processed    84,000,000 records.  Elapsed time: 00:10:08s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:01:04	FastqToSam	Processed    85,000,000 records.  Elapsed time: 00:10:16s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:01:11	FastqToSam	Processed    86,000,000 records.  Elapsed time: 00:10:23s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:01:18	FastqToSam	Processed    87,000,000 records.  Elapsed time: 00:10:30s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:01:25	FastqToSam	Processed    88,000,000 records.  Elapsed time: 00:10:37s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:01:33	FastqToSam	Processed    89,000,000 records.  Elapsed time: 00:10:44s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:01:40	FastqToSam	Processed    90,000,000 records.  Elapsed time: 00:10:52s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:01:47	FastqToSam	Processed    91,000,000 records.  Elapsed time: 00:10:59s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:01:54	FastqToSam	Processed    92,000,000 records.  Elapsed time: 00:11:06s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:02:02	FastqToSam	Processed    93,000,000 records.  Elapsed time: 00:11:13s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:02:09	FastqToSam	Processed    94,000,000 records.  Elapsed time: 00:11:21s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:02:17	FastqToSam	Processed    95,000,000 records.  Elapsed time: 00:11:28s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:02:24	FastqToSam	Processed    96,000,000 records.  Elapsed time: 00:11:35s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:02:31	FastqToSam	Processed    97,000,000 records.  Elapsed time: 00:11:43s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:02:39	FastqToSam	Processed    98,000,000 records.  Elapsed time: 00:11:51s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:02:47	FastqToSam	Processed    99,000,000 records.  Elapsed time: 00:11:58s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:02:54	FastqToSam	Processed   100,000,000 records.  Elapsed time: 00:12:06s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:03:01	FastqToSam	Processed   101,000,000 records.  Elapsed time: 00:12:13s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:03:08	FastqToSam	Processed   102,000,000 records.  Elapsed time: 00:12:20s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:03:15	FastqToSam	Processed   103,000,000 records.  Elapsed time: 00:12:27s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:03:22	FastqToSam	Processed   104,000,000 records.  Elapsed time: 00:12:34s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:03:29	FastqToSam	Processed   105,000,000 records.  Elapsed time: 00:12:41s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:03:37	FastqToSam	Processed   106,000,000 records.  Elapsed time: 00:12:48s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:03:44	FastqToSam	Processed   107,000,000 records.  Elapsed time: 00:12:56s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:03:51	FastqToSam	Processed   108,000,000 records.  Elapsed time: 00:13:03s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:03:59	FastqToSam	Processed   109,000,000 records.  Elapsed time: 00:13:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:04:06	FastqToSam	Processed   110,000,000 records.  Elapsed time: 00:13:18s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:04:13	FastqToSam	Processed   111,000,000 records.  Elapsed time: 00:13:25s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:04:21	FastqToSam	Processed   112,000,000 records.  Elapsed time: 00:13:32s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:04:28	FastqToSam	Processed   113,000,000 records.  Elapsed time: 00:13:39s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:04:35	FastqToSam	Processed   114,000,000 records.  Elapsed time: 00:13:47s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:04:44	FastqToSam	Processed   115,000,000 records.  Elapsed time: 00:13:55s.  Time for last 1,000,000:    8s.  Last read position: */*
+INFO	2022-04-24 09:04:51	FastqToSam	Processed   116,000,000 records.  Elapsed time: 00:14:03s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:04:58	FastqToSam	Processed   117,000,000 records.  Elapsed time: 00:14:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:05:06	FastqToSam	Processed   118,000,000 records.  Elapsed time: 00:14:17s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:05:13	FastqToSam	Processed   119,000,000 records.  Elapsed time: 00:14:25s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:05:21	FastqToSam	Processed   120,000,000 records.  Elapsed time: 00:14:32s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:05:28	FastqToSam	Processed   121,000,000 records.  Elapsed time: 00:14:40s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:05:36	FastqToSam	Processed   122,000,000 records.  Elapsed time: 00:14:47s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:05:43	FastqToSam	Processed   123,000,000 records.  Elapsed time: 00:14:55s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:05:51	FastqToSam	Processed   124,000,000 records.  Elapsed time: 00:15:02s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:05:58	FastqToSam	Processed   125,000,000 records.  Elapsed time: 00:15:09s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:06:05	FastqToSam	Processed   126,000,000 records.  Elapsed time: 00:15:17s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:06:12	FastqToSam	Processed   127,000,000 records.  Elapsed time: 00:15:24s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:06:19	FastqToSam	Processed   128,000,000 records.  Elapsed time: 00:15:31s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:06:26	FastqToSam	Processed   129,000,000 records.  Elapsed time: 00:15:38s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:06:33	FastqToSam	Processed   130,000,000 records.  Elapsed time: 00:15:45s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:06:41	FastqToSam	Processed   131,000,000 records.  Elapsed time: 00:15:52s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:06:48	FastqToSam	Processed   132,000,000 records.  Elapsed time: 00:15:59s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:06:55	FastqToSam	Processed   133,000,000 records.  Elapsed time: 00:16:07s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:07:02	FastqToSam	Processed   134,000,000 records.  Elapsed time: 00:16:14s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:07:09	FastqToSam	Processed   135,000,000 records.  Elapsed time: 00:16:21s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:07:16	FastqToSam	Processed   136,000,000 records.  Elapsed time: 00:16:28s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:07:24	FastqToSam	Processed   137,000,000 records.  Elapsed time: 00:16:35s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:07:31	FastqToSam	Processed   138,000,000 records.  Elapsed time: 00:16:42s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:07:38	FastqToSam	Processed   139,000,000 records.  Elapsed time: 00:16:50s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:07:46	FastqToSam	Processed   140,000,000 records.  Elapsed time: 00:16:58s.  Time for last 1,000,000:    8s.  Last read position: */*
+INFO	2022-04-24 09:07:54	FastqToSam	Processed   141,000,000 records.  Elapsed time: 00:17:06s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:08:02	FastqToSam	Processed   142,000,000 records.  Elapsed time: 00:17:13s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:08:09	FastqToSam	Processed   143,000,000 records.  Elapsed time: 00:17:21s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:08:17	FastqToSam	Processed   144,000,000 records.  Elapsed time: 00:17:29s.  Time for last 1,000,000:    8s.  Last read position: */*
+INFO	2022-04-24 09:08:25	FastqToSam	Processed   145,000,000 records.  Elapsed time: 00:17:37s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:08:33	FastqToSam	Processed   146,000,000 records.  Elapsed time: 00:17:44s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:08:40	FastqToSam	Processed   147,000,000 records.  Elapsed time: 00:17:52s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:08:49	FastqToSam	Processed   148,000,000 records.  Elapsed time: 00:18:00s.  Time for last 1,000,000:    8s.  Last read position: */*
+INFO	2022-04-24 09:08:56	FastqToSam	Processed   149,000,000 records.  Elapsed time: 00:18:07s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:09:03	FastqToSam	Processed   150,000,000 records.  Elapsed time: 00:18:14s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:09:10	FastqToSam	Processed   151,000,000 records.  Elapsed time: 00:18:22s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:09:17	FastqToSam	Processed   152,000,000 records.  Elapsed time: 00:18:29s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:09:25	FastqToSam	Processed   153,000,000 records.  Elapsed time: 00:18:37s.  Time for last 1,000,000:    8s.  Last read position: */*
+INFO	2022-04-24 09:09:33	FastqToSam	Processed   154,000,000 records.  Elapsed time: 00:18:44s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:09:40	FastqToSam	Processed   155,000,000 records.  Elapsed time: 00:18:51s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:09:47	FastqToSam	Processed   156,000,000 records.  Elapsed time: 00:18:58s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:09:54	FastqToSam	Processed   157,000,000 records.  Elapsed time: 00:19:06s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:10:01	FastqToSam	Processed   158,000,000 records.  Elapsed time: 00:19:13s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:10:08	FastqToSam	Processed   159,000,000 records.  Elapsed time: 00:19:20s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:10:15	FastqToSam	Processed   160,000,000 records.  Elapsed time: 00:19:27s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:10:22	FastqToSam	Processed   161,000,000 records.  Elapsed time: 00:19:34s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:10:30	FastqToSam	Processed   162,000,000 records.  Elapsed time: 00:19:42s.  Time for last 1,000,000:    8s.  Last read position: */*
+INFO	2022-04-24 09:10:38	FastqToSam	Processed   163,000,000 records.  Elapsed time: 00:19:49s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:10:45	FastqToSam	Processed   164,000,000 records.  Elapsed time: 00:19:56s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:10:53	FastqToSam	Processed   165,000,000 records.  Elapsed time: 00:20:04s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:11:00	FastqToSam	Processed   166,000,000 records.  Elapsed time: 00:20:11s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:11:07	FastqToSam	Processed   167,000,000 records.  Elapsed time: 00:20:19s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:11:14	FastqToSam	Processed   168,000,000 records.  Elapsed time: 00:20:26s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:11:21	FastqToSam	Processed   169,000,000 records.  Elapsed time: 00:20:33s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:11:29	FastqToSam	Processed   170,000,000 records.  Elapsed time: 00:20:41s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:11:36	FastqToSam	Processed   171,000,000 records.  Elapsed time: 00:20:48s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:11:43	FastqToSam	Processed   172,000,000 records.  Elapsed time: 00:20:55s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:11:51	FastqToSam	Processed   173,000,000 records.  Elapsed time: 00:21:02s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:11:58	FastqToSam	Processed   174,000,000 records.  Elapsed time: 00:21:09s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:12:05	FastqToSam	Processed   175,000,000 records.  Elapsed time: 00:21:17s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:12:12	FastqToSam	Processed   176,000,000 records.  Elapsed time: 00:21:24s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:12:19	FastqToSam	Processed   177,000,000 records.  Elapsed time: 00:21:31s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:12:27	FastqToSam	Processed   178,000,000 records.  Elapsed time: 00:21:38s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:12:34	FastqToSam	Processed   179,000,000 records.  Elapsed time: 00:21:46s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:12:41	FastqToSam	Processed   180,000,000 records.  Elapsed time: 00:21:53s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:12:48	FastqToSam	Processed   181,000,000 records.  Elapsed time: 00:22:00s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:12:56	FastqToSam	Processed   182,000,000 records.  Elapsed time: 00:22:08s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:13:04	FastqToSam	Processed   183,000,000 records.  Elapsed time: 00:22:15s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:13:11	FastqToSam	Processed   184,000,000 records.  Elapsed time: 00:22:22s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:13:18	FastqToSam	Processed   185,000,000 records.  Elapsed time: 00:22:29s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:13:25	FastqToSam	Processed   186,000,000 records.  Elapsed time: 00:22:37s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:13:33	FastqToSam	Processed   187,000,000 records.  Elapsed time: 00:22:45s.  Time for last 1,000,000:    8s.  Last read position: */*
+INFO	2022-04-24 09:13:41	FastqToSam	Processed   188,000,000 records.  Elapsed time: 00:22:52s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:13:49	FastqToSam	Processed   189,000,000 records.  Elapsed time: 00:23:00s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:13:56	FastqToSam	Processed   190,000,000 records.  Elapsed time: 00:23:08s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:14:03	FastqToSam	Processed   191,000,000 records.  Elapsed time: 00:23:15s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:14:10	FastqToSam	Processed   192,000,000 records.  Elapsed time: 00:23:22s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:14:18	FastqToSam	Processed   193,000,000 records.  Elapsed time: 00:23:29s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:14:25	FastqToSam	Processed   194,000,000 records.  Elapsed time: 00:23:37s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:14:33	FastqToSam	Processed   195,000,000 records.  Elapsed time: 00:23:45s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:14:41	FastqToSam	Processed   196,000,000 records.  Elapsed time: 00:23:52s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:14:48	FastqToSam	Processed   197,000,000 records.  Elapsed time: 00:24:00s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:14:55	FastqToSam	Processed   198,000,000 records.  Elapsed time: 00:24:07s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:15:03	FastqToSam	Processed   199,000,000 records.  Elapsed time: 00:24:14s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:15:10	FastqToSam	Processed   200,000,000 records.  Elapsed time: 00:24:22s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:15:17	FastqToSam	Processed   201,000,000 records.  Elapsed time: 00:24:29s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:15:25	FastqToSam	Processed   202,000,000 records.  Elapsed time: 00:24:36s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:15:32	FastqToSam	Processed   203,000,000 records.  Elapsed time: 00:24:43s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:15:39	FastqToSam	Processed   204,000,000 records.  Elapsed time: 00:24:50s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:15:46	FastqToSam	Processed   205,000,000 records.  Elapsed time: 00:24:58s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:15:53	FastqToSam	Processed   206,000,000 records.  Elapsed time: 00:25:05s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:16:00	FastqToSam	Processed   207,000,000 records.  Elapsed time: 00:25:12s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:16:07	FastqToSam	Processed   208,000,000 records.  Elapsed time: 00:25:19s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:16:14	FastqToSam	Processed   209,000,000 records.  Elapsed time: 00:25:26s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:16:22	FastqToSam	Processed   210,000,000 records.  Elapsed time: 00:25:34s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:16:30	FastqToSam	Processed   211,000,000 records.  Elapsed time: 00:25:41s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:16:37	FastqToSam	Processed   212,000,000 records.  Elapsed time: 00:25:49s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:16:44	FastqToSam	Processed   213,000,000 records.  Elapsed time: 00:25:56s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:16:51	FastqToSam	Processed   214,000,000 records.  Elapsed time: 00:26:03s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:16:58	FastqToSam	Processed   215,000,000 records.  Elapsed time: 00:26:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:17:06	FastqToSam	Processed   216,000,000 records.  Elapsed time: 00:26:17s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:17:13	FastqToSam	Processed   217,000,000 records.  Elapsed time: 00:26:24s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:17:20	FastqToSam	Processed   218,000,000 records.  Elapsed time: 00:26:32s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:17:27	FastqToSam	Processed   219,000,000 records.  Elapsed time: 00:26:39s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:17:34	FastqToSam	Processed   220,000,000 records.  Elapsed time: 00:26:46s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:17:42	FastqToSam	Processed   221,000,000 records.  Elapsed time: 00:26:53s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:17:49	FastqToSam	Processed   222,000,000 records.  Elapsed time: 00:27:01s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:17:56	FastqToSam	Processed   223,000,000 records.  Elapsed time: 00:27:08s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:18:04	FastqToSam	Processed   224,000,000 records.  Elapsed time: 00:27:15s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:18:11	FastqToSam	Processed   225,000,000 records.  Elapsed time: 00:27:22s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:18:18	FastqToSam	Processed   226,000,000 records.  Elapsed time: 00:27:30s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:18:25	FastqToSam	Processed   227,000,000 records.  Elapsed time: 00:27:37s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:18:32	FastqToSam	Processed   228,000,000 records.  Elapsed time: 00:27:44s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:18:39	FastqToSam	Processed   229,000,000 records.  Elapsed time: 00:27:51s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:18:46	FastqToSam	Processed   230,000,000 records.  Elapsed time: 00:27:58s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:18:53	FastqToSam	Processed   231,000,000 records.  Elapsed time: 00:28:05s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:19:00	FastqToSam	Processed   232,000,000 records.  Elapsed time: 00:28:12s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:19:08	FastqToSam	Processed   233,000,000 records.  Elapsed time: 00:28:19s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:19:15	FastqToSam	Processed   234,000,000 records.  Elapsed time: 00:28:26s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:19:22	FastqToSam	Processed   235,000,000 records.  Elapsed time: 00:28:33s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:19:29	FastqToSam	Processed   236,000,000 records.  Elapsed time: 00:28:41s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:19:36	FastqToSam	Processed   237,000,000 records.  Elapsed time: 00:28:48s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:19:43	FastqToSam	Processed   238,000,000 records.  Elapsed time: 00:28:55s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:19:50	FastqToSam	Processed   239,000,000 records.  Elapsed time: 00:29:02s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:19:57	FastqToSam	Processed   240,000,000 records.  Elapsed time: 00:29:09s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:20:05	FastqToSam	Processed   241,000,000 records.  Elapsed time: 00:29:16s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:20:12	FastqToSam	Processed   242,000,000 records.  Elapsed time: 00:29:23s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:20:19	FastqToSam	Processed   243,000,000 records.  Elapsed time: 00:29:30s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:20:26	FastqToSam	Processed   244,000,000 records.  Elapsed time: 00:29:38s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:20:33	FastqToSam	Processed   245,000,000 records.  Elapsed time: 00:29:45s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:20:40	FastqToSam	Processed   246,000,000 records.  Elapsed time: 00:29:52s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:20:47	FastqToSam	Processed   247,000,000 records.  Elapsed time: 00:29:59s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:20:55	FastqToSam	Processed   248,000,000 records.  Elapsed time: 00:30:06s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:21:02	FastqToSam	Processed   249,000,000 records.  Elapsed time: 00:30:13s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:21:09	FastqToSam	Processed   250,000,000 records.  Elapsed time: 00:30:20s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:21:16	FastqToSam	Processed   251,000,000 records.  Elapsed time: 00:30:28s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:21:23	FastqToSam	Processed   252,000,000 records.  Elapsed time: 00:30:35s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:21:30	FastqToSam	Processed   253,000,000 records.  Elapsed time: 00:30:42s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:21:37	FastqToSam	Processed   254,000,000 records.  Elapsed time: 00:30:49s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:21:44	FastqToSam	Processed   255,000,000 records.  Elapsed time: 00:30:56s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:21:51	FastqToSam	Processed   256,000,000 records.  Elapsed time: 00:31:03s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:21:58	FastqToSam	Processed   257,000,000 records.  Elapsed time: 00:31:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:22:06	FastqToSam	Processed   258,000,000 records.  Elapsed time: 00:31:17s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:22:13	FastqToSam	Processed   259,000,000 records.  Elapsed time: 00:31:24s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:22:20	FastqToSam	Processed   260,000,000 records.  Elapsed time: 00:31:31s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:22:27	FastqToSam	Processed   261,000,000 records.  Elapsed time: 00:31:38s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:22:34	FastqToSam	Processed   262,000,000 records.  Elapsed time: 00:31:45s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:22:41	FastqToSam	Processed   263,000,000 records.  Elapsed time: 00:31:52s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:22:48	FastqToSam	Processed   264,000,000 records.  Elapsed time: 00:31:59s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:22:55	FastqToSam	Processed   265,000,000 records.  Elapsed time: 00:32:06s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:23:02	FastqToSam	Processed   266,000,000 records.  Elapsed time: 00:32:13s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:23:09	FastqToSam	Processed   267,000,000 records.  Elapsed time: 00:32:21s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:23:16	FastqToSam	Processed   268,000,000 records.  Elapsed time: 00:32:28s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:23:23	FastqToSam	Processed   269,000,000 records.  Elapsed time: 00:32:35s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:23:30	FastqToSam	Processed   270,000,000 records.  Elapsed time: 00:32:42s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:23:38	FastqToSam	Processed   271,000,000 records.  Elapsed time: 00:32:49s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:23:45	FastqToSam	Processed   272,000,000 records.  Elapsed time: 00:32:56s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:23:52	FastqToSam	Processed   273,000,000 records.  Elapsed time: 00:33:04s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:24:00	FastqToSam	Processed   274,000,000 records.  Elapsed time: 00:33:11s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:24:07	FastqToSam	Processed   275,000,000 records.  Elapsed time: 00:33:19s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:24:14	FastqToSam	Processed   276,000,000 records.  Elapsed time: 00:33:26s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:24:21	FastqToSam	Processed   277,000,000 records.  Elapsed time: 00:33:33s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:24:28	FastqToSam	Processed   278,000,000 records.  Elapsed time: 00:33:40s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:24:35	FastqToSam	Processed   279,000,000 records.  Elapsed time: 00:33:47s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:24:42	FastqToSam	Processed   280,000,000 records.  Elapsed time: 00:33:54s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:24:49	FastqToSam	Processed   281,000,000 records.  Elapsed time: 00:34:01s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:24:56	FastqToSam	Processed   282,000,000 records.  Elapsed time: 00:34:08s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:25:04	FastqToSam	Processed   283,000,000 records.  Elapsed time: 00:34:15s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:25:11	FastqToSam	Processed   284,000,000 records.  Elapsed time: 00:34:22s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:25:18	FastqToSam	Processed   285,000,000 records.  Elapsed time: 00:34:29s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:25:25	FastqToSam	Processed   286,000,000 records.  Elapsed time: 00:34:36s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:25:32	FastqToSam	Processed   287,000,000 records.  Elapsed time: 00:34:44s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:25:39	FastqToSam	Processed   288,000,000 records.  Elapsed time: 00:34:51s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:25:46	FastqToSam	Processed   289,000,000 records.  Elapsed time: 00:34:58s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:25:53	FastqToSam	Processed   290,000,000 records.  Elapsed time: 00:35:05s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:26:01	FastqToSam	Processed   291,000,000 records.  Elapsed time: 00:35:13s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:26:08	FastqToSam	Processed   292,000,000 records.  Elapsed time: 00:35:20s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:26:15	FastqToSam	Processed   293,000,000 records.  Elapsed time: 00:35:27s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:26:23	FastqToSam	Processed   294,000,000 records.  Elapsed time: 00:35:34s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:26:30	FastqToSam	Processed   295,000,000 records.  Elapsed time: 00:35:42s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:26:38	FastqToSam	Processed   296,000,000 records.  Elapsed time: 00:35:49s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:26:45	FastqToSam	Processed   297,000,000 records.  Elapsed time: 00:35:57s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:26:52	FastqToSam	Processed   298,000,000 records.  Elapsed time: 00:36:04s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:26:59	FastqToSam	Processed   299,000,000 records.  Elapsed time: 00:36:11s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:27:07	FastqToSam	Processed   300,000,000 records.  Elapsed time: 00:36:19s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:27:15	FastqToSam	Processed   301,000,000 records.  Elapsed time: 00:36:26s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:27:22	FastqToSam	Processed   302,000,000 records.  Elapsed time: 00:36:34s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:27:29	FastqToSam	Processed   303,000,000 records.  Elapsed time: 00:36:41s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:27:36	FastqToSam	Processed   304,000,000 records.  Elapsed time: 00:36:48s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:27:44	FastqToSam	Processed   305,000,000 records.  Elapsed time: 00:36:55s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:27:51	FastqToSam	Processed   306,000,000 records.  Elapsed time: 00:37:02s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:27:58	FastqToSam	Processed   307,000,000 records.  Elapsed time: 00:37:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:28:05	FastqToSam	Processed   308,000,000 records.  Elapsed time: 00:37:17s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:28:13	FastqToSam	Processed   309,000,000 records.  Elapsed time: 00:37:24s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:28:20	FastqToSam	Processed   310,000,000 records.  Elapsed time: 00:37:32s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:28:27	FastqToSam	Processed   311,000,000 records.  Elapsed time: 00:37:39s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:28:34	FastqToSam	Processed   312,000,000 records.  Elapsed time: 00:37:46s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:28:42	FastqToSam	Processed   313,000,000 records.  Elapsed time: 00:37:53s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:28:49	FastqToSam	Processed   314,000,000 records.  Elapsed time: 00:38:00s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:28:56	FastqToSam	Processed   315,000,000 records.  Elapsed time: 00:38:07s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:29:03	FastqToSam	Processed   316,000,000 records.  Elapsed time: 00:38:14s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:29:10	FastqToSam	Processed   317,000,000 records.  Elapsed time: 00:38:22s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:29:17	FastqToSam	Processed   318,000,000 records.  Elapsed time: 00:38:29s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:29:24	FastqToSam	Processed   319,000,000 records.  Elapsed time: 00:38:36s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:29:32	FastqToSam	Processed   320,000,000 records.  Elapsed time: 00:38:43s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:29:39	FastqToSam	Processed   321,000,000 records.  Elapsed time: 00:38:50s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:29:46	FastqToSam	Processed   322,000,000 records.  Elapsed time: 00:38:58s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:29:53	FastqToSam	Processed   323,000,000 records.  Elapsed time: 00:39:05s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:30:00	FastqToSam	Processed   324,000,000 records.  Elapsed time: 00:39:12s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:30:08	FastqToSam	Processed   325,000,000 records.  Elapsed time: 00:39:19s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:30:15	FastqToSam	Processed   326,000,000 records.  Elapsed time: 00:39:26s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:30:22	FastqToSam	Processed   327,000,000 records.  Elapsed time: 00:39:34s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:30:29	FastqToSam	Processed   328,000,000 records.  Elapsed time: 00:39:41s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:30:37	FastqToSam	Processed   329,000,000 records.  Elapsed time: 00:39:48s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:30:44	FastqToSam	Processed   330,000,000 records.  Elapsed time: 00:39:55s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:30:51	FastqToSam	Processed   331,000,000 records.  Elapsed time: 00:40:03s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:30:58	FastqToSam	Processed   332,000,000 records.  Elapsed time: 00:40:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:31:06	FastqToSam	Processed   333,000,000 records.  Elapsed time: 00:40:17s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:31:13	FastqToSam	Processed   334,000,000 records.  Elapsed time: 00:40:24s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:31:20	FastqToSam	Processed   335,000,000 records.  Elapsed time: 00:40:32s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:31:27	FastqToSam	Processed   336,000,000 records.  Elapsed time: 00:40:39s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:31:35	FastqToSam	Processed   337,000,000 records.  Elapsed time: 00:40:46s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:31:42	FastqToSam	Processed   338,000,000 records.  Elapsed time: 00:40:54s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:31:49	FastqToSam	Processed   339,000,000 records.  Elapsed time: 00:41:01s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:31:57	FastqToSam	Processed   340,000,000 records.  Elapsed time: 00:41:08s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:32:04	FastqToSam	Processed   341,000,000 records.  Elapsed time: 00:41:16s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:32:11	FastqToSam	Processed   342,000,000 records.  Elapsed time: 00:41:23s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:32:18	FastqToSam	Processed   343,000,000 records.  Elapsed time: 00:41:30s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:32:26	FastqToSam	Processed   344,000,000 records.  Elapsed time: 00:41:37s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:32:33	FastqToSam	Processed   345,000,000 records.  Elapsed time: 00:41:44s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:32:40	FastqToSam	Processed   346,000,000 records.  Elapsed time: 00:41:52s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:32:47	FastqToSam	Processed   347,000,000 records.  Elapsed time: 00:41:59s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:32:54	FastqToSam	Processed   348,000,000 records.  Elapsed time: 00:42:06s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:33:02	FastqToSam	Processed   349,000,000 records.  Elapsed time: 00:42:13s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:33:09	FastqToSam	Processed   350,000,000 records.  Elapsed time: 00:42:21s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:33:16	FastqToSam	Processed   351,000,000 records.  Elapsed time: 00:42:28s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:33:23	FastqToSam	Processed   352,000,000 records.  Elapsed time: 00:42:35s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:33:31	FastqToSam	Processed   353,000,000 records.  Elapsed time: 00:42:42s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:33:38	FastqToSam	Processed   354,000,000 records.  Elapsed time: 00:42:50s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:33:45	FastqToSam	Processed   355,000,000 records.  Elapsed time: 00:42:57s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:33:53	FastqToSam	Processed   356,000,000 records.  Elapsed time: 00:43:04s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:34:00	FastqToSam	Processed   357,000,000 records.  Elapsed time: 00:43:11s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:34:07	FastqToSam	Processed   358,000,000 records.  Elapsed time: 00:43:19s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:34:14	FastqToSam	Processed   359,000,000 records.  Elapsed time: 00:43:26s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:34:22	FastqToSam	Processed   360,000,000 records.  Elapsed time: 00:43:33s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:34:29	FastqToSam	Processed   361,000,000 records.  Elapsed time: 00:43:41s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:34:36	FastqToSam	Processed   362,000,000 records.  Elapsed time: 00:43:48s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:34:43	FastqToSam	Processed   363,000,000 records.  Elapsed time: 00:43:55s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:34:50	FastqToSam	Processed   364,000,000 records.  Elapsed time: 00:44:02s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:34:58	FastqToSam	Processed   365,000,000 records.  Elapsed time: 00:44:09s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:35:05	FastqToSam	Processed   366,000,000 records.  Elapsed time: 00:44:16s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:35:12	FastqToSam	Processed   367,000,000 records.  Elapsed time: 00:44:24s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:35:19	FastqToSam	Processed   368,000,000 records.  Elapsed time: 00:44:31s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:35:26	FastqToSam	Processed   369,000,000 records.  Elapsed time: 00:44:38s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:35:34	FastqToSam	Processed   370,000,000 records.  Elapsed time: 00:44:45s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:35:41	FastqToSam	Processed   371,000,000 records.  Elapsed time: 00:44:53s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:35:48	FastqToSam	Processed   372,000,000 records.  Elapsed time: 00:45:00s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:35:56	FastqToSam	Processed   373,000,000 records.  Elapsed time: 00:45:07s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:36:03	FastqToSam	Processed   374,000,000 records.  Elapsed time: 00:45:14s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:36:10	FastqToSam	Processed   375,000,000 records.  Elapsed time: 00:45:22s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:36:18	FastqToSam	Processed   376,000,000 records.  Elapsed time: 00:45:29s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:36:25	FastqToSam	Processed   377,000,000 records.  Elapsed time: 00:45:36s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:36:32	FastqToSam	Processed   378,000,000 records.  Elapsed time: 00:45:44s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:36:39	FastqToSam	Processed   379,000,000 records.  Elapsed time: 00:45:51s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:36:47	FastqToSam	Processed   380,000,000 records.  Elapsed time: 00:45:58s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:36:54	FastqToSam	Processed   381,000,000 records.  Elapsed time: 00:46:06s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:37:01	FastqToSam	Processed   382,000,000 records.  Elapsed time: 00:46:13s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:37:08	FastqToSam	Processed   383,000,000 records.  Elapsed time: 00:46:20s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:37:16	FastqToSam	Processed   384,000,000 records.  Elapsed time: 00:46:27s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:37:23	FastqToSam	Processed   385,000,000 records.  Elapsed time: 00:46:35s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:37:31	FastqToSam	Processed   386,000,000 records.  Elapsed time: 00:46:42s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:37:38	FastqToSam	Processed   387,000,000 records.  Elapsed time: 00:46:50s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:37:45	FastqToSam	Processed   388,000,000 records.  Elapsed time: 00:46:57s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:37:53	FastqToSam	Processed   389,000,000 records.  Elapsed time: 00:47:04s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:38:00	FastqToSam	Processed   390,000,000 records.  Elapsed time: 00:47:12s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:38:07	FastqToSam	Processed   391,000,000 records.  Elapsed time: 00:47:19s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:38:15	FastqToSam	Processed   392,000,000 records.  Elapsed time: 00:47:26s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:38:22	FastqToSam	Processed   393,000,000 records.  Elapsed time: 00:47:34s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:38:29	FastqToSam	Processed   394,000,000 records.  Elapsed time: 00:47:41s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:38:36	FastqToSam	Processed   395,000,000 records.  Elapsed time: 00:47:48s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:38:44	FastqToSam	Processed   396,000,000 records.  Elapsed time: 00:47:55s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:38:51	FastqToSam	Processed   397,000,000 records.  Elapsed time: 00:48:02s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:38:58	FastqToSam	Processed   398,000,000 records.  Elapsed time: 00:48:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:39:05	FastqToSam	Processed   399,000,000 records.  Elapsed time: 00:48:17s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:39:13	FastqToSam	Processed   400,000,000 records.  Elapsed time: 00:48:24s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:39:20	FastqToSam	Processed   401,000,000 records.  Elapsed time: 00:48:32s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:39:27	FastqToSam	Processed   402,000,000 records.  Elapsed time: 00:48:39s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:39:35	FastqToSam	Processed   403,000,000 records.  Elapsed time: 00:48:46s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:39:42	FastqToSam	Processed   404,000,000 records.  Elapsed time: 00:48:53s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:39:49	FastqToSam	Processed   405,000,000 records.  Elapsed time: 00:49:01s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:39:56	FastqToSam	Processed   406,000,000 records.  Elapsed time: 00:49:08s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:40:03	FastqToSam	Processed   407,000,000 records.  Elapsed time: 00:49:15s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:40:11	FastqToSam	Processed   408,000,000 records.  Elapsed time: 00:49:22s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:40:18	FastqToSam	Processed   409,000,000 records.  Elapsed time: 00:49:30s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:40:25	FastqToSam	Processed   410,000,000 records.  Elapsed time: 00:49:37s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:40:33	FastqToSam	Processed   411,000,000 records.  Elapsed time: 00:49:44s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:40:40	FastqToSam	Processed   412,000,000 records.  Elapsed time: 00:49:51s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:40:47	FastqToSam	Processed   413,000,000 records.  Elapsed time: 00:49:59s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:40:54	FastqToSam	Processed   414,000,000 records.  Elapsed time: 00:50:06s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:41:02	FastqToSam	Processed   415,000,000 records.  Elapsed time: 00:50:13s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:41:09	FastqToSam	Processed   416,000,000 records.  Elapsed time: 00:50:20s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:41:16	FastqToSam	Processed   417,000,000 records.  Elapsed time: 00:50:28s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:41:23	FastqToSam	Processed   418,000,000 records.  Elapsed time: 00:50:35s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:41:31	FastqToSam	Processed   419,000,000 records.  Elapsed time: 00:50:42s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:41:38	FastqToSam	Processed   420,000,000 records.  Elapsed time: 00:50:50s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:41:45	FastqToSam	Processed   421,000,000 records.  Elapsed time: 00:50:57s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:41:53	FastqToSam	Processed   422,000,000 records.  Elapsed time: 00:51:04s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:42:00	FastqToSam	Processed   423,000,000 records.  Elapsed time: 00:51:11s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:42:07	FastqToSam	Processed   424,000,000 records.  Elapsed time: 00:51:19s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:42:14	FastqToSam	Processed   425,000,000 records.  Elapsed time: 00:51:26s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:42:21	FastqToSam	Processed   426,000,000 records.  Elapsed time: 00:51:33s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:42:29	FastqToSam	Processed   427,000,000 records.  Elapsed time: 00:51:41s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:42:36	FastqToSam	Processed   428,000,000 records.  Elapsed time: 00:51:48s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:42:43	FastqToSam	Processed   429,000,000 records.  Elapsed time: 00:51:55s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:42:51	FastqToSam	Processed   430,000,000 records.  Elapsed time: 00:52:02s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:42:58	FastqToSam	Processed   431,000,000 records.  Elapsed time: 00:52:09s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:43:06	FastqToSam	Processed   432,000,000 records.  Elapsed time: 00:52:17s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:43:13	FastqToSam	Processed   433,000,000 records.  Elapsed time: 00:52:24s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:43:20	FastqToSam	Processed   434,000,000 records.  Elapsed time: 00:52:32s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:43:27	FastqToSam	Processed   435,000,000 records.  Elapsed time: 00:52:39s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:43:34	FastqToSam	Processed   436,000,000 records.  Elapsed time: 00:52:46s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:43:42	FastqToSam	Processed   437,000,000 records.  Elapsed time: 00:52:53s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:43:49	FastqToSam	Processed   438,000,000 records.  Elapsed time: 00:53:01s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:43:56	FastqToSam	Processed   439,000,000 records.  Elapsed time: 00:53:08s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:44:04	FastqToSam	Processed   440,000,000 records.  Elapsed time: 00:53:15s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:44:11	FastqToSam	Processed   441,000,000 records.  Elapsed time: 00:53:22s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:44:18	FastqToSam	Processed   442,000,000 records.  Elapsed time: 00:53:30s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:44:26	FastqToSam	Processed   443,000,000 records.  Elapsed time: 00:53:37s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:44:33	FastqToSam	Processed   444,000,000 records.  Elapsed time: 00:53:44s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:44:40	FastqToSam	Processed   445,000,000 records.  Elapsed time: 00:53:52s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:44:47	FastqToSam	Processed   446,000,000 records.  Elapsed time: 00:53:59s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:44:55	FastqToSam	Processed   447,000,000 records.  Elapsed time: 00:54:06s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:45:02	FastqToSam	Processed   448,000,000 records.  Elapsed time: 00:54:14s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:45:09	FastqToSam	Processed   449,000,000 records.  Elapsed time: 00:54:21s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:45:17	FastqToSam	Processed   450,000,000 records.  Elapsed time: 00:54:28s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:45:24	FastqToSam	Processed   451,000,000 records.  Elapsed time: 00:54:36s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:45:32	FastqToSam	Processed   452,000,000 records.  Elapsed time: 00:54:43s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:45:39	FastqToSam	Processed   453,000,000 records.  Elapsed time: 00:54:51s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:45:46	FastqToSam	Processed   454,000,000 records.  Elapsed time: 00:54:58s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:45:54	FastqToSam	Processed   455,000,000 records.  Elapsed time: 00:55:05s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:46:01	FastqToSam	Processed   456,000,000 records.  Elapsed time: 00:55:12s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:46:08	FastqToSam	Processed   457,000,000 records.  Elapsed time: 00:55:20s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:46:15	FastqToSam	Processed   458,000,000 records.  Elapsed time: 00:55:27s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:46:23	FastqToSam	Processed   459,000,000 records.  Elapsed time: 00:55:34s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:46:30	FastqToSam	Processed   460,000,000 records.  Elapsed time: 00:55:41s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:46:37	FastqToSam	Processed   461,000,000 records.  Elapsed time: 00:55:49s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:46:44	FastqToSam	Processed   462,000,000 records.  Elapsed time: 00:55:56s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:46:52	FastqToSam	Processed   463,000,000 records.  Elapsed time: 00:56:03s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:46:59	FastqToSam	Processed   464,000,000 records.  Elapsed time: 00:56:11s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:47:06	FastqToSam	Processed   465,000,000 records.  Elapsed time: 00:56:18s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:47:13	FastqToSam	Processed   466,000,000 records.  Elapsed time: 00:56:25s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:47:21	FastqToSam	Processed   467,000,000 records.  Elapsed time: 00:56:32s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:47:28	FastqToSam	Processed   468,000,000 records.  Elapsed time: 00:56:40s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:47:35	FastqToSam	Processed   469,000,000 records.  Elapsed time: 00:56:47s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:47:43	FastqToSam	Processed   470,000,000 records.  Elapsed time: 00:56:54s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:47:50	FastqToSam	Processed   471,000,000 records.  Elapsed time: 00:57:02s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:47:57	FastqToSam	Processed   472,000,000 records.  Elapsed time: 00:57:09s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:48:04	FastqToSam	Processed   473,000,000 records.  Elapsed time: 00:57:16s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:48:12	FastqToSam	Processed   474,000,000 records.  Elapsed time: 00:57:23s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:48:19	FastqToSam	Processed   475,000,000 records.  Elapsed time: 00:57:31s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:48:26	FastqToSam	Processed   476,000,000 records.  Elapsed time: 00:57:38s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:48:36	FastqToSam	Processed   477,000,000 records.  Elapsed time: 00:57:47s.  Time for last 1,000,000:    9s.  Last read position: */*
+INFO	2022-04-24 09:48:43	FastqToSam	Processed   478,000,000 records.  Elapsed time: 00:57:55s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:48:51	FastqToSam	Processed   479,000,000 records.  Elapsed time: 00:58:02s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:48:58	FastqToSam	Processed   480,000,000 records.  Elapsed time: 00:58:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:49:06	FastqToSam	Processed   481,000,000 records.  Elapsed time: 00:58:17s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:49:13	FastqToSam	Processed   482,000,000 records.  Elapsed time: 00:58:25s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:49:20	FastqToSam	Processed   483,000,000 records.  Elapsed time: 00:58:32s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:49:28	FastqToSam	Processed   484,000,000 records.  Elapsed time: 00:58:39s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:49:35	FastqToSam	Processed   485,000,000 records.  Elapsed time: 00:58:46s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:49:42	FastqToSam	Processed   486,000,000 records.  Elapsed time: 00:58:54s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:49:49	FastqToSam	Processed   487,000,000 records.  Elapsed time: 00:59:01s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:49:56	FastqToSam	Processed   488,000,000 records.  Elapsed time: 00:59:08s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:50:04	FastqToSam	Processed   489,000,000 records.  Elapsed time: 00:59:15s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:50:11	FastqToSam	Processed   490,000,000 records.  Elapsed time: 00:59:23s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:50:18	FastqToSam	Processed   491,000,000 records.  Elapsed time: 00:59:30s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:50:25	FastqToSam	Processed   492,000,000 records.  Elapsed time: 00:59:37s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:50:33	FastqToSam	Processed   493,000,000 records.  Elapsed time: 00:59:44s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:50:40	FastqToSam	Processed   494,000,000 records.  Elapsed time: 00:59:51s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:50:47	FastqToSam	Processed   495,000,000 records.  Elapsed time: 00:59:59s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:50:54	FastqToSam	Processed   496,000,000 records.  Elapsed time: 01:00:06s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:51:02	FastqToSam	Processed   497,000,000 records.  Elapsed time: 01:00:13s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:51:09	FastqToSam	Processed   498,000,000 records.  Elapsed time: 01:00:21s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:51:16	FastqToSam	Processed   499,000,000 records.  Elapsed time: 01:00:28s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:51:23	FastqToSam	Processed   500,000,000 records.  Elapsed time: 01:00:35s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:51:30	FastqToSam	Processed   501,000,000 records.  Elapsed time: 01:00:42s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:51:37	FastqToSam	Processed   502,000,000 records.  Elapsed time: 01:00:49s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:51:44	FastqToSam	Processed   503,000,000 records.  Elapsed time: 01:00:56s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:51:51	FastqToSam	Processed   504,000,000 records.  Elapsed time: 01:01:03s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:51:59	FastqToSam	Processed   505,000,000 records.  Elapsed time: 01:01:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:52:06	FastqToSam	Processed   506,000,000 records.  Elapsed time: 01:01:17s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:52:13	FastqToSam	Processed   507,000,000 records.  Elapsed time: 01:01:24s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:52:20	FastqToSam	Processed   508,000,000 records.  Elapsed time: 01:01:32s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:52:27	FastqToSam	Processed   509,000,000 records.  Elapsed time: 01:01:39s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:52:34	FastqToSam	Processed   510,000,000 records.  Elapsed time: 01:01:46s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:52:41	FastqToSam	Processed   511,000,000 records.  Elapsed time: 01:01:53s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:52:48	FastqToSam	Processed   512,000,000 records.  Elapsed time: 01:02:00s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:52:55	FastqToSam	Processed   513,000,000 records.  Elapsed time: 01:02:07s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:53:02	FastqToSam	Processed   514,000,000 records.  Elapsed time: 01:02:14s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:53:10	FastqToSam	Processed   515,000,000 records.  Elapsed time: 01:02:21s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:53:17	FastqToSam	Processed   516,000,000 records.  Elapsed time: 01:02:28s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:53:24	FastqToSam	Processed   517,000,000 records.  Elapsed time: 01:02:35s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:53:31	FastqToSam	Processed   518,000,000 records.  Elapsed time: 01:02:42s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:53:38	FastqToSam	Processed   519,000,000 records.  Elapsed time: 01:02:49s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:53:45	FastqToSam	Processed   520,000,000 records.  Elapsed time: 01:02:56s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:53:52	FastqToSam	Processed   521,000,000 records.  Elapsed time: 01:03:03s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:53:59	FastqToSam	Processed   522,000,000 records.  Elapsed time: 01:03:11s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:54:06	FastqToSam	Processed   523,000,000 records.  Elapsed time: 01:03:18s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:54:13	FastqToSam	Processed   524,000,000 records.  Elapsed time: 01:03:25s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:54:20	FastqToSam	Processed   525,000,000 records.  Elapsed time: 01:03:32s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:54:27	FastqToSam	Processed   526,000,000 records.  Elapsed time: 01:03:39s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:54:34	FastqToSam	Processed   527,000,000 records.  Elapsed time: 01:03:46s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:54:41	FastqToSam	Processed   528,000,000 records.  Elapsed time: 01:03:53s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:54:48	FastqToSam	Processed   529,000,000 records.  Elapsed time: 01:04:00s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:54:55	FastqToSam	Processed   530,000,000 records.  Elapsed time: 01:04:07s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:55:02	FastqToSam	Processed   531,000,000 records.  Elapsed time: 01:04:14s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:55:09	FastqToSam	Processed   532,000,000 records.  Elapsed time: 01:04:21s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:55:17	FastqToSam	Processed   533,000,000 records.  Elapsed time: 01:04:28s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:55:24	FastqToSam	Processed   534,000,000 records.  Elapsed time: 01:04:35s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:55:31	FastqToSam	Processed   535,000,000 records.  Elapsed time: 01:04:42s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:55:38	FastqToSam	Processed   536,000,000 records.  Elapsed time: 01:04:49s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:55:45	FastqToSam	Processed   537,000,000 records.  Elapsed time: 01:04:56s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:55:52	FastqToSam	Processed   538,000,000 records.  Elapsed time: 01:05:03s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:55:59	FastqToSam	Processed   539,000,000 records.  Elapsed time: 01:05:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:56:06	FastqToSam	Processed   540,000,000 records.  Elapsed time: 01:05:18s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:56:13	FastqToSam	Processed   541,000,000 records.  Elapsed time: 01:05:25s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:56:20	FastqToSam	Processed   542,000,000 records.  Elapsed time: 01:05:32s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:56:27	FastqToSam	Processed   543,000,000 records.  Elapsed time: 01:05:39s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:56:34	FastqToSam	Processed   544,000,000 records.  Elapsed time: 01:05:46s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:56:42	FastqToSam	Processed   545,000,000 records.  Elapsed time: 01:05:54s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:56:49	FastqToSam	Processed   546,000,000 records.  Elapsed time: 01:06:01s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:56:56	FastqToSam	Processed   547,000,000 records.  Elapsed time: 01:06:08s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:57:03	FastqToSam	Processed   548,000,000 records.  Elapsed time: 01:06:15s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:57:10	FastqToSam	Processed   549,000,000 records.  Elapsed time: 01:06:22s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:57:18	FastqToSam	Processed   550,000,000 records.  Elapsed time: 01:06:30s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:57:25	FastqToSam	Processed   551,000,000 records.  Elapsed time: 01:06:37s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:57:33	FastqToSam	Processed   552,000,000 records.  Elapsed time: 01:06:44s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:57:40	FastqToSam	Processed   553,000,000 records.  Elapsed time: 01:06:51s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:57:47	FastqToSam	Processed   554,000,000 records.  Elapsed time: 01:06:58s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:57:54	FastqToSam	Processed   555,000,000 records.  Elapsed time: 01:07:06s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:58:01	FastqToSam	Processed   556,000,000 records.  Elapsed time: 01:07:13s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:58:08	FastqToSam	Processed   557,000,000 records.  Elapsed time: 01:07:20s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:58:15	FastqToSam	Processed   558,000,000 records.  Elapsed time: 01:07:27s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:58:23	FastqToSam	Processed   559,000,000 records.  Elapsed time: 01:07:35s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:58:30	FastqToSam	Processed   560,000,000 records.  Elapsed time: 01:07:42s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:58:37	FastqToSam	Processed   561,000,000 records.  Elapsed time: 01:07:49s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:58:44	FastqToSam	Processed   562,000,000 records.  Elapsed time: 01:07:56s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:58:52	FastqToSam	Processed   563,000,000 records.  Elapsed time: 01:08:03s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:58:59	FastqToSam	Processed   564,000,000 records.  Elapsed time: 01:08:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:59:06	FastqToSam	Processed   565,000,000 records.  Elapsed time: 01:08:18s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:59:14	FastqToSam	Processed   566,000,000 records.  Elapsed time: 01:08:25s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:59:21	FastqToSam	Processed   567,000,000 records.  Elapsed time: 01:08:32s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 09:59:28	FastqToSam	Processed   568,000,000 records.  Elapsed time: 01:08:39s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:59:35	FastqToSam	Processed   569,000,000 records.  Elapsed time: 01:08:47s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:59:42	FastqToSam	Processed   570,000,000 records.  Elapsed time: 01:08:54s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:59:49	FastqToSam	Processed   571,000,000 records.  Elapsed time: 01:09:01s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 09:59:56	FastqToSam	Processed   572,000,000 records.  Elapsed time: 01:09:08s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:00:03	FastqToSam	Processed   573,000,000 records.  Elapsed time: 01:09:15s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:00:10	FastqToSam	Processed   574,000,000 records.  Elapsed time: 01:09:22s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:00:17	FastqToSam	Processed   575,000,000 records.  Elapsed time: 01:09:29s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:00:25	FastqToSam	Processed   576,000,000 records.  Elapsed time: 01:09:36s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:00:32	FastqToSam	Processed   577,000,000 records.  Elapsed time: 01:09:43s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:00:39	FastqToSam	Processed   578,000,000 records.  Elapsed time: 01:09:50s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 10:00:46	FastqToSam	Processed   579,000,000 records.  Elapsed time: 01:09:57s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:00:53	FastqToSam	Processed   580,000,000 records.  Elapsed time: 01:10:04s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:01:00	FastqToSam	Processed   581,000,000 records.  Elapsed time: 01:10:12s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:01:07	FastqToSam	Processed   582,000,000 records.  Elapsed time: 01:10:19s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:01:14	FastqToSam	Processed   583,000,000 records.  Elapsed time: 01:10:26s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:01:21	FastqToSam	Processed   584,000,000 records.  Elapsed time: 01:10:33s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:01:28	FastqToSam	Processed   585,000,000 records.  Elapsed time: 01:10:40s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:01:36	FastqToSam	Processed   586,000,000 records.  Elapsed time: 01:10:47s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:01:43	FastqToSam	Processed   587,000,000 records.  Elapsed time: 01:10:54s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:01:50	FastqToSam	Processed   588,000,000 records.  Elapsed time: 01:11:01s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 10:01:57	FastqToSam	Processed   589,000,000 records.  Elapsed time: 01:11:09s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:02:04	FastqToSam	Processed   590,000,000 records.  Elapsed time: 01:11:15s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 10:02:11	FastqToSam	Processed   591,000,000 records.  Elapsed time: 01:11:22s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:02:18	FastqToSam	Processed   592,000,000 records.  Elapsed time: 01:11:29s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 10:02:25	FastqToSam	Processed   593,000,000 records.  Elapsed time: 01:11:37s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:02:32	FastqToSam	Processed   594,000,000 records.  Elapsed time: 01:11:44s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:02:39	FastqToSam	Processed   595,000,000 records.  Elapsed time: 01:11:51s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:02:46	FastqToSam	Processed   596,000,000 records.  Elapsed time: 01:11:58s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:02:53	FastqToSam	Processed   597,000,000 records.  Elapsed time: 01:12:05s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:03:00	FastqToSam	Processed   598,000,000 records.  Elapsed time: 01:12:12s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:03:07	FastqToSam	Processed   599,000,000 records.  Elapsed time: 01:12:19s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:03:14	FastqToSam	Processed   600,000,000 records.  Elapsed time: 01:12:26s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:03:22	FastqToSam	Processed   601,000,000 records.  Elapsed time: 01:12:33s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:03:29	FastqToSam	Processed   602,000,000 records.  Elapsed time: 01:12:40s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:03:36	FastqToSam	Processed   603,000,000 records.  Elapsed time: 01:12:47s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:03:43	FastqToSam	Processed   604,000,000 records.  Elapsed time: 01:12:55s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:03:51	FastqToSam	Processed   605,000,000 records.  Elapsed time: 01:13:02s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:03:58	FastqToSam	Processed   606,000,000 records.  Elapsed time: 01:13:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:04:05	FastqToSam	Processed   607,000,000 records.  Elapsed time: 01:13:17s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:04:12	FastqToSam	Processed   608,000,000 records.  Elapsed time: 01:13:24s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:04:19	FastqToSam	Processed   609,000,000 records.  Elapsed time: 01:13:31s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:04:26	FastqToSam	Processed   610,000,000 records.  Elapsed time: 01:13:38s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:04:33	FastqToSam	Processed   611,000,000 records.  Elapsed time: 01:13:45s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:04:41	FastqToSam	Processed   612,000,000 records.  Elapsed time: 01:13:52s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:04:48	FastqToSam	Processed   613,000,000 records.  Elapsed time: 01:13:59s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:04:55	FastqToSam	Processed   614,000,000 records.  Elapsed time: 01:14:06s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:05:02	FastqToSam	Processed   615,000,000 records.  Elapsed time: 01:14:14s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:05:09	FastqToSam	Processed   616,000,000 records.  Elapsed time: 01:14:21s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:05:16	FastqToSam	Processed   617,000,000 records.  Elapsed time: 01:14:28s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:05:23	FastqToSam	Processed   618,000,000 records.  Elapsed time: 01:14:35s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 10:05:30	FastqToSam	Processed   619,000,000 records.  Elapsed time: 01:14:42s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:05:37	FastqToSam	Processed   620,000,000 records.  Elapsed time: 01:14:49s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:05:45	FastqToSam	Processed   621,000,000 records.  Elapsed time: 01:14:56s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:05:52	FastqToSam	Processed   622,000,000 records.  Elapsed time: 01:15:03s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:05:59	FastqToSam	Processed   623,000,000 records.  Elapsed time: 01:15:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:06:06	FastqToSam	Processed   624,000,000 records.  Elapsed time: 01:15:17s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:06:13	FastqToSam	Processed   625,000,000 records.  Elapsed time: 01:15:24s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:06:20	FastqToSam	Processed   626,000,000 records.  Elapsed time: 01:15:31s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:06:27	FastqToSam	Processed   627,000,000 records.  Elapsed time: 01:15:38s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 10:06:34	FastqToSam	Processed   628,000,000 records.  Elapsed time: 01:15:45s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 10:06:41	FastqToSam	Processed   629,000,000 records.  Elapsed time: 01:15:53s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:06:48	FastqToSam	Processed   630,000,000 records.  Elapsed time: 01:15:59s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 10:06:55	FastqToSam	Processed   631,000,000 records.  Elapsed time: 01:16:07s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:07:02	FastqToSam	Processed   632,000,000 records.  Elapsed time: 01:16:14s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:07:09	FastqToSam	Processed   633,000,000 records.  Elapsed time: 01:16:21s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:07:16	FastqToSam	Processed   634,000,000 records.  Elapsed time: 01:16:28s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:07:23	FastqToSam	Processed   635,000,000 records.  Elapsed time: 01:16:35s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:07:31	FastqToSam	Processed   636,000,000 records.  Elapsed time: 01:16:42s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:07:38	FastqToSam	Processed   637,000,000 records.  Elapsed time: 01:16:49s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:07:45	FastqToSam	Processed   638,000,000 records.  Elapsed time: 01:16:56s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:07:52	FastqToSam	Processed   639,000,000 records.  Elapsed time: 01:17:04s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:07:59	FastqToSam	Processed   640,000,000 records.  Elapsed time: 01:17:11s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 10:08:06	FastqToSam	Processed   641,000,000 records.  Elapsed time: 01:17:18s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:08:13	FastqToSam	Processed   642,000,000 records.  Elapsed time: 01:17:25s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:08:20	FastqToSam	Processed   643,000,000 records.  Elapsed time: 01:17:32s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:08:27	FastqToSam	Processed   644,000,000 records.  Elapsed time: 01:17:39s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:08:34	FastqToSam	Processed   645,000,000 records.  Elapsed time: 01:17:46s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:08:41	FastqToSam	Processed   646,000,000 records.  Elapsed time: 01:17:53s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 10:08:49	FastqToSam	Processed   647,000,000 records.  Elapsed time: 01:18:00s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:08:56	FastqToSam	Processed   648,000,000 records.  Elapsed time: 01:18:08s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:09:03	FastqToSam	Processed   649,000,000 records.  Elapsed time: 01:18:15s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 10:09:10	FastqToSam	Processed   650,000,000 records.  Elapsed time: 01:18:22s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:09:17	FastqToSam	Processed   651,000,000 records.  Elapsed time: 01:18:29s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:09:24	FastqToSam	Processed   652,000,000 records.  Elapsed time: 01:18:36s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:09:32	FastqToSam	Processed   653,000,000 records.  Elapsed time: 01:18:43s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:09:39	FastqToSam	Processed   654,000,000 records.  Elapsed time: 01:18:50s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:09:46	FastqToSam	Processed   655,000,000 records.  Elapsed time: 01:18:57s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:09:53	FastqToSam	Processed   656,000,000 records.  Elapsed time: 01:19:05s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:10:00	FastqToSam	Processed   657,000,000 records.  Elapsed time: 01:19:12s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:10:07	FastqToSam	Processed   658,000,000 records.  Elapsed time: 01:19:19s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:10:15	FastqToSam	Processed   659,000,000 records.  Elapsed time: 01:19:26s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:10:22	FastqToSam	Processed   660,000,000 records.  Elapsed time: 01:19:33s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:10:29	FastqToSam	Processed   661,000,000 records.  Elapsed time: 01:19:40s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:10:36	FastqToSam	Processed   662,000,000 records.  Elapsed time: 01:19:48s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:10:43	FastqToSam	Processed   663,000,000 records.  Elapsed time: 01:19:55s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:10:50	FastqToSam	Processed   664,000,000 records.  Elapsed time: 01:20:02s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:10:58	FastqToSam	Processed   665,000,000 records.  Elapsed time: 01:20:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:11:05	FastqToSam	Processed   666,000,000 records.  Elapsed time: 01:20:17s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:11:13	FastqToSam	Processed   667,000,000 records.  Elapsed time: 01:20:24s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:11:20	FastqToSam	Processed   668,000,000 records.  Elapsed time: 01:20:31s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:11:27	FastqToSam	Processed   669,000,000 records.  Elapsed time: 01:20:38s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:11:34	FastqToSam	Processed   670,000,000 records.  Elapsed time: 01:20:45s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:11:41	FastqToSam	Processed   671,000,000 records.  Elapsed time: 01:20:53s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:11:48	FastqToSam	Processed   672,000,000 records.  Elapsed time: 01:21:00s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:11:56	FastqToSam	Processed   673,000,000 records.  Elapsed time: 01:21:07s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:12:03	FastqToSam	Processed   674,000,000 records.  Elapsed time: 01:21:15s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:12:11	FastqToSam	Processed   675,000,000 records.  Elapsed time: 01:21:22s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:12:18	FastqToSam	Processed   676,000,000 records.  Elapsed time: 01:21:30s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:12:25	FastqToSam	Processed   677,000,000 records.  Elapsed time: 01:21:37s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:12:32	FastqToSam	Processed   678,000,000 records.  Elapsed time: 01:21:44s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:12:39	FastqToSam	Processed   679,000,000 records.  Elapsed time: 01:21:51s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:12:46	FastqToSam	Processed   680,000,000 records.  Elapsed time: 01:21:58s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 10:12:54	FastqToSam	Processed   681,000,000 records.  Elapsed time: 01:22:05s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:13:01	FastqToSam	Processed   682,000,000 records.  Elapsed time: 01:22:12s.  Time for last 1,000,000:    6s.  Last read position: */*
+INFO	2022-04-24 10:13:08	FastqToSam	Processed   683,000,000 records.  Elapsed time: 01:22:19s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:13:15	FastqToSam	Processed   684,000,000 records.  Elapsed time: 01:22:27s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:13:22	FastqToSam	Processed   685,000,000 records.  Elapsed time: 01:22:34s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:13:29	FastqToSam	Processed   686,000,000 records.  Elapsed time: 01:22:41s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:13:36	FastqToSam	Processed   687,000,000 records.  Elapsed time: 01:22:48s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:13:43	FastqToSam	Processed   688,000,000 records.  Elapsed time: 01:22:55s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:13:51	FastqToSam	Processed   689,000,000 records.  Elapsed time: 01:23:02s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:13:58	FastqToSam	Processed   690,000,000 records.  Elapsed time: 01:23:10s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:14:05	FastqToSam	Processed   691,000,000 records.  Elapsed time: 01:23:17s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:14:13	FastqToSam	Processed   692,000,000 records.  Elapsed time: 01:23:24s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:14:20	FastqToSam	Processed   693,000,000 records.  Elapsed time: 01:23:31s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:14:27	FastqToSam	Processed   694,000,000 records.  Elapsed time: 01:23:38s.  Time for last 1,000,000:    7s.  Last read position: */*
+INFO	2022-04-24 10:14:30	FastqToSam	Processed 347178150 fastq reads
+INFO	2022-04-24 10:14:31	SortingCollection	Creating merging iterator from 1389 files
+[Sun Apr 24 11:34:21 UTC 2022] picard.sam.FastqToSam done. Elapsed time: 163.56 minutes.
+Runtime.totalMemory()=760283136
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@compute1-exec-187.ris.wustl.edu>
+Subject: Job 725038: <picard FastqToSam F1=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUARGE-14-3173_R1.fastq.gz F2=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUARGE-14-3173_R2.fastq.gz O=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/bamfiles/bamfiles_allbams/YUARGE-14-3173/YUARGE-14-3173.bam SM=YUARGE-14-3173 TMP_DIR=/storage1/fs1/aadel/Active/abul/TempForbamfiles> in cluster <compute1-lsf> Done
+
+Job <picard FastqToSam F1=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUARGE-14-3173_R1.fastq.gz F2=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUARGE-14-3173_R2.fastq.gz O=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/bamfiles/bamfiles_allbams/YUARGE-14-3173/YUARGE-14-3173.bam SM=YUARGE-14-3173 TMP_DIR=/storage1/fs1/aadel/Active/abul/TempForbamfiles> was submitted from host <compute1-client-1.ris.wustl.edu> by user <ausmani> in cluster <compute1-lsf> at Sat Apr 23 16:22:39 2022
+Job was executed on host(s) <compute1-exec-187.ris.wustl.edu>, in queue <general>, as user <ausmani> in cluster <compute1-lsf> at Sun Apr 24 03:50:41 2022
+</home/abulusmani> was used as the home directory.
+</storage1/fs1/aadel/Active/abul> was used as the working directory.
+Started at Sun Apr 24 03:50:41 2022
+Terminated at Sun Apr 24 06:34:39 2022
+Results reported at Sun Apr 24 06:34:39 2022
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+picard FastqToSam F1=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUARGE-14-3173_R1.fastq.gz F2=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/portal-us.medgenome.com/P2003746_04072022/FASTQ/YUARGE-14-3173_R2.fastq.gz O=/storage1/fs1/aadel/Active/abul/EM-seq_yale_cfDNA_1st_batch/bamfiles/bamfiles_allbams/YUARGE-14-3173/YUARGE-14-3173.bam SM=YUARGE-14-3173 TMP_DIR=/storage1/fs1/aadel/Active/abul/TempForbamfiles
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   9340.41 sec.
+    Max Memory :                                 873 MB
+    Average Memory :                             819.74 MB
+    Total Requested Memory :                     48000.00 MB
+    Delta Memory :                               47127.00 MB
+    Max Swap :                                   862 MB
+    Max Processes :                              11
+    Max Threads :                                47
+    Run time :                                   9838 sec.
+    Turnaround time :                            51120 sec.
+
+The output (if any) is above this job summary.
+

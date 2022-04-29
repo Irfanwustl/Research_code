@@ -58,14 +58,14 @@ for onemodel in model_info_list:
         yamlinfo = yaml.safe_load(file)
         samplename=yamlinfo['sample_name']
     
-    copycommand="bsub -M 48000000 -R 'select[mem>48000] rusage[mem=48000]' -oo "+destinationfolder_commands+"/"+samplename+"_copy.log" + "  -q general -a 'docker(irfanwustl/pythonsamtoolsfresh)'  cp -r "+gmspath+"/"+onemodel+' '+destinationfolder+"/"+samplename+"\n"
+    copycommand="bsub -M 48000000 -R 'select[mem>48000] rusage[mem=48000]' -oo "+destinationfolder_commands+"/"+samplename+"_copy.log" + "  -q general -a 'docker(irfanwustl/insilico_mix)'  cp -r "+gmspath+"/"+onemodel+' '+destinationfolder+"/"+samplename+"\n"
     
     
     
     copycommands.append(copycommand)
     
     
-    cramtobamcommand="bsub -M 48000000 -R 'select[mem>48000] rusage[mem=48000]' -oo "+destinationfolder_commands+"/"+samplename+"_cramtobam.log" + "  -q general -a 'docker(irfanwustl/pythonsamtoolsfresh)'"+ " samtools view -b -T /storage1/fs1/aadel/Active/work/Hg38Reference/all_sequences.fa -o "+destinationfolder_bam+"/"+samplename+".final.bam  "+gmspath+"/"+onemodel+"/build*/results/final.cram\n"
+    cramtobamcommand="bsub -M 48000000 -R 'select[mem>48000] rusage[mem=48000]' -oo "+destinationfolder_commands+"/"+samplename+"_cramtobam.log" + "  -q general -a 'docker(irfanwustl/insilico_mix)'"+ " samtools view -b -T /storage1/fs1/aadel/Active/work/Hg38Reference/all_sequences.fa -o "+destinationfolder_bam+"/"+samplename+".final.bam  "+gmspath+"/"+onemodel+"/build*/results/final.cram\n"
 
     cramtobamcommands.append(cramtobamcommand)
 
