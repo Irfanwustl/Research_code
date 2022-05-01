@@ -1,0 +1,14 @@
+EM-Seq-5-auto_copy.log	Succeeded
+BS-Spike-1-auto_cramtobam.log	Succeeded
+EM-Seq-1-auto_copy.log	Succeeded
+EM-Seq-3-auto_cramtobam.log	Succeeded
+BS-Spike-10-auto_cramtobam.log	Succeeded
+EM-Seq-10-auto_cramtobam.log	Succeeded
+EM-Seq-5-auto_cramtobam.log	Succeeded
+BS-Spike-10-auto_copy.log	Succeeded
+BS-Spike-5-auto_cramtobam.log	Succeeded
+BS-Spike-1-auto_copy.log	Succeeded
+BS-Spike-5-auto_copy.log	Succeeded
+EM-Seq-3-auto_copy.log	Succeeded
+EM-Seq-1-auto_cramtobam.log	Succeeded
+EM-Seq-10-auto_copy.log	Succeeded
