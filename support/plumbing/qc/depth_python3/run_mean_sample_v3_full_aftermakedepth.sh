@@ -5,7 +5,7 @@ out_folder="${in_folder}_mean_samplev3"
 mkdir ${out_folder}
 
 #### mean sample
-python mean_sample_v3.py  ${in_folder}   m 10000  ${out_folder}      ###################################### need to be changed in every batch ######
+python mean_sample_v3.py  ${in_folder}   Y 10000  ${out_folder}      ###################################### need to be changed in every batch ######
 
 echo "now R.."
 
