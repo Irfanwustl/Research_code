@@ -47,8 +47,18 @@ outdf.head()
 
 
 #ECNODE tissues
-total_compartments=['chrom','start','AdrenalGland-others','BodyOfPancreas-others','EsophagusSquamousEpithelium-others','GastroesophagealSphincter-others','HeartLeftVentricle-others','LoweLegSkin-others','Ovary-others','Spleen-others','Stomach-others','Testis-others','ThyroidGland-others','TibialNerve-others','TransverseColon-others','UpperLobeOfLeftLung-others']
+#total_compartments=['chrom','start','AdrenalGland-others','BodyOfPancreas-others','EsophagusSquamousEpithelium-others','GastroesophagealSphincter-others','HeartLeftVentricle-others','LoweLegSkin-others','Ovary-others','Spleen-others','Stomach-others','Testis-others','ThyroidGland-others','TibialNerve-others','TransverseColon-others','UpperLobeOfLeftLung-others']
 
+
+
+
+#TCGAtissues
+#total_compartments=['chrom','start','AdrenalGlandNormal-others','AdrenalGlandTumor-others','BladderNormal-others','BladderTumor-others','BreastNormal-others','BreastTumor-others','EsophagusNormal-others','EsophagusTumor-others','KidneyNormal-others','KidneyTumor-others','PancreasNormal-others','PancreasTumor-others','SkinNormal-others','SkinTumor-others','StomachNormal-others','StomachTumor-others','ThymusNormal-others','ThymusTumor-others']
+
+
+
+#TCGA normal
+total_compartments=['chrom','start','AdrenalGlandNormal-others','BladderNormal-others','BreastNormal-others','EsophagusNormal-others','KidneyNormal-others','PancreasNormal-others','SkinNormal-others','StomachNormal-others','ThymusNormal-others']
 
 finalcompartmentshouldbe=len(total_compartments)
 total_compartments_set=set(total_compartments)

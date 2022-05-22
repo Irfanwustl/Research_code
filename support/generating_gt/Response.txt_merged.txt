@@ -1,0 +1,25 @@
+YU_ID	ICI response status	Metastatic melanoma subtype	ICI regimen	Toxicity
+YUMAGIE	?	?	Combination	NA
+YUNEXUS	?	Uveal	Combination	NA
+YUZERU	DCB	Sun-exposed	Anti-PD1	NA
+YUDAB	NDB	Sun-exposed	Anti-PD1	NA
+YUFARM	NDB	Acral	Anti-PD1	NA
+YUADD 	DCB	Sun-exposed	Anti-PD1	0
+YUCEVO	DCB	Sun-exposed	Anti-PD1	1
+YUBUMP	NDB	Sun-exposed	Anti-PD1	0
+YUCUSK	NDB	Ocular/Uveal	Anti-PD1	2
+YUCONFE	DCB	Sun-exposed	Combination	NA
+YUFURL	NDB	Mucosal	Combination	3
+YUDIME	NDB	Sun-exposed	Anti-PD1	0
+YUCOT	DCB	Sun-exposed	Anti-PD1	0
+YUSONG	NDB	Sun-exposed	Anti-PD1	3
+YUDIGIT	NDB	Ocular/Uveal	Anti-PD1	1
+YURIDA	DCB	Sun-exposed	Anti-PD1	1
+YUBLIT	DCB	Sun-exposed	Anti-PD1	2
+YUBRET	DCB	Sun-exposed	Anti-PD1	2
+YUPOGER	NDB	Sun-exposed	Combination	3
+YUNOCA	NDB	Mucosal	Anti-PD1	NA
+YUPRETE	NDB	Acral	Anti-PD1	3
+YUDEBIT	NDB	Sun-exposed	Combination	1
+YUFROME	NDB	Ocular/Uveal	Anti-PD1	0
+YUHIMO	NDB	Acral	Anti-PD1	0
