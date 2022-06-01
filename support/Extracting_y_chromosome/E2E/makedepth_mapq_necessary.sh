@@ -23,7 +23,7 @@ do
 	
 	
 	echo rawdepth=========${dirList[i]}
-	samtools depth -Q 30 ${dir}/${dirList[i]} > ${tempdir}/${dirList[i]}_fullinfodepth.txt
+	samtools depth -q 20 -Q 40 ${dir}/${dirList[i]} > ${tempdir}/${dirList[i]}_fullinfodepth.txt
 	awk '{print $3}' ${tempdir}/${dirList[i]}_fullinfodepth.txt > ${outdir}/${dirList[i]}_depth
 
 	(( i++ ))
